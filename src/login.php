@@ -1,4 +1,4 @@
-<?php session_start(); 
+<?php session_start();
 include ('db/conexion.php');
 ?>
 
@@ -14,17 +14,8 @@ include ('db/conexion.php');
 	<link rel="stylesheet" type="text/css" href="../assets/css/util.css">
 	<link rel="stylesheet" type="text/css" href="../assets/css/main.css">
 	<link rel="stylesheet" type="text/css" href="../assets/fonts/material-design-iconic-font.min.css">
-<!--	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
--->
-
-
 </head>
 <body>
-	
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('../assets/img/lago.jpg');">
 			<div class="wrap-login100">
@@ -39,18 +30,18 @@ include ('db/conexion.php');
 
 					<form action="login.php" method="post">
 					<div class="wrap-input100 validate-input">
-						<input class="input100" type="text" name="correo" placeholder="">
-						<span class="focus-input100" data-placeholder="Correo Electrónico"></span>
+						<input class="input100" type="text" name="correo" placeholder="Correo Electronico">
+						<span class="focus-input100" data-placeholder=""></span>
 					</div>
 
 					<div class="wrap-input100 validate-input">
-						<input class="input100" type="password" name="contrasena" placeholder="">
-						<span class="focus-input100" data-placeholder="Contraseña"></span>
+						<input class="input100" type="password" name="contrasena" placeholder="Contraseña">
+						<span class="focus-input100" data-placeholder=""></span>
 					</div>
 
 					<div class="container-login100-form-btn">
-					
-						<button class="login100-form-btn">
+
+						<button type="submit" class="login100-form-btn">
 							Entrar
 						</button>
 					</div>
