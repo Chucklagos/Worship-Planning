@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 
 $conexion = mysqli_connect(
   'localhost',
@@ -9,7 +9,7 @@ $conexion = mysqli_connect(
 );
 
 if ($conexion) {
-  //echo('Si hay conexion con la base de datos');
+ // echo('Si hay conexion con la base de datos');
 }
 //or die(mysqli_erro($mysqli));
 ?>

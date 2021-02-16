@@ -1,4 +1,4 @@
-<?php session_start();?>
+<?php //session_start();?>
 
 <div class="sidebar" data-image="../assets/img/sidebar-5.jpg">
             <!--

@@ -28,14 +28,15 @@ include ('db/conexion.php');
 						Iniciar Sesión
 					</span>
 
-					<form action="login.php" method="post">
+					<form action="validar.php" method="post">
 					<div class="wrap-input100 validate-input">
-						<input class="input100" type="text" name="correo" placeholder="Correo Electronico">
+						<input class="input100" type="text" name="correo" required placeholder="Correo Electronico">
 						<span class="focus-input100" data-placeholder=""></span>
+						
 					</div>
 
 					<div class="wrap-input100 validate-input">
-						<input class="input100" type="password" name="contrasena" placeholder="Contraseña">
+						<input class="input100" type="password" name="contrasena" required placeholder="Contraseña">
 						<span class="focus-input100" data-placeholder=""></span>
 					</div>
 
@@ -46,10 +47,9 @@ include ('db/conexion.php');
 						</button>
 					</div>
 					</form>
-
 					<?php
-					$correo=$_POST['correo'];
-					$contrasena=$_POST['contrasena'];
+					//$correo=$_POST['correo'];
+					//$contrasena=$_POST['contrasena'];
 					?>
 
 							<!--<div class="text-center p-t-90">
