@@ -12,6 +12,9 @@
 =========================================================
 
  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  -->
+<?php
+  session_start();
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,94 +36,16 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="sidebar" data-image="../assets/img/sidebar-5.jpg">
-            <!--
-        Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
 
-        Tip 2: you can also add an image using data-image tag
-    -->
-            <div class="sidebar-wrapper">
-                <div class="logo">
-                    <a href="#" class="simple-text">
-                        Worship Planning
-                    </a>
-                </div>
-                <ul class="nav">
-                    
-                    
-    
-                </ul>
-            </div>
-        </div>
+    <div class="wrapper">
+<!--sidebar-->
+        <?php include('panel.php');?>
+
         <div class="main-panel">
             <!-- Navbar -->
-            <!--
             <nav class="navbar navbar-expand-lg " color-on-scroll="500">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="">  </a>
-                    <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-bar burger-lines"></span>
-                        <span class="navbar-toggler-bar burger-lines"></span>
-                        <span class="navbar-toggler-bar burger-lines"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navigation">
-                        <ul class="nav navbar-nav mr-auto">
-                            <li class="nav-item">
-                                <a href="#" class="nav-link" data-toggle="dropdown">
-                                    <i class="nc-icon nc-palette"></i>
-                                    <span class="d-lg-none">Dashboard</span>
-                                </a>
-                            </li>
-                            <li class="dropdown nav-item">
-                                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                                    <i class="nc-icon nc-planet"></i>
-                                    <span class="notification">5</span>
-                                    <span class="d-lg-none">Notification</span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Notification 1</a>
-                                    <a class="dropdown-item" href="#">Notification 2</a>
-                                    <a class="dropdown-item" href="#">Notification 3</a>
-                                    <a class="dropdown-item" href="#">Notification 4</a>
-                                    <a class="dropdown-item" href="#">Another notification</a>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="nc-icon nc-zoom-split"></i>
-                                    <span class="d-lg-block">&nbsp;Search</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#pablo">
-                                    <span class="no-icon">Account</span>
-                                </a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="no-icon">Dropdown</span>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                    <div class="divider"></div>
-                                    <a class="dropdown-item" href="#">Separated link</a>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#pablo">
-                                    <span class="no-icon">Log out</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav> -->
+
+            </nav>
             <!-- End Navbar -->
             <div class="content">
                 <div class="container-fluid">
@@ -131,156 +56,82 @@
                                     <h4 class="card-title">Datos Personales</h4>
                                 </div>
                                 <div class="card-body">
-                                    <form>
+                                    <form action="validarRegistro.php" method="post">
                                         <div class="row">
+                                          <div class="col-md-3 pr-1">
+                                                <div class="form-group">
+                                                    <label>Identidad</label>
+                                                    <input type="text" class="form-control" name="identidad" placeholder="Identidad sin guiones" minlength="13" maxlength="13" required>
+                                                </div>
+                                            </div>
                                             <div class="col-md-3 pr-1">
                                                 <div class="form-group">
                                                     <label>Correo Electronico</label>
-                                                    <input type="text" class="form-control" placeholder="example@.com" value="">
+                                                    <input type="email" class="form-control" name="email" placeholder="ejemplo@mail.com" required>
                                                 </div>
                                             </div>
-                                            <div class="col-md-3 pl-1">
-                                                <div class="form-group">
+                                                <div class="form-group col-md-3 pl-1">
                                                     <label>Contraseña</label>
-                                                    <input type="text" class="form-control" placeholder="" value="">
-                                                </div>
-                                            </div>
-                                            <!--<div class="col-md-2 pr-1">
-                                                <div class="form-group">
-                                                    <label>Genero</label>
-                                                    <button type="button" class="btn btn-outline-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        Seleccione
-                                                      </button>
-                                                      <div class="dropdown-menu">
-                                                        <a class="dropdown-item" href="#">Femenino</a>
-                                                        <a class="dropdown-item" href="#">Masculino</a>
-                                                      </div>
-                                                </div>
-                                            </div>-->
-                                            
-                                        </div>
-
-                                        
-                                        <div class="row">
-                                            <div class="col-md-3 pr-1">
-                                                <div class="form-group">
-                                                    <label>Primer Nombre</label>
-                                                    <input type="text" class="form-control" placeholder="" value="">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3 pl-1">
-                                                <div class="form-group">
-                                                    <label>Segundo Nombre</label>
-                                                    <input type="text" class="form-control" placeholder="" value="">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3 pl-1">
-                                                <div class="form-group">
-                                                    <label>Primer Apellido</label>
-                                                    <input type="text" class="form-control" placeholder="" value="">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3 pl-1">
-                                                <div class="form-group">
-                                                    <label>Segundo Apellido</label>
-                                                    <input type="text" class="form-control" placeholder="" value="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label>Direccion</label>
-                                                    <input type="text" class="form-control" placeholder="" value="">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-md-3 pr-1">
-                                                <div class="form-group">
-                                                    <label>Telefono</label>
-                                                    <input type="tel" class="form-control" placeholder="0000-0000" value="">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-3 pr-1">
-                                                <div class="form-group">
-                                                    <label>Ocupacion</label>
-                                                    <input type="text" class="form-control" placeholder="" value="">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 pl-1">
-                                                <div class="form-group">
-                                                    <label>Fecha de Nacimiento</label>
-                                                    <input type="date" class="form-control" placeholder="" value="">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-2 pr-1">
-                                                <div class="form-group">
-                                                    <label>Estado Civil</label>
-                                                    <button type="button" class="btn btn-outline-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        Seleccione
-                                                      </button>
-                                                      <div class="dropdown-menu">
-                                                        <a class="dropdown-item" href="#">Soltero(a)</a>
-                                                        <a class="dropdown-item" href="#">Casado(a)</a>
-                                                        <a class="dropdown-item" href="#">Divorciado(a)</a>
-                                                        <a class="dropdown-item" href="#">Viudo(a)</a>
-                                                      </div>
-                                                </div>
-                                            </div>
-
-                                           
-
-                                        </div> -->
-                                        
-                                        <div class="row">
-                                            <div class="col-md-4 pr-1">
-                                                <div class="form-group">
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 px-1">
-                                                <div class="form-group">
-                                                    
+                                                    <input type="password" class="form-control" name="contrasena" minlength="8" required>
                                                 </div>
                                         </div>
-
-
-
-                                        <!-- BOTONES DE  GUARDAR  -->   
                                         <div class="row">
-                                            <div class="col-md-20 pr-1">
-                                                <div class="form-group">
-                                                    <button type="submit" class="btn btn-info btn-fill pull-right">Registrarse</button>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-20 pr-1">
-                                                <div class="form-group">
-                                                    <button  type="submit" class="btn btn-info btn-fill pull-right">Cancelar</button>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                            </div>
-                                           
-                                       
-                                       
-                                        
+                                              <div class="form-group col-md-3 pr-1">
+                                                  <label>Primer Nombre</label>
+                                                  <input type="text" class="form-control" name="pnombre" required>
+                                              </div>
+                                              <div class="form-group col-md-3 pl-1">
+                                                  <label>Segundo Nombre</label>
+                                                  <input type="text" class="form-control" name="snombre">
+                                              </div>
+                                              <div class="form-group col-md-3 pl-1">
+                                                  <label>Primer Apellido</label>
+                                                  <input type="text" class="form-control" name="papellido" required>
+                                              </div>
+                                              <div class="form-group col-md-3 pl-1">
+                                                  <label>Segundo Apellido</label>
+                                                  <input type="text" class="form-control" name="sapellido">
+                                              </div>
+                                        </div>
+                                        <div class="row">
+                                              <div class="form-group col-md-4 pr-1">
+                                                <label>Telefono</label>
+                                                <input type="tel" class="form-control" name="telefono" required>
+                                              </div>
+                                              <div class="form-group col-md-4 px-1">
+                                                <label>Fecha de Nacimiento</label>
+                                                <input type="date" class="form-control" name="fechaNacimiento" required>
+                                              </div>
+                                              <div class="form-group col-md-4 pr-1">
+                                                <label>Estado Civil</label>
+                                                <select class="form-control" name="estadoCivil">
+                                                  <option value="soltero">Soltero(a)</option>
+                                                  <option value="casado">Casado(a)</option>
+                                                  <option value="divorciado">Divorciado(a)</option>
+                                                  <option value="viudo">Viudo(a)</option>
+                                                </select>
+                                              </div>
+                                        </div>
+                                        <!-- BOTONES DE  GUARDAR  -->
+                                        <div class="row">
+                                              <div class="form-group col-md-20 pr-1">
+                                                  <button type="submit" name="registrarse" class="btn btn-info btn-fill pull-right">Registrarse</button>
+                                                  <div class="clearfix"></div>
+                                              </div>
+                                              <div class="form-group col-md-20 pr-1">
+                                                  <button  type="submit" class="btn btn-info btn-fill pull-right">Cancelar</button>
+                                                  <div class="clearfix"></div>
+                                              </div>
                                     </form>
                                 </div>
                             </div>
                         </div>
-
-
-                        
                     </div>
                 </div>
             </div>
-            
         </div>
     </div>
-    
+
 </body>
 
 <!--   Core JS Files   -->
