@@ -1,4 +1,8 @@
-<?php session_start();?>
+<<<<<<< Updated upstream
+<?php //session_start();?>
+=======
+ <?php //session_start();?>
+>>>>>>> Stashed changes
 
 <div class="sidebar" data-image="../assets/img/sidebar-5.jpg">
             <!--
