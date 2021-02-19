@@ -12,6 +12,17 @@
 =========================================================
 
  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  -->
+<?php
+session_start();
+$varsession=$_SESSION['email'];
+if($varsession==null || $varsession== ''){
+   echo 'Usted no tiene autorizacion para ver los datos de este usuario';
+   die();
+
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -92,7 +103,7 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#pablo">
+                                <a class="nav-link" href="cerrar_Session.php">
                                     <span class="no-icon">Cerrar Sesión</span>
                                 </a>
                             </li>
@@ -115,7 +126,7 @@
                                             <div class="col-md-2 pr-1">
                                                 <div class="form-group">
                                                     <label>ID </label>
-                                                    <input type="text" class="form-control" disabled="" placeholder="" value="">
+                                                    <input type="text" class="form-control" disabled="" placeholder="" value="<?php echo $_SESSION['identidad'] ?>">
                                                 </div>
                                             </div>
 
@@ -123,7 +134,7 @@
                                             <div class="col-md-4 pl-1">
                                                 <div class="form-group">
                                                     <label for="exampleInputEmail1"  >Correo electronico</label>
-                                                    <input type="email" class="form-control" placeholder="example@.com" disabled="">
+                                                    <input type="email" class="form-control" value= "<?php echo $_SESSION['email'] ?>" disabled="">
                                                 </div>
                                             </div>
                                             <!--
@@ -148,25 +159,25 @@
                                             <div class="col-md-3 pr-1">
                                                 <div class="form-group">
                                                     <label >Primer Nombre</label>
-                                                    <input type="text" class="form-control" placeholder="" value="" disabled="">
+                                                    <input type="text" class="form-control" placeholder="" value="<?php echo $_SESSION['primerNombre'] ?>" disabled="">
                                                 </div>
                                             </div>
                                             <div class="col-md-3 pl-1">
                                                 <div class="form-group">
                                                     <label>Segundo Nombre</label>
-                                                    <input type="text" class="form-control" placeholder="" value="" disabled="">
+                                                    <input type="text" class="form-control" placeholder="" value="<?php echo $_SESSION['segundoNombre'] ?>" disabled="">
                                                 </div>
                                             </div>
                                             <div class="col-md-3 pl-1">
                                                 <div class="form-group">
                                                     <label>Primer Apellido</label>
-                                                    <input type="text" class="form-control" placeholder="" value="" disabled="">
+                                                    <input type="text" class="form-control" placeholder="" value="<?php echo $_SESSION['primerApellido'] ?>" disabled="">
                                                 </div>
                                             </div>
                                             <div class="col-md-3 pl-1">
                                                 <div class="form-group">
                                                     <label>Segundo Apellido</label>
-                                                    <input type="text" class="form-control" placeholder="" value="" disabled="">
+                                                    <input type="text" class="form-control" placeholder="" value="<?php echo $_SESSION['segundoApellido'] ?>" disabled="">
                                                 </div>
                                             </div>
                                         </div>
