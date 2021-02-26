@@ -32,7 +32,7 @@ include ('db/conexion.php');
 					<div class="wrap-input100 validate-input">
 						<input class="input100" type="text" name="correo" required placeholder="Correo Electronico">
 						<span class="focus-input100" data-placeholder=""></span>
-						
+
 					</div>
 
 					<div class="wrap-input100 validate-input">
@@ -45,8 +45,8 @@ include ('db/conexion.php');
 						<button type="submit" class="login100-form-btn">
 							Entrar
 						</button>
-						
-						 
+
+
 
 
 					</div>
