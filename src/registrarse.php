@@ -20,8 +20,15 @@
 </head>
 <body>
     <div class="wrapper">
-        <!--sidebar-->
-        <?php include('include/panel.php');?>
+        <div class="sidebar" data-image="">
+            <div class="sidebar-wrapper">
+                <div class="logo">
+                    <a href="#" class="simple-text">
+                        Worship Planning
+                    </a>
+                </div>
+            </div>
+        </div>
         <div class="main-panel">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg " color-on-scroll="500">

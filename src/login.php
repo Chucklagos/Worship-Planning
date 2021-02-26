@@ -17,11 +17,11 @@ include ('db/conexion.php');
 </head>
 <body>
 	<div class="limiter">
-		<div class="container-login100" style="background-image: url('../assets/img/lago.jpg');">
+		<div class="container-login100" style="background-image: url('../assets/img/imagenLogin.jpg');">
 			<div class="wrap-login100">
 				<div class="login100-form">
 					<span class="login100-form-logo">
-						<img src="../assets/img/blue-mountain-logo.jpg" width="80" height="80">
+						<img src="../assets/img/logo.png" width="110" height="110">
 					</span>
 
 					<span class="login100-form-title p-b-34 p-t-27">
@@ -45,6 +45,10 @@ include ('db/conexion.php');
 						<button type="submit" class="login100-form-btn">
 							Entrar
 						</button>
+						
+						 
+
+
 					</div>
 					</form>
 					<?php
