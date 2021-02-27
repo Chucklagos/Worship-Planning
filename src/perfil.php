@@ -58,14 +58,14 @@ if($varsession==null || $varsession== ''){
                     </a>
                 </div>
                 <ul class="nav">
-                    
+
                     <li class="nav-item active">
                         <a class="nav-link" href="perfil.html">
                             <i class="nc-icon nc-circle-09"></i>
                             <p>Perfil</p>
                         </a>
                     </li>
-    
+
                 </ul>
             </div>
         </div>
@@ -81,7 +81,7 @@ if($varsession==null || $varsession== ''){
                     </button>
                     <div class="collapse navbar-collapse justify-content-end" id="navigation">
                         <ul class="nav navbar-nav mr-auto">
-          
+
                         </ul>
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
@@ -103,7 +103,7 @@ if($varsession==null || $varsession== ''){
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="cerrar_Session.php">
+                                <a class="nav-link" href="cerrar_session.php">
                                     <span class="no-icon">Cerrar Sesión</span>
                                 </a>
                             </li>
@@ -130,7 +130,7 @@ if($varsession==null || $varsession== ''){
                                                 </div>
                                             </div>
 
-                                            
+
                                             <div class="col-md-4 pl-1">
                                                 <div class="form-group">
                                                     <label for="exampleInputEmail1"  >Correo electronico</label>
@@ -151,9 +151,9 @@ if($varsession==null || $varsession== ''){
                                                 </div>
                                             </div>
                                             -->
-                                            
 
-                                            
+
+
                                         </div>
                                         <div class="row">
                                             <div class="col-md-3 pr-1">
@@ -190,7 +190,7 @@ if($varsession==null || $varsession== ''){
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="row">
                                             <div class="col-md-3 pr-1">
                                                 <div class="form-group">
@@ -225,19 +225,19 @@ if($varsession==null || $varsession== ''){
                                                 </div>
                                             </div>
                                             -->
-                                            
+
 
                                         </div>
-                                        
+
                                         <div class="row">
                                             <div class="col-md-4 pr-1">
                                                 <div class="form-group">
-                                                    
+
                                                 </div>
                                             </div>
                                             <div class="col-md-4 px-1">
                                                 <div class="form-group">
-                                                    
+
                                                 </div>
                                         </div>
 
@@ -257,9 +257,9 @@ if($varsession==null || $varsession== ''){
                                                     <div class="clearfix"></div>
                                                 </div>
                                             </div>
-                                         -->   
-                                       
-                                        
+                                         -->
+
+
                                     </form>
                                 </div>
                             </div>
@@ -306,7 +306,7 @@ if($varsession==null || $varsession== ''){
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
     <!--   -->

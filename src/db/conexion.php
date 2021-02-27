@@ -5,7 +5,7 @@ $conexion = mysqli_connect(
   'localhost',
   'iglesia',
   'iglesia',
-  'Church'
+  'church'
 );
 
 if ($conexion) {
