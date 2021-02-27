@@ -27,8 +27,7 @@ if ($filas>0) {
 }
    else {
     echo "Error en la autentificación";
-    header("location:login.php");   
+    header("location:login.php");
   }
 mysqli_free_result($resultado);
 mysqli_close($conexion);
-
