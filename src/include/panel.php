@@ -12,12 +12,12 @@
                 </div>
                 <ul class="nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="">
+                        <a class="nav-link" href="perfil.php">
                             <p>Información Personal</p>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="">
+                        <a class="nav-link" href="tesoreria.php">
                             <p>Tesoreria</p>
                         </a>
                     </li>

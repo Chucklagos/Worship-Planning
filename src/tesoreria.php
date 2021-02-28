@@ -33,18 +33,18 @@
 													<h2> <b></b></h2>
 												</div>
 												<div class="col-sm-6">
-													<a href="#agregarModal"  data-toggle="modal"> 
-													<button type="button" name="agregarRegistro" class="btn btn-primary btn-fill pull-right">Agregar</button>
+													<a href="#agregarModal"  data-toggle="modal">
+													<button type="button" name="agregarRegistro" style="margin:5px" class="btn btn-primary btn-fill pull-right">Agregar</button>
 													</a>
-													
-													<a href="#eliminarModal"  data-toggle="modal"> 
-													<button type="button" name="eliminarRegistro" class="btn btn-primary btn-fill pull-right">Eliminar</button>
-													</a>			
-													
-													
-													<a href="#reporteModal"  data-toggle="modal"> 
-													<button type="button" name="reporteRegistro" class="btn btn-primary btn-fill pull-right">Ver Reporte</button>
-													</a>	
+
+													<a href="#eliminarModal"  data-toggle="modal">
+													<button type="button" name="eliminarRegistro" style="margin:5px" class="btn btn-primary btn-fill pull-right">Eliminar</button>
+													</a>
+
+
+													<a href="#reporteModal"  data-toggle="modal">
+													<button type="button" name="reporteRegistro" style="margin:5px" class="btn btn-primary btn-fill pull-right">Ver Reporte</button>
+													</a>
 												</div>
 											</div>
 										</div>
@@ -78,36 +78,36 @@
 											<td>L.500</td>
 											<td>
 												<!-- Boton editar
-												
+
 												<a href="#editarModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 												-->
 
 
 												<a href="#eliminarModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-											
+
 											</td>
-											</tr> 
+											</tr>
 											</tbody>
 											</table>
 									</div>
-								</div>        
+								</div>
 </div>
 <!-- AGREGAR REGISTRO MODAL  -->
 <div id="agregarModal" class="modal fade">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<form>
-				<div class="modal-header">						
+			<form action="validarTesoreria.php">
+				<div class="modal-header">
 					<h4 class="modal-title">Agregar Registro</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				</div>
-				<div class="modal-body">					
+				<div class="modal-body">
 					<div class="form-group">
 						<label>Tipo</label>
-						<select class="form-control" name="Tipo">
+						<select class="form-control" name="tipoMovimiento">
                             <option value="ingreso">Ingreso</option>
                             <option value="wgreso">Egreso</option>
-                        </select>	
+                        </select>
 					</div>
 					<div class="form-group">
 						<label>Fecha</label>
@@ -115,16 +115,17 @@
 					</div>
 					<div class="form-group">
 						<label>Concepto</label>
-						<textarea class="form-control" required></textarea>
+            <input type="text" class="form-control" name="concepto" required>
+						<!--textarea class="form-control" required></textarea-->
 					</div>
 					<div class="form-group">
 						<label>Monto</label>
 						<input type="text" class="form-control" placeholder="L." required>
-					</div>					
+					</div>
 				</div>
 				<div class="modal-footer">
 					<input type="button" class="btn btn btn-dark" data-dismiss="modal" value="Cancel">
-					<input type="button" class="btn btn-primary" value="Add">
+					<input type="submit" class="btn btn-primary" value="Redistrar">
 				</div>
 			</form>
 		</div>
@@ -135,17 +136,17 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<form>
-				<div class="modal-header">						
+				<div class="modal-header">
 					<h4 class="modal-title">Editar Registro</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				</div>
-				<div class="modal-body">					
+				<div class="modal-body">
 					<div class="form-group">
 					<label>Tipo</label>
 						<select class="form-control" name="Tipo">
                             <option value="ingreso">Ingreso</option>
                             <option value="wgreso">Egreso</option>
-                        </select>	
+                        </select>
 					</div>
 					<div class="form-group">
 					<label>Fecha</label>
@@ -157,11 +158,11 @@
 					</div>
 					<div class="form-group">
 						<label>Monto</label>
-						
+
 						<input type="number" min="0" max="10000" step="1" name="Broker_Fees" id="broker_fees" required="required">
-					</div>	
-					
-				
+					</div>
+
+
 				</div>
 				<div class="modal-footer">
 					<input type="button" class="btn btn btn-dark" data-dismiss="modal" value="Cancel">
@@ -176,11 +177,11 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<form>
-				<div class="modal-header">						
+				<div class="modal-header">
 					<h4 class="modal-title">Eliminar Registro</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				</div>
-				<div class="modal-body">					
+				<div class="modal-body">
 					<h5>¿Está seguro de que desea eliminar estos registros?</h5>
 					<p><h6 class="text-primary">Esta acción no se puede deshacer.</h6></p>
 				</div>
@@ -199,11 +200,11 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<form>
-				<div class="modal-header">						
+				<div class="modal-header">
 					<h4 class="modal-title">Reporte</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				</div>
-				
+
                             <div class="card strpied-tabled-with-hover">
                                 <div class="card-header ">
                                     <h4 class="card-title"></h4>
