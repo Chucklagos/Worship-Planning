@@ -96,7 +96,7 @@
 <div id="agregarModal" class="modal fade">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<form action="validarTesoreria.php">
+			<form action="validarTesoreria.php" method="post">
 				<div class="modal-header">
 					<h4 class="modal-title">Agregar Registro</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -106,7 +106,7 @@
 						<label>Tipo</label>
 						<select class="form-control" name="tipoMovimiento">
                             <option value="ingreso">Ingreso</option>
-                            <option value="wgreso">Egreso</option>
+                            <option value="egreso">Egreso</option>
                         </select>
 					</div>
 					<div class="form-group">
@@ -120,12 +120,12 @@
 					</div>
 					<div class="form-group">
 						<label>Monto</label>
-						<input type="text" class="form-control" placeholder="L." required>
+						<input type="text" class="form-control" placeholder="L." name="monto" required>
 					</div>
 				</div>
 				<div class="modal-footer">
 					<input type="button" class="btn btn btn-dark" data-dismiss="modal" value="Cancel">
-					<input type="submit" class="btn btn-primary" value="Redistrar">
+					<input type="submit" class="btn btn-primary" value="Agregar">
 				</div>
 			</form>
 		</div>
