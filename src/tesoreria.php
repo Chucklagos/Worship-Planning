@@ -1,4 +1,7 @@
-<?php session_start();?>
+<?php
+  include 'db/conexion.php';
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,16 +69,15 @@
 											</thead>
 											<tbody>
 												<tr>
-												<td>
-											<span class="custom-checkbox">
-												<input type="checkbox" id="checkbox1" name="options[]" value="1">
-												<label for="checkbox1"></label>
-											</span>
-											</td>
-											<td>Entrada</td>
-											<td>24/02/2021</td>
-											<td>Ofrenda</td>
-											<td>L.500</td>
+                      <?php
+                        $query = "SELECT fecha, concepto, monto, tipoMovimiento FROM movimiento ORDER BY idMovimiento DESC";
+                        $result_tasks = mysqli_query($conn, $query);
+
+                        while($row = mysqli_fetch_assoc($result_tasks)) { ?>
+											<td><?php echo $row['fecha']; ?></td>
+											<td><?php echo $row['concepto']; ?></td>
+											<td><?php echo $row['monto']; ?></td>
+											<td><?php echo $row['tipoMovimiento']; ?></td>
 											<td>
 												<!-- Boton editar
 
@@ -87,6 +89,7 @@
 
 											</td>
 											</tr>
+                    <?php } ?>
 											</tbody>
 											</table>
 									</div>
