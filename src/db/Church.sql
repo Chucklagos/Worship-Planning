@@ -1,4 +1,4 @@
--- Church.usuario definition
+-- church.usuario definition
 
 CREATE TABLE `usuario` (
   `idUsuario` varchar(13) NOT NULL,
@@ -16,27 +16,16 @@ CREATE TABLE `usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
--- Church.tesoreria definition
-
-CREATE TABLE `tesoreria` (
-  `idTesoreria` int(11) NOT NULL,
-  `idUsuario` varchar(13) NOT NULL,
-  PRIMARY KEY (`idTesoreria`),
-  KEY `idUsuario` (`idUsuario`),
-  CONSTRAINT `tesoreria_ibfk_1` FOREIGN KEY (`idUsuario`) REFERENCES `usuario` (`idUsuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-
--- Church.movimiento definition
+-- church.movimiento definition
 
 CREATE TABLE `movimiento` (
-  `idMovimiento` int(11) NOT NULL,
+  `idMovimiento` int(11) NOT NULL AUTO_INCREMENT,
   `fecha` date DEFAULT NULL,
   `concepto` varchar(45) DEFAULT NULL,
   `monto` float DEFAULT NULL,
   `tipoMovimiento` varchar(7) DEFAULT NULL,
-  `idTesoreria` int(11) DEFAULT NULL,
+  `idUsuario` varchar(13) DEFAULT NULL,
   PRIMARY KEY (`idMovimiento`),
-  KEY `idTesoreria` (`idTesoreria`),
-  CONSTRAINT `movimiento_ibfk_1` FOREIGN KEY (`idTesoreria`) REFERENCES `tesoreria` (`idTesoreria`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  KEY `idUsuario` (`idUsuario`),
+  CONSTRAINT `movimiento_ibfk_1` FOREIGN KEY (`idUsuario`) REFERENCES `usuario` (`idUsuario`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
