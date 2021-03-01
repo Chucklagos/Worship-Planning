@@ -65,7 +65,7 @@
 											<tbody>
 												<tr>
                       <?php
-                        $query = "SELECT fecha, concepto, monto, tipoMovimiento FROM movimiento ORDER BY idMovimiento DESC";
+                        $query = "SELECT idMovimiento, fecha, concepto, monto, tipoMovimiento FROM movimiento ORDER BY idMovimiento DESC";
                         $result_tasks = mysqli_query($conexion, $query);
 
                         while($row = mysqli_fetch_assoc($result_tasks)) { ?>
@@ -78,7 +78,7 @@
 
 												<a href="#editarModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 												-->
-                        <a href="borrarTesoreria.php?idMovimiento=<?php echo $row['idMovimiento']?>">Borrar</a>
+                        <a href="borrarTesoreria.php?idMovimiento=<?php echo $row['idMovimiento']?>"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                       <!--a href="#eliminarModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a-->
 
 											</td>
