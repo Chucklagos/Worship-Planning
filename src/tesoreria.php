@@ -54,16 +54,11 @@
 											<table class="table table-striped table-hover">
 											<thead>
 											<tr>
-												<th>
-													<span class="custom-checkbox">
-														<input type="checkbox" id="selectAll">
-														<label for="selectAll"></label>
-													</span>
-												</th>
-												<th>Tipo</th>
+
 												<th>Fecha</th>
 												<th>Concepto</th>
 												<th>Monto</th>
+												<th>Tipo</th>
 												<th>Acción</th>
 											</tr>
 											</thead>
@@ -83,9 +78,8 @@
 
 												<a href="#editarModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 												-->
-
-
-												<a href="#eliminarModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                        <a href="borrarTesoreria.php?idMovimiento=<?php echo $row['idMovimiento']?>">Borrar</a>
+                      <!--a href="#eliminarModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a-->
 
 											</td>
 											</tr>
@@ -108,8 +102,8 @@
 					<div class="form-group">
 						<label>Tipo</label>
 						<select class="form-control" name="tipoMovimiento">
-                            <option value="ingreso">Ingreso</option>
-                            <option value="egreso">Egreso</option>
+                            <option value="Ingreso">Ingreso</option>
+                            <option value="Egreso">Egreso</option>
                         </select>
 					</div>
 					<div class="form-group">

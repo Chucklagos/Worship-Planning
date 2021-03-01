@@ -42,12 +42,9 @@ include ('db/conexion.php');
 
 					<div class="container-login100-form-btn">
 
-						<button type="submit" class="login100-form-btn">
+						<button type="submit" class="login100-form-btn" onclick="ventana()">
 							Entrar
 						</button>
-
-
-
 
 					</div>
 					</form>
