@@ -46,11 +46,6 @@
                             <p>Documentos</p>
                         </a>
                     </li>
-                    <li>
-                        <a class="nav-link" href="tesoreria.php">
-                            <p>Tesoreria</p>
-                        </a>
-                    </li>
                 </ul>
 
 
