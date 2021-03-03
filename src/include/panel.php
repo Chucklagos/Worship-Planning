@@ -21,6 +21,36 @@
                             <p>Tesoreria</p>
                         </a>
                     </li>
+                    <li>
+                        <a class="nav-link" href="#">
+                            <p>Inventario</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">
+                            <p>Membresía</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">
+                            <p>Eventos</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">
+                            <p>Discipulado</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">
+                            <p>Documentos</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="tesoreria.php">
+                            <p>Tesoreria</p>
+                        </a>
+                    </li>
                 </ul>
 
 
