@@ -1,7 +1,8 @@
 <?php
   include 'db/conexion.php';
-
-if (isset($_POST['registrarse'])) {
+  //echo $identidad;
+  //echo var_dump($_POST['identidad']);
+  echo var_dump($_REQUEST['data']);
   $identidad = $_POST['identidad'];
   $email = $_POST['email'];
   $contrasena = $_POST['contrasena'];
@@ -20,7 +21,7 @@ if (isset($_POST['registrarse'])) {
   if(!$resultado) {
     die("Query Failed.");
   }
-}
 
-header('location: registrarse.php');
+
+
  ?>
