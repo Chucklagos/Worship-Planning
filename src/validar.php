@@ -26,8 +26,14 @@ if ($filas>0) {
     header("location:perfil.php");
 }
    else {
-    echo "Error en la autentificación";
-    header("location:login.php");
+    ?>
+    <?php
+    include('login.php')
+    ?>
+    <script src="ventana.js"></script>
+    
+    <?php
+    //header("location:login.php");   
   }
 mysqli_free_result($resultado);
 mysqli_close($conexion);

@@ -1,4 +1,4 @@
-<?php session_start();
+<?php //session_start();
 include ('db/conexion.php');
 ?>
 
@@ -14,6 +14,7 @@ include ('db/conexion.php');
 	<link rel="stylesheet" type="text/css" href="../assets/css/util.css">
 	<link rel="stylesheet" type="text/css" href="../assets/css/main.css">
 	<link rel="stylesheet" type="text/css" href="../assets/fonts/material-design-iconic-font.min.css">
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
 <body>
 	<div class="limiter">
