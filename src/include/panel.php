@@ -11,7 +11,7 @@
                     </a>
                 </div>
                 <ul class="nav">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="perfil.php">
                             <p>Información Personal</p>
                         </a>
