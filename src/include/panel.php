@@ -12,37 +12,45 @@
                 </div>
                 <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="perfil.php">
-                            <p>Información Personal</p>
+                        <a class="nav-link" href="perfil.php" >
+                        <i class="nc-icon nc-circle-09"></i>
+                            <p>Perfil</p>
                         </a>
                     </li>
                     <li>
                         <a class="nav-link" href="tesoreria.php">
+                        <i class="nc-icon nc-money-coins"></i>
                             <p>Tesoreria</p>
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="inventario.php">
+                        <i class="nc-icon nc-notes"></i>
                             <p>Inventario</p>
                         </a>
                     </li>
                     <li>
                         <a class="nav-link" href="#">
+                        <i class="nc-icon nc-badge"></i>
                             <p>Membresía</p>
                         </a>
                     </li>
                     <li>
                         <a class="nav-link" href="#">
+                        <i class="nc-icon nc-bell-55"></i>
                             <p>Eventos</p>
                         </a>
                     </li>
                     <li>
                         <a class="nav-link" href="#">
+                        <i class="nc-icon nc-layers-3"></i>
                             <p>Discipulado</p>
                         </a>
                     </li>
                     <li>
                         <a class="nav-link" href="#">
+                        <i class="nc-icon nc-paper-2"></i>
+                        
                             <p>Documentos</p>
                         </a>
                     </li>
