@@ -21,7 +21,7 @@
   if(!$resultado) {
     die("Query Failed.");
   }
-
-
+  
+ 
 
  ?>
