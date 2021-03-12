@@ -22,11 +22,6 @@
 
                         </ul>
                         <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#pablo">
-                                    <span class="no-icon"></span>
-                                </a>
-                            </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <span class="no-icon"></span>
@@ -72,7 +67,9 @@
                                                             <div class="card-body">
                                                                 <h6 class="card-title">Inventario General</h6>
                                                                 <br>
-                                                                <a href="invGeneral.php" class="btn btn-info btn-fill pull-right">Ver inventario</a>
+                                                                <p align="right">
+                                                                    <a href="invGeneral.php" class="btn btn-outline-primary">Ver inventario</a>
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -84,7 +81,9 @@
                                                             <div class="card-body">
                                                                 <h6 class="card-title">Ministerio de Alabanza</h6>
                                                                 <br>
-                                                                <a href="invAlabanza.php" class="btn btn-info btn-fill pull-right">Ver inventario</a>
+                                                                <p align="right">
+                                                                    <a href="invAlabanza.php" class="btn btn-outline-primary">Ver inventario</a>
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -95,7 +94,9 @@
                                                             <div class="card-body">
                                                                 <h6 class="card-title">Ministerio infantil</h6>
                                                                 <br>
-                                                                <a href="invInfantil.php" class="btn btn-info btn-fill pull-right">Ver inventario</a>
+                                                                <p align="right">
+                                                                    <a href="invInfantil.php" class="btn btn-outline-primary">Ver inventario</a>
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -107,7 +108,9 @@
                                                             <div class="card-body">
                                                                 <h6 class="card-title">Ministerio de Jóvenes</h6>
                                                                 <br>
-                                                                <a href="invJovenes.php" class="btn btn-info btn-fill pull-right">Ver inventario</a>
+                                                                <p align="right">
+                                                                    <a href="invJovenes.php" class="btn btn-outline-primary">Ver inventario</a>
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -118,7 +121,9 @@
                                                             <div class="card-body">
                                                                 <h6 class="card-title">Ministerio de Damas</h6>
                                                                 <br>
-                                                                <a href="invDamas.php" class="btn btn-info btn-fill pull-right">Ver inventario</a>
+                                                                <p align="right">
+                                                                    <a href="invDamas.php" class="btn btn-outline-primary">Ver inventario</a>
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -129,7 +134,9 @@
                                                             <div class="card-body">
                                                                 <h6 class="card-title">Ministerio de Caballeros</h6>
                                                                 <br>
-                                                                <a href="invCaballeros.php" class="btn btn-info btn-fill pull-right">Ver inventario</a>
+                                                                <p align="right">
+                                                                    <a href="invCaballeros.php" class="btn btn-outline-primary">Ver inventario</a>
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -140,7 +147,9 @@
                                                             <div class="card-body">
                                                                 <h6 class="card-title">Ministerio de Danza</h6>
                                                                 <br>
-                                                                <a href="invDanza.php" class="btn btn-info btn-fill pull-right">Ver inventario</a>
+                                                                <p align="right">
+                                                                    <a href="invDanza.php" class="btn btn-outline-primary">Ver inventario</a>
+                                                                </p>
                                                             </div>
                                                         </div>
                                                     </div>

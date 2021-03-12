@@ -24,7 +24,7 @@
                             <div class="card">
 								<br>
                                 <div class="container-xl">
-								<div class="table-responsive">
+								
 									<div class="table-wrapper">
 										<div class="table-title">
 											<div class="row">
@@ -54,16 +54,21 @@
 										<table class="table table-striped table-hover">
 											<thead>
 											<tr>
-									
+												<th></th> <!--ESTA COLUMNA SOLO SIRVE COMO ESPACIO NO UTILIZAR-->
+
 												<th>ID</th>
 												<th>Cantidad</th>
 												<th>Descripción</th>
 												<th>Ministerio</th>
 												<th>Acción</th>
+
+												
+
 											</tr>
 											</thead>
 											<tbody>
-											
+												<td></td><!--ESTA FILA SOLO SIRVE COMO ESPACIO NO UTILIZAR-->
+
 												<td></td>
 												<td></td>
 												<td></td>
@@ -72,11 +77,21 @@
 													<a href="#editarModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 													<a href="#eliminarModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 												</td>
+
+												 
+												
 											
 											</tbody>
 										</table>
+										<br>
+												<div class="col-12">
+													<a href="inventario.php" class="btn btn-outline-primary" role="button">Regresar</a>
+													<br>
+													<br>
+												</div>
+												<br>
 									</div>
-								</div>
+								
 </div>
 
 <!-- EDITAR REGISTRO MODAL -->

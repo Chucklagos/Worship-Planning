@@ -61,7 +61,7 @@
                             <div class="card">
 								<br>
                                 <div class="container-xl">
-								<div class="table-responsive">
+								
 									<div class="table-wrapper">
 										<div class="table-title">
 											<div class="row">
@@ -73,11 +73,7 @@
 													<button type="button" name="agregarRegistro" style="margin:5px" class="btn btn-primary btn-fill pull-right">Agregar</button>
 													</a>
 
-													<a href="#eliminarModal"  data-toggle="modal">
-													<button type="button" name="eliminarRegistro" style="margin:5px" class="btn btn-primary btn-fill pull-right">Eliminar</button>
-													</a>
-
-
+													
 													<a href="#reporteModal"  data-toggle="modal">
 													<button type="button" name="reporteRegistro" style="margin:5px" class="btn btn-primary btn-fill pull-right">Ver Reporte</button>
 													</a>
@@ -90,6 +86,8 @@
 											<thead>
 											<tr>
 
+												
+												
 												<th>Fecha</th>
 												<th>Concepto</th>
 												<th>Monto</th>
@@ -98,6 +96,7 @@
 											</tr>
 											</thead>
 											<tbody>
+												
 												<tr>
                       <?php
                         $query = "SELECT idMovimiento, fecha, concepto, monto, tipoMovimiento FROM movimiento ORDER BY idMovimiento DESC";
@@ -119,7 +118,8 @@
                     <?php } ?>
 											</tbody>
 											</table>
-									</div>
+								<br>
+								<br>
 								</div>
 </div>
 <!-- AGREGAR REGISTRO MODAL  -->
