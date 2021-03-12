@@ -9,13 +9,49 @@
 
 </head>
 <body>
-    <div class="wrapper">
-        <!--sidebar-->
-        <?php include('include/panel.php');?>
+<div class="wrapper">
+        <?php include'include/panel.php'; ?>
         <div class="main-panel">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg " color-on-scroll="500">
+				<div class="container-fluid">
+                    <a class="navbar-brand" href="">  </a>
+                    <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-bar burger-lines"></span>
+                        <span class="navbar-toggler-bar burger-lines"></span>
+                        <span class="navbar-toggler-bar burger-lines"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                        <ul class="nav navbar-nav mr-auto">
 
+                        </ul>
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#pablo">
+                                    <span class="no-icon"></span>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="no-icon"></span>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="perfil.php"></a>
+                                    <a class="dropdown-item" href="#"></a>
+                                    <a class="dropdown-item" href="#"></a>
+                                    <a class="dropdown-item" href="#"></a>
+                                    <div class="divider"></div>
+                                    <a class="dropdown-item" href="#"></a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="cerrar_session.php">
+                                    <span class="no-icon">Cerrar Sesión</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
             <!-- End Navbar -->
             <div class="content">
@@ -23,38 +59,35 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="card">
-
-                                <div class="card-header">
-                                    <h4 class="card-title">Tesoreria</h4>
-                                </div>
+								<br>
                                 <div class="container-xl">
-								<div class="table-responsive">
+								
 									<div class="table-wrapper">
 										<div class="table-title">
 											<div class="row">
 												<div class="col-sm-6">
-													<h2> <b></b></h2>
+													<h2>Tesorería<b></b></h2>
 												</div>
 												<div class="col-sm-6">
 													<a href="#agregarModal"  data-toggle="modal">
 													<button type="button" name="agregarRegistro" style="margin:5px" class="btn btn-primary btn-fill pull-right">Agregar</button>
 													</a>
 
-													<a href="#eliminarModal"  data-toggle="modal">
-													<button type="button" name="eliminarRegistro" style="margin:5px" class="btn btn-primary btn-fill pull-right">Eliminar</button>
-													</a>
-
-
+													
 													<a href="#reporteModal"  data-toggle="modal">
 													<button type="button" name="reporteRegistro" style="margin:5px" class="btn btn-primary btn-fill pull-right">Ver Reporte</button>
 													</a>
 												</div>
 											</div>
 										</div>
+										<hr>
+										<br>
 											<table class="table table-striped table-hover">
 											<thead>
 											<tr>
 
+												
+												
 												<th>Fecha</th>
 												<th>Concepto</th>
 												<th>Monto</th>
@@ -63,6 +96,7 @@
 											</tr>
 											</thead>
 											<tbody>
+												
 												<tr>
                       <?php
                         $query = "SELECT idMovimiento, fecha, concepto, monto, tipoMovimiento FROM movimiento ORDER BY idMovimiento DESC";
@@ -84,7 +118,8 @@
                     <?php } ?>
 											</tbody>
 											</table>
-									</div>
+								<br>
+								<br>
 								</div>
 </div>
 <!-- AGREGAR REGISTRO MODAL  -->

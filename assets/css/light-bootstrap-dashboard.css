@@ -263,6 +263,8 @@ input:focus {
     transition: all 150ms ease-in;
 }
 
+
+
 .btn {
     -webkit-transition: all 100ms ease-in;
     -moz-transition: all 100ms ease-in;

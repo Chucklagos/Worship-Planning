@@ -24,3 +24,7 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 	<link href="assets/css/style.css" rel="stylesheet">
 
+
+<link rel="stylesheet" type="text/css" href="fontawesome/css/all.css">	
+
+
