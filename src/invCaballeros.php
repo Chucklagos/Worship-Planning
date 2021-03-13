@@ -14,7 +14,7 @@
         <div class="main-panel">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg " color-on-scroll="500">
-
+                
             </nav>
             <!-- End Navbar -->
             <div class="content">
@@ -36,54 +36,72 @@
 													<a href="#agregarModal"  data-toggle="modal">
 													<button type="button" name="agregarRegistro" style="margin:5px" class="btn btn-primary btn-fill pull-right">Agregar</button>
 													</a>
+
+												
 												</div>
 												
 											</div>
 										</div>
 										<hr>
 										<br>
-										<table class="table table-striped table-hover">
+										
+										
+										<table class="table table-striped table-hover ">
 											<thead>
 											<tr>
-												<th></th> <!--ESTA COLUMNA SOLO SIRVE COMO ESPACIO NO UTILIZAR-->
-
+                                                
                                                 <th>ID</th>
 												<th>Cantidad</th>
 												<th>Descripción</th>
-												<th>Acción</th>
-
-												
+												<th>Acción</th>	
 											</tr>
 											</thead>
 											<tbody>
 												<td></td><!--ESTA FILA SOLO SIRVE COMO ESPACIO NO UTILIZAR-->
 												
-												<td></td>
-												<td></td>
-												<td></td>
-												<td>
+												<tr>
+                                             <?php
+                                             $query = "SELECT descripcion, cantidad, idMinisterio FROM inventario where idMinisterio=5 ORDER BY idMinisterio DESC";
+                                             $result_tasks = mysqli_query($conexion, $query);
+                                             while($row = mysqli_fetch_assoc($result_tasks)) { ?>
+											 <td><?php echo $row['idMinisterio']; ?></td>
+											 <td><?php echo $row['cantidad']; ?></td>
+											 <td><?php echo $row['descripcion']; ?></td>
+								
+											<td>
 													<a href="#editarModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 													<a href="#eliminarModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 												</td>
-											
+											</tr>
+                                            <?php } ?>
+												<td></td>
+												<td></td>
+												<td></td>
 												
 											</tbody>
 										</table>
-										<br>
+									</div>
+								</div>
+</div>
+												<br>
 												<div class="col-12">
 													<a href="inventario.php" class="btn btn-outline-primary" role="button">Regresar</a>
 													<br>
 													<br>
 												</div>
 												<br>
+
 									</div>
-								
-</div>
+									
+									
+
+												
+									</div>
 <!-- AGREGAR REGISTRO MODAL  -->
 <div id="agregarModal" class="modal fade">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<form action="validarTesoreria.php" method="post">
+			<form action="validarInventarioCaballeros.php" method="post">
 				<div class="modal-header">
 					<h4 class="modal-title">Agregar Registro</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -92,19 +110,19 @@
 
                     <div class="form-group">
 						<label>ID</label>
-                        <input type="text" class="form-control" name="concepto" required>
+                        <input type="text" class="form-control" name="idMinisterio" required>
 						<!--textarea class="form-control" required></textarea-->
 					</div>
 
                     <div class="form-group">
 						<label>Cantidad</label>
-                        <input type="text" class="form-control" name="concepto" required>
+                        <input type="text" class="form-control" name="cantidad" required>
 						<!--textarea class="form-control" required></textarea-->
 					</div>
                     
                     <div class="form-group">
 						<label>Descripción</label>
-                        <input type="text" class="form-control" name="concepto" required>
+                        <input type="text" class="form-control" name="descripcion" required>
 						<!--textarea class="form-control" required></textarea-->
 					</div>
 
@@ -149,10 +167,6 @@
                         <input type="text" class="form-control" name="concepto" required>
 						<!--textarea class="form-control" required></textarea-->
 					</div>
-
-
-					
-
 
 				</div>
 				<div class="modal-footer">
