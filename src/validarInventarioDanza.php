@@ -13,6 +13,6 @@
     die("Query Failed.");
   }
 
-  header('location: invAlabanza.php');
+  header('location: invDanza.php');
 
  ?>
