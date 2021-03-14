@@ -61,7 +61,7 @@
 												
 												<tr>
                                              <?php
-                                             $query = "SELECT descripcion, cantidad, idMinisterio FROM inventario where idMinisterio=2 ORDER BY idMinisterio DESC";
+                                             $query = "SELECT idInventario, descripcion, cantidad, idMinisterio FROM inventario where idMinisterio=2 ORDER BY idMinisterio DESC";
                                              $result_tasks = mysqli_query($conexion, $query);
                                              while($row = mysqli_fetch_assoc($result_tasks)) { ?>
 											 <td><?php echo $row['idMinisterio']; ?></td>
@@ -69,9 +69,8 @@
 											 <td><?php echo $row['descripcion']; ?></td>
 								
 											<td>
-													<a href="#editarModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-													<a href="#eliminarModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-												</td>
+						<a style="margin-right:2px" href="borrarInventarioInfantil.php?idInventario=<?php echo $row['idInventario']?>"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+													
 											</tr>
                                             <?php } ?>
 												<td></td>
@@ -125,8 +124,6 @@
                         <input type="text" class="form-control" name="descripcion" required>
 						<!--textarea class="form-control" required></textarea-->
 					</div>
-
-
 					
 					
 				</div>

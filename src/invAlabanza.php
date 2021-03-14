@@ -58,25 +58,25 @@
 											</thead>
 											<tbody>
 												<td></td><!--ESTA FILA SOLO SIRVE COMO ESPACIO NO UTILIZAR-->
-												
 												<tr>
+												
                                              <?php
-                                             $query = "SELECT descripcion, cantidad, idMinisterio FROM inventario where idMinisterio=1 ORDER BY idMinisterio DESC";
+                                             $query = "SELECT idInventario, descripcion, cantidad, idMinisterio FROM inventario where idMinisterio=1 ORDER BY idMinisterio DESC";
                                              $result_tasks = mysqli_query($conexion, $query);
                                              while($row = mysqli_fetch_assoc($result_tasks)) { ?>
-											 <td><?php echo $row['idMinisterio']; ?></td>
-											 <td><?php echo $row['cantidad']; ?></td>
-											 <td><?php echo $row['descripcion']; ?></td>
-								
+											<td><?php echo $row['idMinisterio']; ?></td>
+											<td><?php echo $row['cantidad']; ?></td>
+											<td><?php echo $row['descripcion']; ?></td>
 											<td>
+							<a style="margin-right:2px" href="borrarInventarioAlabanza.php?idInventario=<?php echo $row['idInventario']?>"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+											
+								
+											<!--<td>
 													<a href="#editarModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 													<a href="#eliminarModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-												</td>
-											</tr>
+											</td>-->
+											 	</tr>
                                             <?php } ?>
-												<td></td>
-												<td></td>
-												<td></td>
 												
 											</tbody>
 										</table>
@@ -138,6 +138,7 @@
 		</div>
 	</div>
 </div>
+
 <!-- EDITAR REGISTRO MODAL -->
 <div id="#editarModal" class="modal fade">
 	<div class="modal-dialog">
@@ -177,6 +178,7 @@
 		</div>
 	</div>
 </div>
+
 <!-- ELIMINAR REGISTRO MODAL -->
 <div id="eliminarModal" class="modal fade">
 	<div class="modal-dialog">
