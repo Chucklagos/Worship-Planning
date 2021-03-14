@@ -100,7 +100,7 @@
 
 												<tr>
                       <?php
-                        $query = "SELECT idMovimiento, fecha, concepto, monto, tipoMovimiento FROM movimiento ORDER BY idMovimiento DESC";
+                        $query = "SELECT idMovimiento, fecha, concepto, monto, tipoMovimiento FROM movimiento ORDER BY fecha DESC";
                         $result_tasks = mysqli_query($conexion, $query);
                         while($row = mysqli_fetch_assoc($result_tasks)) { ?>
 											<td><?php echo $row['fecha']; ?></td>
