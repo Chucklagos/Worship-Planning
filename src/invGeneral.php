@@ -69,17 +69,28 @@
 											<tbody>
 												<td></td><!--ESTA FILA SOLO SIRVE COMO ESPACIO NO UTILIZAR-->
 
-												<td></td>
-												<td></td>
-												<td></td>
-												<td></td>
-												<td>
-													<a href="#editarModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-													<a href="#eliminarModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-												</td>
-
-												 
+												<tr>
 												
+                                             <?php
+                                             $query = "SELECT inventario.idInventario, inventario.descripcion, inventario.cantidad, inventario.idMinisterio, ministerio.nombre FROM inventario INNER JOIN ministerio ON inventario.idMinisterio = ministerio.idMinisterio ORDER BY idMinisterio DESC";
+                                             $result_tasks = mysqli_query($conexion, $query);
+                                             while($row = mysqli_fetch_assoc($result_tasks)) { ?>
+                                             <td></td><!--ESTA FILA SOLO SIRVE COMO ESPACIO NO UTILIZAR-->
+                                             <td><?php echo $row['idInventario']; ?></td>	
+											 <td><?php echo $row['cantidad']; ?></td>
+											 <td><?php echo $row['descripcion']; ?></td>
+											 <td><?php echo $row['nombre']; ?></td>
+											
+											<td>
+							<a style="margin-right:2px" href="borrarInventario.php?idInventario=<?php echo $row['idInventario']?>"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+											
+											</tr>
+                                            <?php } ?>
+
+												<td></td>
+												<td></td>
+												<td></td>
+																							
 											
 											</tbody>
 										</table>
