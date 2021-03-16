@@ -9,7 +9,7 @@ include ('db/conexion.php');
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="icon" type="image/png" href="../assets/icons/favicon.ico"/>
+	<link rel="icon" type="image/png" href="../assets/img/logo-worship-4.png"/>
 	<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../assets/css/util.css">
 	<link rel="stylesheet" type="text/css" href="../assets/css/main.css">
@@ -21,12 +21,12 @@ include ('db/conexion.php');
 		<div class="container-login100" style="background-image: url('../assets/img/imagenLogin.jpg');">
 			<div class="wrap-login100">
 				<div class="login100-form">
-					<span class="login100-form-logo">
-						<img src="../assets/img/logo.png" width="110" height="110">
-					</span>
+					
+						<center><img src="../assets/img/logo-login.png" width="205" height="205"></center>
+					 	
 
 					<span class="login100-form-title p-b-34 p-t-27">
-						Iniciar Sesión
+						<h3>Iniciar Sesión</h3>
 					</span>
 
 					<form action="validar.php" method="post">
