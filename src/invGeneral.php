@@ -24,7 +24,7 @@
                             <div class="card">
 								<br>
                                 <div class="container-xl">
-								
+
 									<div class="table-wrapper">
 										<div class="table-title">
 											<div class="row">
@@ -54,44 +54,38 @@
 										<table class="table table-striped table-hover">
 											<thead>
 											<tr>
-												<th></th> <!--ESTA COLUMNA SOLO SIRVE COMO ESPACIO NO UTILIZAR-->
-
-												<th>ID</th>
 												<th>Cantidad</th>
 												<th>Descripción</th>
 												<th>Ministerio</th>
 												<th>Acción</th>
 
-												
+
 
 											</tr>
 											</thead>
 											<tbody>
-												<td></td><!--ESTA FILA SOLO SIRVE COMO ESPACIO NO UTILIZAR-->
 
 												<tr>
-												
+
                                              <?php
                                              $query = "SELECT inventario.idInventario, inventario.descripcion, inventario.cantidad, inventario.idMinisterio, ministerio.nombre FROM inventario INNER JOIN ministerio ON inventario.idMinisterio = ministerio.idMinisterio ORDER BY idMinisterio DESC";
                                              $result_tasks = mysqli_query($conexion, $query);
                                              while($row = mysqli_fetch_assoc($result_tasks)) { ?>
-                                             <td></td><!--ESTA FILA SOLO SIRVE COMO ESPACIO NO UTILIZAR-->
-                                             <td><?php echo $row['idInventario']; ?></td>	
 											 <td><?php echo $row['cantidad']; ?></td>
 											 <td><?php echo $row['descripcion']; ?></td>
 											 <td><?php echo $row['nombre']; ?></td>
-											
+
 											<td>
 							<a style="margin-right:2px" href="borrarInventario.php?idInventario=<?php echo $row['idInventario']?>"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-											
+
 											</tr>
                                             <?php } ?>
 
 												<td></td>
 												<td></td>
 												<td></td>
-																							
-											
+
+
 											</tbody>
 										</table>
 										<br>
@@ -102,7 +96,7 @@
 												</div>
 												<br>
 									</div>
-								
+
 </div>
 
 <!-- EDITAR REGISTRO MODAL -->
