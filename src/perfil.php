@@ -1,41 +1,23 @@
-<!--
-=========================================================
- Light Bootstrap Dashboard - v2.0.1
-=========================================================
-
- Product Page: https://www.creative-tim.com/product/light-bootstrap-dashboard
- Copyright 2019 Creative Tim (https://www.creative-tim.com)
- Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard/blob/master/LICENSE)
-
- Coded by Creative Tim
-
-=========================================================
-
- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  -->
 <?php
 session_start();
 $varsession=$_SESSION['email'];
 if($varsession==null || $varsession== ''){
    echo 'Usted no tiene autorizacion para ver los datos de este usuario';
    die();
-
 }
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <?php include 'include/head.php'; ?>
 </head>
-
 <body>
     <div class="wrapper">
         <?php include 'include/panel.php'; ?>
         <div class="main-panel">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg " color-on-scroll="500">
+              <h5 class="card-title">Bienvenido(a):<?php echo $_SESSION['primerNombre'];?></h5>
                 <div class="container-fluid">
                     <a class="navbar-brand" href="">  </a>
                     <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
@@ -122,7 +104,7 @@ if($varsession==null || $varsession== ''){
                                         <div class="row">
                                             <div class="col-md-3 pr-1">
                                                 <div class="form-group">
-                                                    <label >Primer Nombre</label>
+                                                    <label>Primer Nombre</label>
                                                     <input type="text" class="form-control" placeholder="" value="<?php echo $_SESSION['primerNombre'] ?>" disabled="">
                                                 </div>
                                             </div>
