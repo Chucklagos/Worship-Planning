@@ -1,3 +1,12 @@
+-- church.ministerio definition
+
+CREATE TABLE `ministerio` (
+  `idMinisterio` int(11) NOT NULL,
+  `nombre` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`idMinisterio`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
 -- church.usuario definition
 
 CREATE TABLE `usuario` (
@@ -16,6 +25,22 @@ CREATE TABLE `usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
+-- church.inventario definition
+
+CREATE TABLE `inventario` (
+  `idInventario` int(11) NOT NULL AUTO_INCREMENT,
+  `descripcion` varchar(150) NOT NULL,
+  `cantidad` int(11) NOT NULL,
+  `idMinisterio` int(11) NOT NULL,
+  `idUsuario` varchar(13) DEFAULT NULL,
+  PRIMARY KEY (`idInventario`),
+  KEY `idMinisterio` (`idMinisterio`),
+  KEY `idUsuario` (`idUsuario`),
+  CONSTRAINT `inventario_ibfk_1` FOREIGN KEY (`idMinisterio`) REFERENCES `ministerio` (`idMinisterio`),
+  CONSTRAINT `inventario_ibfk_2` FOREIGN KEY (`idUsuario`) REFERENCES `usuario` (`idUsuario`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
 -- church.movimiento definition
 
 CREATE TABLE `movimiento` (
@@ -28,4 +53,4 @@ CREATE TABLE `movimiento` (
   PRIMARY KEY (`idMovimiento`),
   KEY `idUsuario` (`idUsuario`),
   CONSTRAINT `movimiento_ibfk_1` FOREIGN KEY (`idUsuario`) REFERENCES `usuario` (`idUsuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4;
