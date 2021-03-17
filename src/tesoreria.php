@@ -61,7 +61,7 @@
                             <div class="card">
 								<br>
                                 <div class="container-xl">
-								
+
 									<div class="table-wrapper">
 										<div class="table-title">
 											<div class="row">
@@ -73,9 +73,10 @@
 													<button type="button" name="agregarRegistro" style="margin:5px" class="btn btn-primary btn-fill pull-right">Agregar</button>
 													</a>
 
-													
+
 													<a href="#reporteModal"  data-toggle="modal">
-													<button type="button" name="reporteRegistro" style="margin:5px" class="btn btn-primary btn-fill pull-right">Ver Reporte</button>
+                          <a href="hojaReporte.php" style="margin:5px" class="btn btn-primary btn-fill pull-right" target="_blank">Ver Reporte</a>
+													<!--button type="button" name="reporteRegistro" style="margin:5px" class="btn btn-primary btn-fill pull-right">Ver Reporte</button-->
 													</a>
 												</div>
 											</div>
@@ -86,8 +87,8 @@
 											<thead>
 											<tr>
 
-												
-												
+
+
 												<th>Fecha</th>
 												<th>Concepto</th>
 												<th>Monto</th>
@@ -96,10 +97,10 @@
 											</tr>
 											</thead>
 											<tbody>
-												
+
 												<tr>
                       <?php
-                        $query = "SELECT idMovimiento, fecha, concepto, monto, tipoMovimiento FROM movimiento ORDER BY idMovimiento DESC";
+                        $query = "SELECT idMovimiento, fecha, concepto, monto, tipoMovimiento FROM movimiento ORDER BY fecha DESC";
                         $result_tasks = mysqli_query($conexion, $query);
                         while($row = mysqli_fetch_assoc($result_tasks)) { ?>
 											<td><?php echo $row['fecha']; ?></td>

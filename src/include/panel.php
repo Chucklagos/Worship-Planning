@@ -30,7 +30,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="membresia.php">
                         <i class="nc-icon nc-badge"></i>
                             <p>Membresía</p>
                         </a>

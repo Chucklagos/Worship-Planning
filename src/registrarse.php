@@ -154,8 +154,7 @@ $('#enviarForm').submit(function (ef) {
     ef.preventDefault();
 });
 $('#enviarForm').reset(); 
-<?php
-?>
+
 </script>
    
 
