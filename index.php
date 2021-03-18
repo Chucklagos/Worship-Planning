@@ -76,11 +76,11 @@ if(isset($_POST['Submit'])){
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-  
+
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
-  
+
   <link href="assets/css/style.css" rel="stylesheet">
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
@@ -94,7 +94,7 @@ if(isset($_POST['Submit'])){
 
       <div class="logo mr-auto">
         <h1 class="text-light"><a href="index.html"><span>Worship Planning</span></a></h1>
-        
+
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
@@ -153,16 +153,16 @@ if(isset($_POST['Submit'])){
 
         <div class="row">
           <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
-            
+
           </div>
 
           <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">
             <h3>Funciones</h3>
             <p>
-              Es una herramientas fácil de usar y sus funcionalidades spn intuitiva, agiliza el 
-              trabajo de organización, tesoreria,discipulado planificación y programación de 
-              su próximo servicio, evento etc.
-   
+              Es una herramientas fácil de usar y sus funcionalidades son intuitiva, agiliza el
+              trabajo de organización, tesoreria,discipulado planificación y programación de
+              su próximo servicio, evento, etc.
+
             </p>
 
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
@@ -196,7 +196,7 @@ if(isset($_POST['Submit'])){
 
       </div>
     </section><!-- End About Section -->
-     
+
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
@@ -249,11 +249,11 @@ if(isset($_POST['Submit'])){
                 <div class="validate"></div>
               </div>
 
-              
+
               <div class="g-recaptcha" data-sitekey="6LfFbX0aAAAAAAw02oZQLIK5Ug6oCsh3OTJ8X8MH"></div>
-    
-              
-              <div class="text-center"><button type="submit" name='Submit'>Enviar Mensaje</button></div>
+
+
+              <div class="text-center"><button type="submit" class="btn btn-outline-primary" name='Submit'>Enviar Mensaje</button></div>
               </div>
               <div  id="error"><?php echo $successMsg ?><?php echo $error ?><?php echo $captchaFail ?></div>
 
@@ -280,7 +280,7 @@ if(isset($_POST['Submit'])){
               <li><i class="bx bx-chevron-right"></i> <a href="index.html">Inicio</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="src/registrarse.php">Registrarase</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="src/login.php">Iniciar Sesión</a></li>
-             
+
             </ul>
           </div>
 
@@ -288,15 +288,15 @@ if(isset($_POST['Submit'])){
       </div>
     </div>
 
-    
+
   </footer><!-- End Footer -->
 
-  
+
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
- 
+
   <script src="assets/vendor/venobox/venobox.min.js"></script>
   <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
   <script src="assets/vendor/counterup/counterup.min.js"></script>
