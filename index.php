@@ -250,7 +250,7 @@ if(isset($_POST['Submit'])){
               </div>
 
 
-              <div class="g-recaptcha" data-sitekey="6LfFbX0aAAAAAAw02oZQLIK5Ug6oCsh3OTJ8X8MH"></div>
+              <div class="g-recaptcha" data-sitekey="6LfFbX0aAAAAAAw02oZQLIK5Ug6oCsh3OTJ8X8MH"></div><hr>
 
 
               <div class="text-center"><button type="submit" class="btn btn-outline-primary" name='Submit'>Enviar Mensaje</button></div>
@@ -278,7 +278,7 @@ if(isset($_POST['Submit'])){
             <h4>Enlaces útiles</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="index.html">Inicio</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="src/registrarse.php">Registrarase</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="src/registrarse.php">Registrarse</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="src/login.php">Iniciar Sesión</a></li>
 
             </ul>
