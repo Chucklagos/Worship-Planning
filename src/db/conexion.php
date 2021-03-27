@@ -2,10 +2,10 @@
 //session_start();
 
 $conexion = mysqli_connect(
-  'localhost',
-  'iglesia',
-  'iglesia',
-  'church'
+  'vkh7buea61avxg07.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+  'drb6g4wswu2bfhgw',
+  'h9dhysdg8hz6yygr',
+  'asx4muqaxno0bdu3'
 );
 
 if ($conexion) {
