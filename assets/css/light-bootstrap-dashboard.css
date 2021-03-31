@@ -2294,7 +2294,7 @@ fieldset[disabled] .form-control {
 }
 
 .footer {
-    background-color: #FFFFFF;
+    background-color: transparent;
 }
 
 .footer .footer-menu {
@@ -2309,7 +2309,7 @@ fieldset[disabled] .form-control {
 }
 
 .footer nav>ul a:not(.btn) {
-    color: #9A9A9A;
+    color: #9a9a9a;
     display: block;
     margin-bottom: 3px;
 }
