@@ -66,7 +66,7 @@ if(isset($_POST['Submit'])){
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link type="image/png" href="assets/img/logo-login.png" rel="icon">
+  <link type="image/png" href="assets/img/logo-favicon.png" rel="icon">
   
 
   <!-- Google Fonts -->
@@ -91,7 +91,7 @@ if(isset($_POST['Submit'])){
 
       <div class="logo mr-auto">
       
-        <h1 class="text-light"><a href="index.html"> 
+        <h1 class="text-light"><a href="index.php"> 
           <img src="assets/img/logo-login.png" class="img-fluid animated" alt="" width="40" height="1000">
         <span>Worship Planning</span></a></h1>
 
