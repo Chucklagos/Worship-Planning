@@ -9,7 +9,7 @@ include ('db/conexion.php');
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="icon" type="image/png" href="../assets/img/logo-worship-4.png"/>
+	<link rel="icon" type="image/png" href="../assets/img/logo-login.png"/>
 	<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../assets/css/util.css">
 	<link rel="stylesheet" type="text/css" href="../assets/css/main.css">

@@ -25,6 +25,6 @@
 	<link href="assets/css/style.css" rel="stylesheet">
 
 
-	<link rel="shortcut icon" type="image/png" href="../assets/img/logo-favicon.png"/>
+	<link rel="shortcut icon" type="image/png" href="../assets/img/logo-login.png"/>
 
 
