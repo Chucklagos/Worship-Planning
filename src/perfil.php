@@ -152,7 +152,7 @@ if($varsession==null || $varsession== ''){
                                               <?php $rid = $_SESSION['identidad'];
                                                     $ruta = '../userpics/'.$rid.'.jpg';
                                                ?>
-                                                <img class="avatar border-gray" src="<?php echo "$ruta"; ?>" alt=""
+                                                <img class="avatar border-gray" src="<?php echo "$ruta"; ?>" alt="">
                                             </a>
                                         <div class="button-container mr-auto ml-auto">
                                                 <center><h6 class="title">Subir foto</h6></center>
