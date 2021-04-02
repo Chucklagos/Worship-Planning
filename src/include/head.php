@@ -25,6 +25,7 @@
 	<link href="assets/css/style.css" rel="stylesheet">
 
 
+	<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
 	<link rel="shortcut icon" type="image/png" href="../assets/img/logo-favicon.png"/>
 
 
