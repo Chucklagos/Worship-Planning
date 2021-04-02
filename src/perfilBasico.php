@@ -19,8 +19,8 @@ if($varsession==null || $varsession== ''){
 <body class="m-0 row justify-content-center">
 
     <div class="wrapper">
-        
-        
+
+
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg " color-on-scroll="500">
             <a class="navbar-brand" href="">Bienvenido a Worship Planning </a>
@@ -40,7 +40,7 @@ if($varsession==null || $varsession== ''){
                                     <span class="no-icon"></span>
                                 </a>
                             </li>
-                           
+
                             <li class="nav-item">
                                 <a class="nav-link" href="login.php">
                                     <span class="no-icon"></span>
@@ -59,13 +59,13 @@ if($varsession==null || $varsession== ''){
             <!-- End Navbar -->
             <div class="container-login100" style="background-image: url('../assets/img/fondo.jpg');">
             <div class="content">
-                
+
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-auto  col-md-9" >
-                            
+
                             <br>
-                            
+
                             <div class="card">
                                 <div class="card-header">
                                     <h5 class="card-title">Información Personal</h5>
@@ -116,7 +116,7 @@ if($varsession==null || $varsession== ''){
                                             </div>
                                         </div>
 
-                                        
+
                                         <div class="row">
                                             <div class="col-md-4 pr-1">
                                                 <div class="form-group">
@@ -139,13 +139,13 @@ if($varsession==null || $varsession== ''){
                                         </div>
                                         <div class="clearfix"></div>
                                     </form>
-                                    
+
                                 </div>
                             </div>
                         </div>
                         <div class="col-auto col-md-3">
                             <br>
-                            
+
                             <div class="card card-user">
                                 <div class="card-image">
                                     <img src="../assets/img/imagenPerfil.jpg" alt="...">
@@ -153,7 +153,11 @@ if($varsession==null || $varsession== ''){
                                 <div class="card-body">
                                     <div class="author">
                                         <a href="#">
-                                            <img class="avatar border-gray" src="../assets/img/profile.png" alt="..." >
+                                          <!--Extraer Foto de Usuario de la carpeta de Fotos-->
+                                          <?php $rid = $_SESSION['identidad'];
+                                                $ruta = '../userpics/'.$rid.'.jpg';
+                                           ?>
+                                            <img class="avatar border-gray" src="<?php echo "$ruta"; ?>" alt="">
                                         </a>
                                         <center><h6 class="title">Subir foto</h6></center>
                                         <label for="file-upload" class="custom-file-upload">
@@ -169,11 +173,11 @@ if($varsession==null || $varsession== ''){
                                             <a href="#">
                                                 <h6 class="title">Miembro</h6>
                                             </a>
-                                       
+
                                         <br>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
 
@@ -221,7 +225,7 @@ if($varsession==null || $varsession== ''){
                                         <br>
                                         <div class="clearfix"></div>
                                     </form>
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -246,7 +250,7 @@ if($varsession==null || $varsession== ''){
                                                     <div class="col-lg-2 mb-2">
                                                         <div class="card">
                                                             <div class="card-body">
-                                                                
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -254,62 +258,59 @@ if($varsession==null || $varsession== ''){
 
                                                     <div class="col-lg-2 mb-2">
                                                         <div class="card">
-                                                            
+
                                                             <div class="card-body">
-                                                                
+
                                                             </div>
                                                         </div>
                                                     </div>
 
                                                     <div class="col-lg-2 mb-2">
                                                         <div class="card">
-                                                            
+
                                                             <div class="card-body">
-                                                                
+
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    
-                                                
+
+
                                                     <div class="col-lg-2 mb-2">
                                                         <div class="card">
-                                                            
+
                                                             <div class="card-body">
-                                                               
+
                                                             </div>
                                                         </div>
                                                     </div>
 
                                                     <div class="col-lg-2 mb-2">
                                                         <div class="card">
-                                                            
+
                                                             <div class="card-body">
-                                                                
+
                                                             </div>
                                                         </div>
                                                     </div>
 
                                                     <div class="col-lg-2 mb-2">
                                                         <div class="card">
-                                                            
+
                                                             <div class="card-body">
-                                                                
+
                                                             </div>
                                                         </div>
                                                     </div>
 
-                                                   
+
                                                 </div>
                                             </div>
-                                        </section>     
+                                        </section>
                                     </form>
-                                    
+
                                 </div>
                             </div>
                         </div>
-                                
-
-                                                    
 
 
 
@@ -322,14 +323,17 @@ if($varsession==null || $varsession== ''){
 
 
 
-                        
+
+
+
+
                     </div>
                 </div>
             </div>
             <?php include('include/footer.php') ?>
         </div>
     </div>
-   
+
 
 </div>
 </body>
