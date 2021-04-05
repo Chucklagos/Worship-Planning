@@ -121,19 +121,19 @@ if($varsession==null || $varsession== ''){
                                             <div class="col-md-4 pr-1">
                                                 <div class="form-group">
                                                     <label>Telefono</label>
-                                                    <input type="text" class="form-control" placeholder="" value="" disabled="">
+                                                    <input type="text" class="form-control" placeholder="" value="<?php echo $_SESSION['telefono'] ?>" disabled="">
                                                 </div>
                                             </div>
                                             <div class="col-md-4 px-1">
                                                 <div class="form-group">
                                                     <label>Fecha de Nacimiento</label>
-                                                    <input type="text" class="form-control" placeholder="" value="" disabled="">
+                                                    <input type="date" class="form-control" placeholder="" value="<?php echo $_SESSION['fechaNacimiento'] ?>" disabled="">
                                                 </div>
                                             </div>
                                             <div class="col-md-4 pl-1">
                                                 <div class="form-group">
                                                     <label>Estado Civil</label>
-                                                    <input type="number" class="form-control" placeholder="" disabled="">
+                                                    <input type="text" class="form-control" placeholder="" value="<?php echo $_SESSION['estadoCivil'] ?>" disabled="">
                                                 </div>
                                             </div>
                                         </div>
