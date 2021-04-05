@@ -1,6 +1,5 @@
 <?php
 session_start();
-//$email=$_POST['correo'];
 $email=$_POST['correo'];
 $clave=$_POST['contrasena'];
 
@@ -32,8 +31,7 @@ if ($filas>0) {
     ?>
     <script src="ventana.js"></script>
     
-    <?php
-    //header("location:login.php");   
+    <?php  
   }
 mysqli_free_result($resultado);
 mysqli_close($conexion);

@@ -68,10 +68,7 @@
 							<a style="margin-right:2px" href="borrarInventarioAlabanza.php?idInventario=<?php echo $row['idInventario']?>"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 
 
-											<!--<td>
-													<a href="#editarModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-													<a href="#eliminarModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-											</td>-->
+											
 											 	</tr>
                                             <?php } ?>
 
@@ -92,7 +89,6 @@
 
 
 
-
 									</div>
 <!-- AGREGAR REGISTRO MODAL  -->
 <div id="agregarModal" class="modal fade">
@@ -107,13 +103,11 @@
                     <div class="form-group">
 						<label>Cantidad</label>
                         <input type="text" class="form-control" name="cantidad" required>
-						<!--textarea class="form-control" required></textarea-->
 					</div>
 
                     <div class="form-group">
 						<label>Descripción</label>
                         <input type="text" class="form-control" name="descripcion" required>
-						<!--textarea class="form-control" required></textarea-->
 					</div>
 				</div>
 				<div class="modal-footer">
@@ -138,7 +132,6 @@
                     <div class="form-group">
 						<label>ID</label>
                         <input type="text" class="form-control" name="concepto" required>
-						<!--textarea class="form-control" required></textarea-->
 					</div>
 
 
@@ -146,13 +139,11 @@
                     <div class="form-group">
 						<label>Cantidad</label>
                         <input type="text" class="form-control" name="concepto" required>
-						<!--textarea class="form-control" required></textarea-->
 					</div>
 
                     <div class="form-group">
 						<label>Descripción</label>
-                        <input type="text" class="form-control" name="concepto" required>
-						<!--textarea class="form-control" required></textarea-->
+                        <input type="text" class="form-control" name="concepto" required
 					</div>
 
 				</div>

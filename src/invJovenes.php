@@ -104,13 +104,11 @@
                     <div class="form-group">
 						<label>Cantidad</label>
                         <input type="text" class="form-control" name="cantidad" required>
-						<!--textarea class="form-control" required></textarea-->
 					</div>
 
                     <div class="form-group">
 						<label>Descripción</label>
                         <input type="text" class="form-control" name="descripcion" required>
-						<!--textarea class="form-control" required></textarea-->
 					</div>
 
 
@@ -138,7 +136,6 @@
                     <div class="form-group">
 						<label>ID</label>
                         <input type="text" class="form-control" name="concepto" required>
-						<!--textarea class="form-control" required></textarea-->
 					</div>
 
 
@@ -146,13 +143,11 @@
                     <div class="form-group">
 						<label>Cantidad</label>
                         <input type="text" class="form-control" name="concepto" required>
-						<!--textarea class="form-control" required></textarea-->
 					</div>
 
                     <div class="form-group">
 						<label>Descripción</label>
                         <input type="text" class="form-control" name="concepto" required>
-						<!--textarea class="form-control" required></textarea-->
 					</div>
 
 				</div>
