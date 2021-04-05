@@ -102,8 +102,57 @@
                       <?php
                         $query = "SELECT idMovimiento, fecha, concepto, monto, tipoMovimiento FROM movimiento ORDER BY fecha DESC";
                         $result_tasks = mysqli_query($conexion, $query);
-                        while($row = mysqli_fetch_assoc($result_tasks)) { ?>
-											<td><?php echo $row['fecha']; ?></td>
+                        while($row = mysqli_fetch_assoc($result_tasks)) {
+
+                          $fecha = $row['fecha'];
+                          $dia = substr($fecha,8);
+                          $mes = substr($fecha, 5, 2);
+                          $anio = substr($fecha, 0, 4);
+
+                          switch ($mes) {
+                            case '01':
+                                $f_fecha = "$dia/Enero/$anio";
+                              break;
+                            case '02':
+                                $f_fecha = "$dia/Febrero/$anio";
+                              break;
+                            case '03':
+                                $f_fecha = "$dia/Marzo/$anio";
+                              break;
+                            case '04':
+                                $f_fecha = "$dia/Abril/$anio";
+                              break;
+                            case '05':
+                                $f_fecha = "$dia/Mayo/$anio";
+                              break;
+                            case '06':
+                                $f_fecha = "$dia/Junio/$anio";
+                              break;
+                            case '07':
+                                $f_fecha = "$dia/Julio/$anio";
+                              break;
+                            case '08':
+                                $f_fecha = "$dia/Agosto/$anio";
+                              break;
+                            case '09':
+                                $f_fecha = "$dia/Septiembre/$anio";
+                              break;
+                            case '10':
+                                $f_fecha = "$dia/Octubre/$anio";
+                              break;
+                            case '11':
+                                $f_fecha = "$dia/Noviembre/$anio";
+                              break;
+                            case '12':
+                                $f_fecha = "$dia/Diciembre/$anio";
+                              break;
+                            default:
+                                $f_fecha = "error";
+                              break;
+                          }
+
+                          ?>
+											<td><?php echo $f_fecha; ?></td>
 											<td><?php echo $row['concepto']; ?></td>
 											<td><?php echo $row['monto']; ?></td>
 											<td><?php echo $row['tipoMovimiento']; ?></td>
@@ -269,9 +318,9 @@
                                 </div>
                             </div>
 			</form>
-			
+
 		</div>
-		
+
 	</div>
 </div>
 
