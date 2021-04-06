@@ -86,7 +86,7 @@
 												<th>Apellido</th>
 												<th>Teléfono</th>
 												<th>Correo Electrónico </th>
-												
+												<th>Rol de Usuario </th>
 												<th>Acción</th>
 
 												
@@ -95,7 +95,7 @@
 											<tbody>
 											  <tr>
 					    <?php
-                        $query = "SELECT idUsuario, primerNombre, primerApellido, telefono, email FROM usuario ORDER BY idUsuario DESC";
+                        $query = "SELECT idUsuario, primerNombre, primerApellido, telefono, email, rolUsuario FROM usuario ORDER BY idUsuario DESC";
                         $result_tasks = mysqli_query($conexion, $query);
                         while($row = mysqli_fetch_assoc($result_tasks)) { ?>
 												
@@ -104,9 +104,10 @@
 												<td><?php echo $row['primerApellido']; ?></td>
 												<td><?php echo $row['telefono']; ?></td>
 												<td><?php echo $row['email']; ?></td>
+												<td><?php echo $row['rolUsuario']; ?></td>
 												<td>
-													<a href="#editarModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-													<a href="borrarMiembro.php?idUsuario=<?php echo $row['idUsuario']?>"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+												<a href="borrarMiembro.php?idUsuario=<?php echo $row['idUsuario']?>"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+												<a href="editarMiembros.php?idUsuario=<?php echo $row['idUsuario']?>"  class="edit" ><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 												</td>
 
 											</tr>
@@ -117,7 +118,7 @@
 									</div>
 								
 </div>
-<!-- AGREGAR REGISTRO MODAL  -->
+<!-- AGREGAR REGISTRO MODAL  
 <div id="agregarModal" class="modal fade">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -203,9 +204,9 @@
 			</form>
 		</div>
 	</div>
-</div>
+</div>-->
 <!-- EDITAR REGISTRO MODAL -->
-<div id="#editarModal" class="modal fade">
+<div id="editarModal" class="modal fade">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<form>
@@ -217,12 +218,12 @@
 					<div class="col-md-12">
 							<div class="form-group">
 								<label>Identidad</label>
-								<input type="text" class="form-control" id="identidad" name="identidad" placeholder="Identidad sin guiones" minlength="13" maxlength="13" required>
+								<input value="<?php echo $idUsuario;?>" type="text" class="form-control" id="identidad" name="identidad" placeholder="Identidad sin guiones" minlength="13" maxlength="13" required>
 							</div>
 
 							<div class="form-group">
 								<label>Correo Electrónico</label>
-								<input type="email" class="form-control" id="email" name="email" placeholder="ejemplo@mail.com" required>
+								<input value="<?php echo $email;?>" type="email" class="form-control" id="email" name="email" placeholder="ejemplo@mail.com" required>
 							</div>
 							
 							<div class="form-group">
