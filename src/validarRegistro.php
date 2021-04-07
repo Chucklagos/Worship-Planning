@@ -1,7 +1,7 @@
 <?php
   include 'db/conexion.php';
 
-if (isset($_POST['registrarse'])) {
+//if (isset($_POST['registrarse'])) {
   $identidad = $_POST['identidad'];
   $email = $_POST['email'];
   $contrasena = $_POST['contrasena'];
@@ -20,7 +20,7 @@ if (isset($_POST['registrarse'])) {
   $resultado = mysqli_query($conexion, $query);
   if(!$resultado) {
     die("Query Failed.");
-  }
+//  }
 }
 
 
