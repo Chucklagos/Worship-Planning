@@ -1,5 +1,6 @@
 <?php
 session_start();
+include 'db/conexion.php';
 $varsession=$_SESSION['email'];
 if($varsession==null || $varsession== ''){
    echo 'Usted no tiene autorizacion para ver los datos de este usuario';
@@ -194,7 +195,7 @@ if($varsession==null || $varsession== ''){
                                             <div class="col-md-4 pr-1">
                                                 <div class="form-group">
                                                     <label>Cargo</label>
-                                                    <input type="text" class="form-control" placeholder="" value="" disabled="">
+                                                    <input type="text" class="form-control" placeholder="" value="<?php echo $_SESSION['rolUsuario'] ?>" disabled="">
                                                 </div>
                                             </div>
                                             <div class="col-md-4 px-1">
@@ -244,60 +245,74 @@ if($varsession==null || $varsession== ''){
                                             <div class="container">
                                                 <div class="row">
 
+                                                  <?php
+                                                    //$query="SELECT MIN(start_event), title, start_event FROM events;";
+                                                    $query="SELECT title, start_event FROM events;";
+                                                    $result_tasks = mysqli_query($conexion, $query);
+                                                    while($row = mysqli_fetch_assoc($result_tasks)) { ?>
                                                     <div class="col-lg-2 mb-2">
                                                         <div class="card">
                                                             <div class="card-body">
+                                                              <?php
 
+                                                              $fecha = $row['start_event'];
+                                                              $dia = substr($fecha,8, 2);
+                                                              $mes = substr($fecha, 5, 2);
+                                                              $anio = substr($fecha, 0, 4);
+                                                              $hora = substr($fecha, 10, 6);
+
+                                                              switch ($mes) {
+                                                                case '01':
+                                                                    $f_fecha = "$dia/Enero/$anio";
+                                                                  break;
+                                                                case '02':
+                                                                    $f_fecha = "$dia/Febrero/$anio";
+                                                                  break;
+                                                                case '03':
+                                                                    $f_fecha = "$dia/Marzo/$anio";
+                                                                  break;
+                                                                case '04':
+                                                                    $f_fecha = "$dia/Abril/$anio";
+                                                                  break;
+                                                                case '05':
+                                                                    $f_fecha = "$dia/Mayo/$anio";
+                                                                  break;
+                                                                case '06':
+                                                                    $f_fecha = "$dia/Junio/$anio";
+                                                                  break;
+                                                                case '07':
+                                                                    $f_fecha = "$dia/Julio/$anio";
+                                                                  break;
+                                                                case '08':
+                                                                    $f_fecha = "$dia/Agosto/$anio";
+                                                                  break;
+                                                                case '09':
+                                                                    $f_fecha = "$dia/Septiembre/$anio";
+                                                                  break;
+                                                                case '10':
+                                                                    $f_fecha = "$dia/Octubre/$anio";
+                                                                  break;
+                                                                case '11':
+                                                                    $f_fecha = "$dia/Noviembre/$anio";
+                                                                  break;
+                                                                case '12':
+                                                                    $f_fecha = "$dia/Diciembre/$anio";
+                                                                  break;
+                                                                default:
+                                                                    $f_fecha = "error";
+                                                                  break;
+                                                              }
+
+                                                                echo $row['title']."<br>";
+                                                                echo "$f_fecha <br> Inicia: $hora";
+                                                                //echo $row['start_event'];
+                                                              ?>
                                                             </div>
                                                         </div>
                                                     </div>
+                                                  <?php } ?>
 
 
-                                                    <div class="col-lg-2 mb-2">
-                                                        <div class="card">
-
-                                                            <div class="card-body">
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-2 mb-2">
-                                                        <div class="card">
-
-                                                            <div class="card-body">
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-
-                                                    <div class="col-lg-2 mb-2">
-                                                        <div class="card">
-
-                                                            <div class="card-body">
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-2 mb-2">
-                                                        <div class="card">
-
-                                                            <div class="card-body">
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-2 mb-2">
-                                                        <div class="card">
-
-                                                            <div class="card-body">
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
 
 
                                                 </div>
