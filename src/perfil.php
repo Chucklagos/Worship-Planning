@@ -18,9 +18,9 @@ if($varsession==null || $varsession== ''){
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg " color-on-scroll="500">
             <!--<a class="navbar-brand" href="">Bienvenido(a): <?php echo $_SESSION['primerNombre'];?> </a>-->
-                
-                
-             
+
+
+
                 <div class="container-fluid">
                     <a class="navbar-brand" href="">  </a>
                     <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,7 +38,7 @@ if($varsession==null || $varsession== ''){
                                     <span class="no-icon"></span>
                                 </a>
                             </li>
-                           
+
                             <li class="nav-item">
                                 <a class="nav-link" href="cerrar_session.php">
                                     <span class="no-icon">Cerrar Sesión</span>
@@ -53,7 +53,7 @@ if($varsession==null || $varsession== ''){
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-8">
-                           
+
                             <div class="card">
                                 <div class="card-header">
                                     <h4 class="card-title">Datos Personales</h4>
@@ -74,7 +74,7 @@ if($varsession==null || $varsession== ''){
                                                     <input type="email" class="form-control" value= "<?php echo $_SESSION['email'] ?>" disabled="">
                                                 </div>
                                             </div>
-                                            
+
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6 pr-1">
@@ -104,36 +104,36 @@ if($varsession==null || $varsession== ''){
                                                 </div>
                                             </div>
                                         </div>
-                                        
-                                        
+
+
                                         <div class="row">
                                             <div class="col-md-4 pr-1">
                                                 <div class="form-group">
                                                     <label>Telefono</label>
-                                                    <input type="text" class="form-control" placeholder="" value="" disabled="">
+                                                    <input type="text" class="form-control" placeholder="" value="<?php echo $_SESSION['telefono'] ?>" disabled="">
                                                 </div>
                                             </div>
                                             <div class="col-md-4 px-1">
                                                 <div class="form-group">
                                                     <label>Fecha de Nacimiento</label>
-                                                    <input type="text" class="form-control" placeholder="" value="" disabled="">
+                                                    <input type="date" class="form-control" placeholder="" value="<?php echo $_SESSION['fechaNacimiento'] ?>" disabled="">
                                                 </div>
                                             </div>
                                             <div class="col-md-4 pl-1">
                                                 <div class="form-group">
                                                     <label>Estado Civil</label>
-                                                    <input type="number" class="form-control" placeholder="" disabled="">
+                                                    <input type="text" class="form-control" placeholder="" value="<?php echo $_SESSION['estadoCivil'] ?>" disabled="">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    
+
                                                 </div>
                                             </div>
                                         </div>
-                                       
+
                                         <div class="clearfix"></div>
                                     </form>
                                 </div>
@@ -148,7 +148,11 @@ if($varsession==null || $varsession== ''){
                                     <div class="author">
                                                 <br>
                                             <a href="#">
-                                                <img class="avatar border-gray" src="../assets/img/profile.png" alt="..." >
+                                              <!--Extraer Foto de Usuario de la carpeta de Fotos-->
+                                              <?php $rid = $_SESSION['identidad'];
+                                                    $ruta = '../userpics/'.$rid.'.jpg';
+                                               ?>
+                                                <img class="avatar border-gray" src="<?php echo "$ruta"; ?>" alt="">
                                             </a>
                                         <div class="button-container mr-auto ml-auto">
                                                 <center><h6 class="title">Subir foto</h6></center>
@@ -164,7 +168,7 @@ if($varsession==null || $varsession== ''){
                                             <a href="#">
                                                 <h6 class="title">Lider Niños</h6>
                                             </a>
-                                    </div>  
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -183,7 +187,7 @@ if($varsession==null || $varsession== ''){
                                             <div class="col-md-4 pr-1">
                                                 <div class="form-group">
                                                     <label>Cargo</label>
-                                                    <input type="text" class="form-control" placeholder="" value="" disabled="">
+                                                    <input type="text" class="form-control" placeholder="" value="<?php echo $_SESSION['fechaNacimiento'] ?>" disabled="">
                                                 </div>
                                             </div>
                                             <div class="col-md-4 px-1">
@@ -211,7 +215,7 @@ if($varsession==null || $varsession== ''){
                                         <br>
                                         <div class="clearfix"></div>
                                     </form>
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -224,7 +228,6 @@ if($varsession==null || $varsession== ''){
             </div>
         </div>
     </div>
-
 </body>
 <?php include('include/foot.php') ?>
 

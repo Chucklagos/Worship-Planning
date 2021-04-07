@@ -18,6 +18,9 @@ if ($datosUsuario){
      $_SESSION['segundoNombre']= $datosUsuario['segundoNombre'];
      $_SESSION['primerApellido']= $datosUsuario['primerApellido'];
      $_SESSION['segundoApellido']= $datosUsuario['segundoApellido'];
+     $_SESSION['telefono']= $datosUsuario['telefono'];
+     $_SESSION['fechaNacimiento']= $datosUsuario['fechaNacimiento'];
+     $_SESSION['estadoCivil']= $datosUsuario['estadoCivil'];
 }
 
 $filas=mysqli_num_rows($resultado);
