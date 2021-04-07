@@ -66,24 +66,21 @@ if(isset($_POST['Submit'])){
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link type="image/png" href="assets/img/logo-favicon.png" rel="icon">
+  
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-
-
   <link href="assets/css/style.css" rel="stylesheet">
+  <!--CAPTCHA-->
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
 </head>
 
 <body>
@@ -93,15 +90,18 @@ if(isset($_POST['Submit'])){
     <div class="container d-flex align-items-center">
 
       <div class="logo mr-auto">
-        <h1 class="text-light"><a href="index.html"><span>Worship Planning</span></a></h1>
+      
+        <h1 class="text-light"><a href="index.php"> 
+          <img src="assets/img/logo-login.png" class="img-fluid animated" alt="" width="40" height="1000">
+        <span>Worship Planning</span></a></h1>
 
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">Inicio</a></li>
-          <li><a href="src/registrarse.php">Registrarse</a></li>
-          <li><a href="src/login.php">Iniciar Sesión</a></li>
+          <li class="active"><a href="index.php">Inicio</a></li>
+          <li><a href="src/registrarse.php" target="_blank" >Registrarse</a></li>
+          <li><a href="src/login.php" target="_blank">Iniciar Sesión</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
@@ -116,7 +116,8 @@ if(isset($_POST['Submit'])){
         <div class="col-lg-7 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center">
           <div data-aos="zoom-out">
             <h1><span>Bienvenidos</span></h1>
-            <h2>Worship Planner es la herramienta aliada para Pastores</h2>
+            <h2>Worship Planner es la herramienta aliada para Pastores la cual facilita la organización 
+              y planificacion en la Iglesia.</h2>
             <div class="text-center text-lg-left">
               <a href="src/registrarse.php" class="btn-get-started scrollto">Registrarse</a>
             </div>
@@ -147,7 +148,7 @@ if(isset($_POST['Submit'])){
 
   <main id="main">
 
-    <!-- ======= About Section ======= -->
+    <!-- ======= Caracteristicas  ======= -->
     <section id="about" class="about">
       <div class="container-fluid">
 
@@ -157,7 +158,7 @@ if(isset($_POST['Submit'])){
           </div>
 
           <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">
-            <h3>Funciones</h3>
+            <h3>Características</h3>
             <p>
               Es una herramientas fácil de usar y sus funcionalidades son intuitiva, agiliza el
               trabajo de organización, tesoreria,discipulado planificación y programación de
@@ -166,7 +167,7 @@ if(isset($_POST['Submit'])){
             </p>
 
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
-              <div class="icon"><i class="bx bx-fingerprint"></i></div>
+              <div class="icon"><i class='bx bx-church'></i></i></div>
               <h4 class="title"><a href="">Información valiosa</a></h4>
               <p class="description">
                 Con nuestro software para iglesias podrá conocer
@@ -175,7 +176,7 @@ if(isset($_POST['Submit'])){
             </div>
 
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
-              <div class="icon"><i class="bx bx-gift"></i></div>
+              <div class="icon"><i class='bx bx-calendar-event'></i></div>
               <h4 class="title"><a href="">Organizacion de Eventos</a></h4>
               <p class="description">
                 Nuestro organizador de eventos le permitirá llevar una agenda donde podra apartar
@@ -184,7 +185,7 @@ if(isset($_POST['Submit'])){
             </div>
 
             <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
-              <div class="icon"><i class="bx bx-atom"></i></div>
+              <div class="icon"><i class='bx bx-money'></i></i></div>
               <h4 class="title"><a href="">Tesoreria</a></h4>
               <p class="description">
                 Podra llevar un control de los diferentes ingresos y egresos de su Iglesia.
@@ -195,10 +196,69 @@ if(isset($_POST['Submit'])){
         </div>
 
       </div>
-    </section><!-- End About Section -->
+    </section><!-- End Caracteristicas-->
 
 
-    <!-- ======= Contact Section ======= -->
+    <!-- ======= Modulos ======= -->
+    <section id="features" class="features">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Módulos</h2>
+          <p>Módulos Disponibles</p>
+        </div>
+
+        <div class="row" data-aos="fade-left">
+          <div class="col-lg-4 col-md-4">
+            <div class="icon-box" data-aos="zoom-in" data-aos-delay="50">
+              <i class='bx bxs-user' style="color: #1EE8DE;" ></i>
+              <h3><a href="">Usuario</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 mt-4 mt-md-0">
+            <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
+              <i class='bx bxs-dollar-circle' style="color: #FFD72B;"></i>
+              <h3><a href="">Tesorería</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 mt-4 mt-md-0">
+            <div class="icon-box" data-aos="zoom-in" data-aos-delay="150">
+              <i class="bx bxs-receipt" style="color: #271CED;"></i>
+              <h3><a href="">Inventario</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 mt-4">
+            <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
+              <i class="bx bxs-id-card" style="color: #B500D1;"></i>
+              <h3><a href="">Membresía</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 mt-4">
+            <div class="icon-box" data-aos="zoom-in" data-aos-delay="250">
+              <i class="bx bx-calendar" style="color: #e80368;"></i>
+              <h3><a href="">Eventos</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 mt-4">
+            <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
+              <i class="bx bx-folder" style="color: #29cc61;"></i>
+              <h3><a href="">Documentos</a></h3>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 mt-4">
+            <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
+              <i class='bx bxs-bible' style="color: #EB01A0;"></i>
+              <h3><a href="">Discipulado</a></h3>
+            </div>
+          </div>
+          
+        </div>
+
+      </div>
+    </section><!-- End Modulos -->
+
+
+    <!-- ======= Contacto ======= -->
     <section id="contact" class="contact">
       <div class="container">
 
@@ -212,13 +272,13 @@ if(isset($_POST['Submit'])){
           <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
             <div class="info">
               <div class="email">
-                <i class="icofont-envelope"></i>
+                <i class='bx bx-envelope' style="color:#271CED;"></i>
                 <h4>Correo Electonico:</h4>
                 <p>info@worshipplanner.com</p>
               </div>
 
               <div class="phone">
-                <i class="icofont-phone"></i>
+                <i class='bx bx-phone-call' style="color:#271CED;"></i>
                 <h4>Telefono:</h4>
                 <p>+504 9999-9999</p>
               </div>
@@ -264,7 +324,7 @@ if(isset($_POST['Submit'])){
         </div>
 
       </div>
-    </section><!-- End Contact Section -->
+    </section><!-- End contacto -->
 
   </main><!-- End #main -->
 
@@ -273,23 +333,35 @@ if(isset($_POST['Submit'])){
     <div class="footer-top">
       <div class="container">
         <div class="row">
-
-          <div class="col-lg-2 col-md-6 footer-links">
+          <div class="col-lg-4 col-md-6 footer-links">
             <h4>Enlaces útiles</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Inicio</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="src/registrarse.php">Registrarse</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="src/login.php">Iniciar Sesión</a></li>
-
+              <li><i class='bx bx-check'></i> <a href="index.php">Inicio</a></li>
+              <li><i class='bx bx-check'></i> <a href="src/registrarse.php">Registrarse</a></li>
+              <li><i class='bx bx-check'></i> <a href="src/login.php">Iniciar Sesión</a></li>
+              <li><i class='bx bx-check'></i> <a href="#contact">Contacto</a></li>
             </ul>
           </div>
-
+          <div class="col-lg-4 col-md-6 footer-links">
+            <center><img src="assets/img/logo-login.png" class="img-fluid animated" alt="" width="280" height="280"></center>
+          </div>
         </div>
+        
       </div>
     </div>
 
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Worship Planning</span></strong>.
+      </div>
+      <div class="credits">
+        Designed by <a href="index.php">Worship Planning</a>
+      </div>
+    </div>
 
   </footer><!-- End Footer -->
+
+
 
 
   <!-- Vendor JS Files -->
