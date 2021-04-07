@@ -6,9 +6,6 @@ if($varsession==null || $varsession== ''){
    die();
 }
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 

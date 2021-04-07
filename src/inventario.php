@@ -1,11 +1,16 @@
 <?php
   include 'db/conexion.php';
   session_start();
- $varsession=$_SESSION['email'];
-if($varsession==null || $varsession== ''){
-   echo 'Usted no tiene autorizacion para ver los datos de este usuario';
-   die();
-}
+  $varsession=$_SESSION['email'];
+  $rolsession=$_SESSION['rolUsuario'];
+  if($varsession==null || $varsession== ''){
+     echo 'Usted no tiene autorizacion para ver los datos de este usuario';
+     die();
+  }
+  if ($rolsession=='miembro') {
+    echo 'Usted no tiene autorizacion para ver los datos de este usuario';
+    die();
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,8 +59,8 @@ if($varsession==null || $varsession== ''){
                 </div>
             </nav>
 
-            
-            
+
+
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
@@ -109,8 +114,8 @@ if($varsession==null || $varsession== ''){
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    
-                                                
+
+
                                                     <div class="col-lg-4 mb-4">
                                                         <div class="card">
                                                             <img src="../assets/img/categorias/jovenes.png"  alt="" class="card-img-top">
@@ -163,14 +168,14 @@ if($varsession==null || $varsession== ''){
                                                         </div>
                                                     </div>
 
-                                                    
+
 
 
 
 
                                                 </div>
                                             </div>
-                                        </section>     
+                                        </section>
                                     </form>
                                 </div>
                             </div>
@@ -179,7 +184,7 @@ if($varsession==null || $varsession== ''){
                 </div>
             </div>
         </div>
-    </div>                
+    </div>
 
 </body>
 <?php include('include/foot.php') ?>

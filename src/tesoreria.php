@@ -1,11 +1,16 @@
 <?php
   include 'db/conexion.php';
   session_start();
- $varsession=$_SESSION['email'];
-if($varsession==null || $varsession== ''){
-   echo 'Usted no tiene autorizacion para ver los datos de este usuario';
-   die();
-}
+  $varsession=$_SESSION['email'];
+  $rolsession=$_SESSION['rolUsuario'];
+  if($varsession==null || $varsession== ''){
+     echo 'Usted no tiene autorizacion para ver los datos de este usuario';
+     die();
+  }
+  if ($rolsession=='miembro') {
+    echo 'Usted no tiene autorizacion para ver los datos de este usuario';
+    die();
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -165,7 +170,7 @@ if($varsession==null || $varsession== ''){
                         <a style="margin-right:2px" href="borrarTesoreria.php?idMovimiento=<?php echo $row['idMovimiento']?>"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                         <a style="margin-left:2px" href="#editarModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 
-                      
+
 											</td>
 											</tr>
                     <?php } ?>

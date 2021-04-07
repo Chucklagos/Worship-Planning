@@ -1,12 +1,16 @@
 <?php
   include 'db/conexion.php';
   session_start();
- $varsession=$_SESSION['email'];
-if($varsession==null || $varsession== ''){
-   echo 'Usted no tiene autorizacion para ver los datos de este usuario';
-   die();
-}
-
+  $varsession=$_SESSION['email'];
+  $rolsession=$_SESSION['rolUsuario'];
+  if($varsession==null || $varsession== ''){
+     echo 'Usted no tiene autorizacion para ver los datos de este usuario';
+     die();
+  }
+  if ($rolsession=='miembro') {
+    echo 'Usted no tiene autorizacion para ver los datos de este usuario';
+    die();
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +36,7 @@ if($varsession==null || $varsession== ''){
 
                         </ul>
                         <ul class="navbar-nav ml-auto">
-							
+
                             <li class="nav-item">
                                 <a class="nav-link" href="cerrar_session.php">
                                     <span class="no-icon">Cerrar Sesión</span>
@@ -50,19 +54,19 @@ if($varsession==null || $varsession== ''){
                             <div class="card">
 								<br>
                                 <div class="container-xl">
-								
+
 									<div class="table-wrapper">
 										<div class="table-title">
 											<div class="row">
 												<div class="col-sm-6">
 													<h3>Miembros <b></b></h3>
 												</div>
-												
+
 												<div class="col-sm-6">
 													<a href="#agregarModal"  data-toggle="modal">
 													</a>
 												</div>
-												
+
 											</div>
 										</div>
 										<hr>
@@ -70,7 +74,7 @@ if($varsession==null || $varsession== ''){
 										<table class="table table-striped table-hover">
 											<thead>
 											<tr>
-												
+
 
                                                 <th>Identidad</th>
 												<th>Nombre</th>
@@ -80,7 +84,7 @@ if($varsession==null || $varsession== ''){
 												<th>Rol de Usuario </th>
 												<th>Acción</th>
 
-												
+
 											</tr>
 											</thead>
 											<tbody>
@@ -89,7 +93,7 @@ if($varsession==null || $varsession== ''){
                         $query = "SELECT idUsuario, primerNombre, primerApellido, telefono, email, rolUsuario FROM usuario ORDER BY idUsuario DESC";
                         $result_tasks = mysqli_query($conexion, $query);
                         while($row = mysqli_fetch_assoc($result_tasks)) { ?>
-												
+
 												<td><?php echo $row['idUsuario']; ?></td>
 												<td><?php echo $row['primerNombre']; ?></td>
 												<td><?php echo $row['primerApellido']; ?></td>
@@ -107,9 +111,9 @@ if($varsession==null || $varsession== ''){
 										</table>
 										<br>
 									</div>
-								
+
 </div>
-<!-- AGREGAR REGISTRO MODAL  
+<!-- AGREGAR REGISTRO MODAL
 <div id="agregarModal" class="modal fade">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -130,11 +134,11 @@ if($varsession==null || $varsession== ''){
 								<label>Correo Electrónico</label>
 								<input value='erick_javier96@yahoo.com' type="email" class="form-control" id="email" name="email" placeholder="ejemplo@mail.com" required>
 							</div>
-							
+
 							<div class="form-group">
 								<label>Contraseña</label>
 								<input value='jejejejeejejejeje' type="password" class="form-control" id="contrasena" name="contrasena" minlength="8" required>
-								
+
 							</div>
 
 							<div class="row">
@@ -186,7 +190,7 @@ if($varsession==null || $varsession== ''){
 								</div>
 							</div>
 
-							
+
 							<div class="modal-footer">
 								<input type="button" class="btn btn btn-dark" data-dismiss="modal" value="Cancelar">
 								<input type="submit" class="btn btn-primary submitBtn" value="Agregar">
@@ -216,11 +220,11 @@ if($varsession==null || $varsession== ''){
 								<label>Correo Electrónico</label>
 								<input value="<?php echo $email;?>" type="email" class="form-control" id="email" name="email" placeholder="ejemplo@mail.com" required>
 							</div>
-							
+
 							<div class="form-group">
 								<label>Contraseña</label>
 								<input type="password" class="form-control" id="contrasena" name="contrasena" minlength="8" required>
-								
+
 							</div>
 
 							<div class="row">
@@ -272,7 +276,7 @@ if($varsession==null || $varsession== ''){
 								</div>
 							</div>
 
-							
+
 							<div class="modal-footer">
 								<input type="button" class="btn btn btn-dark" data-dismiss="modal" value="Cancelar">
 								<input type="submit" class="btn btn-primary" value="Guardar">
