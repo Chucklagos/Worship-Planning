@@ -13,9 +13,10 @@ if (isset($_POST['registrarse'])) {
   $fechaNacimiento = $_POST['fechaNacimiento'];
   $estadoCivil = $_POST['estadoCivil'];
   $estado = "activo";
-  echo "$email, $contrasena, $pnombre, $snombre, $papellido, $sapellido, $telefono, $fechaNacimiento, $estadoCivil";
+  $rolUsuario = "miembro";
+  echo "$email, $contrasena, $pnombre, $snombre, $papellido, $sapellido, $telefono, $fechaNacimiento, $estadoCivil, $rolUsuario";
 
-  $query = "INSERT INTO usuario VALUES('$identidad', '$email', '$contrasena', '$estado', '$pnombre', '$snombre', '$papellido', '$sapellido', '$telefono', '$fechaNacimiento', '$estadoCivil')";
+  $query = "INSERT INTO usuario VALUES('$identidad', '$email', '$contrasena', '$estado', '$pnombre', '$snombre', '$papellido', '$sapellido', '$telefono', '$fechaNacimiento', '$estadoCivil', '$rolUsuario')";
   $resultado = mysqli_query($conexion, $query);
   if(!$resultado) {
     die("Query Failed.");
