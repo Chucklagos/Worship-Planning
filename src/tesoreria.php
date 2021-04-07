@@ -81,7 +81,6 @@ if($varsession==null || $varsession== ''){
 
 													<a href="#reporteModal"  data-toggle="modal">
                           <a href="hojaReporte.php" style="margin:5px" class="btn btn-primary btn-fill pull-right" target="_blank">Ver Reporte</a>
-													<!--button type="button" name="reporteRegistro" style="margin:5px" class="btn btn-primary btn-fill pull-right">Ver Reporte</button-->
 													</a>
 												</div>
 											</div>
@@ -117,8 +116,7 @@ if($varsession==null || $varsession== ''){
                         <a style="margin-right:2px" href="borrarTesoreria.php?idMovimiento=<?php echo $row['idMovimiento']?>"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                         <a style="margin-left:2px" href="#editarModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 
-                      <!--a href="#eliminarModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a-->
-
+                      
 											</td>
 											</tr>
                     <?php } ?>
@@ -152,7 +150,6 @@ if($varsession==null || $varsession== ''){
 					<div class="form-group">
 						<label>Concepto</label>
             <input type="text" class="form-control" name="concepto" required>
-						<!--textarea class="form-control" required></textarea-->
 					</div>
 					<div class="form-group">
 						<label>Monto</label>

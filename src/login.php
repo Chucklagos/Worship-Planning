@@ -50,15 +50,9 @@ include ('db/conexion.php');
 					</div>
 					</form>
 					<?php
-					//$correo=$_POST['correo'];
-					//$contrasena=$_POST['contrasena'];
+					
 					?>
 
-							<!--<div class="text-center p-t-90">
-								<a class="txt1" href="#">
-									¿Olvidó su contraseña?
-								</a>
-							</div>-->
 				</div>
 			</div>
 		</div>

@@ -36,22 +36,7 @@ if($varsession==null || $varsession== ''){
 												<div class="col-sm-6">
 													<h2>Inventario General <b></b></h2>
 												</div>
-												<!--
-												<div class="col-sm-6">
-													<a href="#agregarModal"  data-toggle="modal">
-													<button type="button" name="agregarRegistro" style="margin:5px" class="btn btn-primary btn-fill pull-right">Agregar</button>
-													</a>
-
-													<a href="#eliminarModal"  data-toggle="modal">
-													<button type="button" name="eliminarRegistro" style="margin:5px" class="btn btn-primary btn-fill pull-right">Eliminar</button>
-													</a>
-
-
-													<a href="#reporteModal"  data-toggle="modal">
-													<button type="button" name="reporteRegistro" style="margin:5px" class="btn btn-primary btn-fill pull-right">Ver Reporte</button>
-													</a>
-												</div>
-												-->
+												
 											</div>
 										</div>
 										<hr>
