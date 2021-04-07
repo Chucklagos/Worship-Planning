@@ -166,7 +166,7 @@ if($varsession==null || $varsession== ''){
                                             <hr>
                                             <br>
                                             <a href="#">
-                                                <h6 class="title">Lider Niños</h6>
+                                                <h6 class="title"><?php echo $_SESSION['rolUsuario']; ?></h6>
                                             </a>
                                     </div>
                                 </div>
@@ -187,7 +187,7 @@ if($varsession==null || $varsession== ''){
                                             <div class="col-md-4 pr-1">
                                                 <div class="form-group">
                                                     <label>Cargo</label>
-                                                    <input type="text" class="form-control" placeholder="" value="<?php echo $_SESSION['fechaNacimiento'] ?>" disabled="">
+                                                    <input type="text" class="form-control" placeholder="" value="<?php echo $_SESSION['rolUsuario'] ?>" disabled="">
                                                 </div>
                                             </div>
                                             <div class="col-md-4 px-1">

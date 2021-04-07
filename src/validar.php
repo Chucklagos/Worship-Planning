@@ -21,6 +21,7 @@ if ($datosUsuario){
      $_SESSION['telefono']= $datosUsuario['telefono'];
      $_SESSION['fechaNacimiento']= $datosUsuario['fechaNacimiento'];
      $_SESSION['estadoCivil']= $datosUsuario['estadoCivil'];
+     $_SESSION['rolUsuario']= $datosUsuario['rolUsuario'];
 }
 
 $filas=mysqli_num_rows($resultado);
@@ -33,8 +34,8 @@ if ($filas>0) {
     include('login.php')
     ?>
     <script src="ventana.js"></script>
-    
-    <?php  
+
+    <?php
   }
 mysqli_free_result($resultado);
 mysqli_close($conexion);
