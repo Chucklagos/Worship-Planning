@@ -36,7 +36,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="calendar.php">
                         <i class="nc-icon nc-bell-55"></i>
                             <p>Eventos</p>
                         </a>
