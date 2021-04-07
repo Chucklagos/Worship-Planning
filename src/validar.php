@@ -25,10 +25,11 @@ if ($datosUsuario){
 }
 
 $filas=mysqli_num_rows($resultado);
-if ($filas>0) {
+if ($filas>0 && $_SESSION['rolUsuario']=='admin') {
     header("location:perfil.php");
-}
-   else {
+} else if ($filas>0 && $_SESSION['rolUsuario']=='miembro') {
+    header("location:perfilBasico.php");
+} else {
     ?>
     <?php
     include('login.php')
