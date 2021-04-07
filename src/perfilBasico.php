@@ -247,7 +247,7 @@ if($varsession==null || $varsession== ''){
 
                                                   <?php
                                                     //$query="SELECT MIN(start_event), title, start_event FROM events;";
-                                                    $query="SELECT title, start_event FROM events;";
+                                                    $query="SELECT title, start_event FROM events ORDER BY start_event ASC;";
                                                     $result_tasks = mysqli_query($conexion, $query);
                                                     while($row = mysqli_fetch_assoc($result_tasks)) { ?>
                                                     <div class="col-lg-2 mb-2">
