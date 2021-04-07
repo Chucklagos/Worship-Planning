@@ -1,17 +1,3 @@
-<!--
-=========================================================
- Light Bootstrap Dashboard - v2.0.1
-=========================================================
-
- Product Page: https://www.creative-tim.com/product/light-bootstrap-dashboard
- Copyright 2019 Creative Tim (https://www.creative-tim.com)
- Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard/blob/master/LICENSE)
-
- Coded by Creative Tim
-
-=========================================================
-
- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  -->
 <?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,30 +6,43 @@
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="sidebar" data-image="">
-            <div class="sidebar-wrapper">
-                <div class="logo">
-                    <a href="#" class="simple-text">
-                        Worship Planning
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="main-panel">
+    
+        
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg " color-on-scroll="500">
+            <a class="navbar-brand" href="">Regístrate </a>
 
+              <div class="container-fluid">
+                    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                        <ul class="nav navbar-nav mr-auto">
+                        </ul>
+                        
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item" >
+                                <a class="nav-link" href="login.php">
+                                    <span class="no-icon">Iniciar Sesión</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+              </div>
             </nav>
             <!-- End Navbar -->
-            <div class="content">
+            <div class="content" style="background-image: url('../assets/img/fondo.jpg');"  width="2000" height="1000">
+
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-12">
+                        <div class="col-auto  col-md-12">
+                            <br>
+
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">Datos Personales</h4>
+                                    <h5 class="card-title">Información Personal</h5>
+                                    <hr>
+                                    
                                 </div>
+
                                 <div class="card-body">
                                     <form id="enviarForm" action="validarRegistro.php" method="post">
                                       <div class="row">
@@ -91,7 +90,7 @@
                                               <label>Fecha de Nacimiento</label>
                                               <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento" required>
                                             </div>
-                                            <div class="form-group col-md-4 pr-1">
+                                            <div class="form-group col-md-4 pl-1">
                                               <label>Estado Civil</label>
                                               <select class="form-control" id="estadoCivil" name="estadoCivil">
                                                 <option value="soltero">Soltero(a)</option>
@@ -104,22 +103,34 @@
                                         <!-- BOTONES DE  GUARDAR  -->
                                       <div class="row">
                                             <div class="form-group col-md-20 pr-1">
-                                                <button id="reg" type="submit" name="registrarse" class="btn btn-info btn-fill pull-right">Registrarse</button>
+                                                <button id="reg" type="submit" name="registrarse" class="btn btn-outline-primary">Registrarse</button>
                                                 <div class="clearfix"></div>
                                             </div>
                                             <div class="form-group col-md-20 pr-1">
-                                                <button  type="reset" class="btn btn-info btn-fill pull-right">Limpiar</button>
+                                                <button  type="reset" class="btn btn-outline-primary">Limpiar</button>
                                                 <div class="clearfix"></div>
                                             </div>
+                                            <div class="form-group col-md-20 pr-1">
+                                                <a class="btn btn-outline-dark " href="login.php">Iniciar Sesión</a>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                      <div> 
                                     </form>
+                                    
+                                    
+                                </div>
+                                    
                                 </div>
                             </div>
                         </div>
+                        <?php include('include/footer.php') ?>
                     </div>
+                    
                 </div>
+                
             </div>
-        </div>
-    </div>
+            
+    
     <div id="myModal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
