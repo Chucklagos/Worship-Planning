@@ -25,7 +25,7 @@ if ($datosUsuario){
 }
 
 $filas=mysqli_num_rows($resultado);
-if ($filas>0 && $_SESSION['rolUsuario']=='admin') {
+if ($filas>0 && ($_SESSION['rolUsuario']=='admin' || $_SESSION['rolUsuario']=='lider')) {
     header("location:perfil.php");
 } else if ($filas>0 && $_SESSION['rolUsuario']=='miembro') {
     header("location:perfilBasico.php");

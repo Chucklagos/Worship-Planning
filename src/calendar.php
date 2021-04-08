@@ -1,27 +1,33 @@
 <?php
 session_start();
 $varsession=$_SESSION['email'];
+$rolsession=$_SESSION['rolUsuario'];
 if($varsession==null || $varsession== ''){
-   echo 'Usted no tiene autorizacion para ver los datos de este usuario';
-   die();
+  header('location:accesoRestringido.php');
+  die();
 }
+if ($rolsession=='miembro') {
+  header('location:accesoRestringido.php');
+  die();
+}
+
 ?>
 <!DOCTYPE html>
 <html>
  <head>
  <?php include('include/head.php'); ?>
   <title>Eventos</title>
-  
+
 <link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
 <script src='fullcalendar/lib/jquery.min.js'></script>
 <script src='fullcalendar/lib/moment.min.js'></script>
 <script src='fullcalendar/fullcalendar.js'></script>
 
   <script>
-   
+
   $(document).ready(function() {
    var calendar = $('#calendar').fullCalendar({
-    
+
     header:{
      left:'prev,next today',
      center:'title',
@@ -33,9 +39,9 @@ if($varsession==null || $varsession== ''){
     selectable:true,
     selectHelper:true,
     dayMaxEvents: true,
-    
-  
-    
+
+
+
     select:function(start, end, allDay)
     {
      var title = prompt("Ingrese un evento");
@@ -112,9 +118,9 @@ if($varsession==null || $varsession== ''){
 
    });
   });
-   
+
   </script>
- 
+
  </head>
  <body>
  <div class="wrapper">
@@ -162,10 +168,10 @@ if($varsession==null || $varsession== ''){
                 </div>
             </nav>
             <!-- End Navbar -->
-       
+
   <div id="calendar"></div>
-             
-     
+
+
   </div>
  </body>
 </html>

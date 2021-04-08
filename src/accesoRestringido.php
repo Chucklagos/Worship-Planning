@@ -17,10 +17,10 @@
                         <br>
                         <center><h1>Acceso Restringido</h1><center>
                             <br>
-                        <button type="button" class="btn btn-outline-warning">Regresar</button>
+                        <a href="javascript: history.go(-1)" class="btn btn-outline-danger">Regresar</a>
                     </div>
                 </div>
-            </div> 
+            </div>
         </div>
     </div>
 </body>

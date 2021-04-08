@@ -4,13 +4,17 @@
   $varsession=$_SESSION['email'];
   $rolsession=$_SESSION['rolUsuario'];
   if($varsession==null || $varsession== ''){
-     echo 'Usted no tiene autorizacion para ver los datos de este usuario';
-     die();
-  }
-  if ($rolsession=='miembro') {
-    echo 'Usted no tiene autorizacion para ver los datos de este usuario';
+    header('location:accesoRestringido.php');
     die();
   }
+  if ($rolsession=='miembro') {
+    header('location:accesoRestringido.php');
+    die();
+  }
+  if ($rolsession=='lider') {
+    header('location:accesoRestringido.php');
+  }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
