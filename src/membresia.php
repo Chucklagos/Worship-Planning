@@ -82,6 +82,7 @@
 												<th>Teléfono</th>
 												<th>Correo Electrónico </th>
 												<th>Rol de Usuario </th>
+												<th>Estado de la Cuenta</th>
 												<th>Acción</th>
 
 
@@ -90,7 +91,7 @@
 											<tbody>
 											  <tr>
 					    <?php
-                        $query = "SELECT idUsuario, primerNombre, primerApellido, telefono, email, rolUsuario FROM usuario ORDER BY idUsuario DESC";
+                        $query = "SELECT idUsuario, primerNombre, primerApellido, telefono, email, rolUsuario, estado FROM usuario ORDER BY idUsuario DESC";
                         $result_tasks = mysqli_query($conexion, $query);
                         while($row = mysqli_fetch_assoc($result_tasks)) { ?>
 
@@ -100,6 +101,7 @@
 												<td><?php echo $row['telefono']; ?></td>
 												<td><?php echo $row['email']; ?></td>
 												<td><?php echo $row['rolUsuario']; ?></td>
+												<td><?php echo $row['estado']; ?></td>
 												<td>
 												<a href="borrarMiembro.php?idUsuario=<?php echo $row['idUsuario']?>"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 												<a href="editarMiembros.php?idUsuario=<?php echo $row['idUsuario']?>"  class="edit" ><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>

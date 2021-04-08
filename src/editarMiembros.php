@@ -16,15 +16,70 @@ if(!isset($_GET['idUsario'])){
 		$fechaNacimiento=$row['fechaNacimiento'];
 		$estadoCivil=$row['estadoCivil'];
 		$rolUsuario=$row['rolUsuario'];
+		$estado=$row['estado'];
 	}
  }
 
 //var_dump($_POST);
-if(isset($_POST['Actualizar'])){
-	$idUsuario = $_GET['idUsuario'];
-    //echo $idUsuario;
+if(isset($_POST['Actualizar']) && $_POST['rolUsuario']!=$row['rolUsuario'] ){
     $rolUsuario=$_POST['rolUsuario'];
 	$query= "UPDATE usuario SET rolUsuario='$rolUsuario' WHERE idUsuario='$idUsuario' " ;
+	$resultado = mysqli_query($conexion, $query);
+	header("Location: membresia.php");
+}   
+
+if(isset($_POST['Actualizar']) && $_POST['estado']!=$row['estado'] ){
+    $estado=$_POST['estado'];
+	$query= "UPDATE usuario SET estado='$estado' WHERE idUsuario='$idUsuario' " ;
+	$resultado = mysqli_query($conexion, $query);
+	header("Location: membresia.php");
+}  
+
+if(isset($_POST['Actualizar']) && $_POST['contrasena']!=$row['contrasena'] ){
+    $contrasena=$_POST['contrasena'];
+	$query= "UPDATE usuario SET contrasena='$contrasena' WHERE idUsuario='$idUsuario' " ;
+	$resultado = mysqli_query($conexion, $query);
+	header("Location: membresia.php");
+}  
+
+if(isset($_POST['Actualizar']) && $_POST['primerNombre']!=$row['primerNombre'] ){
+	$primerNombre=$_POST['primerNombre'];
+	$query= "UPDATE usuario SET primerNombre='$primerNombre' WHERE idUsuario='$idUsuario' " ;
+	$resultado = mysqli_query($conexion, $query);
+	header("Location: membresia.php");
+}   
+
+if(isset($_POST['Actualizar']) && $_POST['segundoNombre']!=$row['segundoNombre'] ){
+	$segundoNombre=$_POST['segundoNombre'];
+	$query= "UPDATE usuario SET segundoNombre='$segundoNombre' WHERE idUsuario='$idUsuario' " ;
+	$resultado = mysqli_query($conexion, $query);
+	header("Location: membresia.php");
+}   
+
+if(isset($_POST['Actualizar']) && $_POST['primerApellido']!=$row['primerApellido']){
+	$primerApellido=$_POST['primerApellido'];
+	$query= "UPDATE usuario SET primerApellido='$primerApellido' WHERE idUsuario='$idUsuario' " ;
+	$resultado = mysqli_query($conexion, $query);
+	header("Location: membresia.php");
+}   
+
+if(isset($_POST['Actualizar']) && $_POST['segundoApellido']!=$row['segundoApellido']){
+	$segundoApellido=$_POST['segundoApellido'];
+	$query= "UPDATE usuario SET segundoApellido='$segundoApellido' WHERE idUsuario='$idUsuario' " ;
+	$resultado = mysqli_query($conexion, $query);
+	header("Location: membresia.php");
+}   
+
+if(isset($_POST['Actualizar']) && $_POST['telefono']!=$row['telefono']){
+	$telefono=$_POST['telefono'];
+	$query= "UPDATE usuario SET telefono='$telefono' WHERE idUsuario='$idUsuario' " ;
+	$resultado = mysqli_query($conexion, $query);
+	header("Location: membresia.php");
+}   
+
+if(isset($_POST['Actualizar']) && $_POST['estadoCivil']!=$row['estadoCivil']){
+	$estadoCivil=$_POST['estadoCivil'];
+	$query= "UPDATE usuario SET estadoCivil='$estadoCivil' WHERE idUsuario='$idUsuario' " ;
 	$resultado = mysqli_query($conexion, $query);
 	header("Location: membresia.php");
 }   
@@ -108,11 +163,11 @@ if(isset($_POST['Actualizar'])){
 										<div class="row">
 											<div  class="form-group col-sm-6 pr-1">
 												<label>Primer Nombre</label>
-												<input  value="<?php echo $primerNombre;?>" type="text" class="form-control" id="pnombre" name="pnombre" required>
+												<input  value="<?php echo $primerNombre;?>" type="text" class="form-control" id="primerNombre" name="primerNombre" required>
 											</div>
 											<div  class="form-group col-sm-6 pl-1">
 												<label>Segundo Nombre</label>
-												<input  value="<?php echo $segundoNombre;?>" type="text" class="form-control" id="snombre" name="snombre">
+												<input  value="<?php echo $segundoNombre;?>" type="text" class="form-control" id="segundoNombre" name="segundoNombre">
 											</div>
 											
 										</div>
@@ -120,11 +175,11 @@ if(isset($_POST['Actualizar'])){
 										<div class="row">
 											<div class="form-group col-sm-6 pr-1">
 												<label>Primer Apellido</label>
-												<input  value="<?php echo $primerApellido;?>" type="text" class="form-control" id="papellido" name="papellido" required>
+												<input  value="<?php echo $primerApellido;?>" type="text" class="form-control" id="primerApellido" name="primerApellido" required>
 											</div>
 											<div class="form-group col-sm-6 pl-1">
 												<label>Segundo Apellido</label>
-												<input  value="<?php echo $segundoApellido;?>" type="text" class="form-control" id="sapellido" name="sapellido">
+												<input  value="<?php echo $segundoApellido;?>" type="text" class="form-control" id="segundoApellido" name="segundoApellido">
 											</div>
 										</div>
 										<div class="row">
@@ -138,11 +193,11 @@ if(isset($_POST['Actualizar'])){
 											</div>
 											<div class="form-group col-sm-4 pl-1">
 												<label>Estado Civil</label>
-												<select  value="<?php echo $estadoCivil;?>" class="form-control" id="estadoCivil" name="estadoCivil">
-													<option value="soltero">Soltero(a)</option>
-													<option value="casado">Casado(a)</option>
-													<option value="divorciado">Divorciado(a)</option>
-													<option value="viudo">Viudo(a)</option>
+												<select class="form-control" id="estadoCivil" name="estadoCivil">
+													<option value="soltero"    <?php if($estadoCivil=='soltero') echo 'selected'; ?>>Soltero(a)</option>
+													<option value="casado"     <?php if($estadoCivil=='casado') echo 'selected'; ?>>Casado(a)</option>
+													<option value="divorciado" <?php if($estadoCivil=='divorciado') echo 'selected'; ?>>Divorciado(a)</option>
+													<option value="viudo"      <?php if($estadoCivil=='viudo') echo 'selected'; ?>>Viudo(a)</option>
 												</select>
 											</div>
 										</div>
@@ -150,12 +205,24 @@ if(isset($_POST['Actualizar'])){
 										<div class="row">
 											<div class="form-group col-sm-4 pr-1">
 												<label>Rol de Usuario</label>
-												<input  value="<?php echo $rolUsuario;?>" type="tel" class="form-control" id="rolUsuario" name="rolUsuario" required>
+												<select  class="form-control" id="rolUsuario" name="rolUsuario">
+													<option value="admin"   <?php if($rolUsuario=='admin') echo 'selected'; ?>>Admin</option>
+													<option value="lider"   <?php if($rolUsuario=='lider') echo 'selected'; ?>>Lider</option>
+													<option value="miembro" <?php if($rolUsuario=='miembro') echo 'selected'; ?>>Miembro</option>
+												</select>
+											</div>
+
+											<div class="form-group col-sm-4 pr-1">
+												<label>Estado de la Cuenta</label>
+												<select  class="form-control" id="estado" name="estado">
+													<option value="activo"   <?php if($estado=='activo') echo 'selected'; ?>>Activo</option>
+													<option value="inactivo"   <?php if($estado=='inactivo') echo 'selected'; ?>>Inactivo</option>
+												</select>
 											</div>
 										</div>
 										<div class="row">
 											<div class="col-sm-offset-2 col-sm-10">
-												<input type="button" class="btn btn-outline-danger" data-dismiss="modal" value="Cancelar">
+												<input onclick="location.href='membresia.php'" type="button" class="btn btn-outline-danger" data-dismiss="modal" value="Cancelar">
 												<input type="submit" class="btn btn-outline-primary" name="Actualizar" value="Actualizar">
 											</div>
 										</div>
@@ -170,7 +237,8 @@ if(isset($_POST['Actualizar'])){
 
 		</div>
 	</div>	
+	
 </body>
-
+     
 	<?php include('include/foot.php') ?>
 </html>
