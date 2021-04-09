@@ -70,4 +70,4 @@ Los siguientes pasos describen como llevar acabo una instalación de manera tota
 
     > http://localhost/Worship-Planning/
 
-Y con eso el sistema ya se ejecuta.
+Y con eso el sistema ya se ejecuta de manera local, es importante que los servicios de xampp estén ejecutándose cuando deseamos acceder al sistema en localhost.

@@ -22,10 +22,14 @@ if ($datosUsuario){
      $_SESSION['fechaNacimiento']= $datosUsuario['fechaNacimiento'];
      $_SESSION['estadoCivil']= $datosUsuario['estadoCivil'];
      $_SESSION['rolUsuario']= $datosUsuario['rolUsuario'];
+     $_SESSION['estado']= $datosUsuario['estado'];
 }
 
 $filas=mysqli_num_rows($resultado);
-if ($filas>0 && ($_SESSION['rolUsuario']=='admin' || $_SESSION['rolUsuario']=='lider')) {
+/*if ($filas>0 && $_SESSION['estado']=='inactivo') {
+  header('location: accesoRestringido.php');
+}*/
+if ($filas>0 && ($_SESSION['rolUsuario']=='admin' || $_SESSION['rolUsuario']=='lider') && $_SESSION['estado']=='activo') {
     header("location:perfil.php");
 } else if ($filas>0 && $_SESSION['rolUsuario']=='miembro') {
     header("location:perfilBasico.php");
