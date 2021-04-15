@@ -66,6 +66,49 @@
                       <div class="row">
                           <div class="col-md-12">
 
+
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Sesiones</h4>
+                                </div>
+                                <div class="card-body">
+
+                                  <table class="table table-striped table-hover">
+                                    <thead>
+                                    <tr>
+                                      <th>Nombre</th>
+                                      <th>Apellido</th>
+                                      <th>Rol</th>
+                                      <th>Actividad</th>
+                                      <th>Fecha</th>
+                                      <th>Hora</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                            <?php
+
+                            $query="SELECT nombre, apellido, rol, tipoLog, fecha, hora FROM logs l";
+                            $resultado=mysqli_query($conexion, $query);
+                            while($row = mysqli_fetch_assoc($resultado)) { ?>
+                                      <td><?php echo $row['nombre']; ?></td>
+                                      <td><?php echo $row['apellido']; ?></td>
+                                      <td><?php echo $row['rol']; ?></td>
+                                      <td><?php echo $row['tipoLog']; ?></td>
+                                      <td><?php echo $row['fecha']; ?></td>
+                                      <td><?php echo $row['hora']; ?></td>
+                                    </tr>
+                                    <?php } ?>
+                                    </tbody>
+                                  </table>
+                                    <?php
+                                      ?>
+                                </div>
+                            </div>
+
+
+
+
                               <div class="card">
                                   <div class="card-header">
                                       <h4 class="card-title">Registros en Tesoreria</h4>
@@ -144,6 +187,8 @@
                                         ?>
                                   </div>
                               </div>
+
+
 
 
                           </div>
