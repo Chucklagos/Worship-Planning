@@ -50,10 +50,24 @@
                     <li>
                         <a class="nav-link" href="#">
                         <i class="nc-icon nc-paper-2"></i>
-                        
+
                             <p>Documentos</p>
                         </a>
                     </li>
+                    <?php
+                    session_start();
+                    $rolsession=$_SESSION['rolUsuario'];
+                    if ($rolsession=='admin') {
+                      echo '<li>
+                          <a class="nav-link" href="logs.php">
+                          <i class="nc-icon nc-cctv"></i>
+
+                              <p>Logs</p>
+                          </a>
+                      </li>';
+                    }
+
+                     ?>
                 </ul>
 
 
