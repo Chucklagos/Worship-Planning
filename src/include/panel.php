@@ -48,7 +48,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="documentos.php">
                         <i class="nc-icon nc-paper-2"></i>
                         
                             <p>Documentos</p>
