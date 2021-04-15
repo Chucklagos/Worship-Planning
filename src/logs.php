@@ -88,7 +88,7 @@
                                       <tr>
                             <?php
 
-                            $query="SELECT nombre, apellido, rol, tipoLog, fecha, hora FROM logs l";
+                            $query="SELECT idLog, nombre, apellido, rol, tipoLog, fecha, hora FROM logs l ORDER BY idLog DESC";
                             $resultado=mysqli_query($conexion, $query);
                             while($row = mysqli_fetch_assoc($resultado)) { ?>
                                       <td><?php echo $row['nombre']; ?></td>
