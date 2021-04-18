@@ -88,13 +88,13 @@
                                       <tr>
                             <?php
 
-                            $query="SELECT idLog, nombre, apellido, rol, tipoLog, fecha, hora FROM logs l ORDER BY idLog DESC";
+                            $query="SELECT idLog, nombre, apellido, rol, tipoLog, actividad, fecha, hora FROM logs l WHERE tipoLog='sesiones' ORDER BY idLog DESC";
                             $resultado=mysqli_query($conexion, $query);
                             while($row = mysqli_fetch_assoc($resultado)) { ?>
                                       <td><?php echo $row['nombre']; ?></td>
                                       <td><?php echo $row['apellido']; ?></td>
                                       <td><?php echo $row['rol']; ?></td>
-                                      <td><?php echo $row['tipoLog']; ?></td>
+                                      <td><?php echo $row['actividad']; ?></td>
                                       <td><?php echo $row['fecha']; ?></td>
                                       <td><?php echo $row['hora']; ?></td>
                                     </tr>
@@ -108,88 +108,84 @@
 
 
 
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Tesoreria</h4>
+                                </div>
+                                <div class="card-body">
 
-                              <div class="card">
-                                  <div class="card-header">
-                                      <h4 class="card-title">Registros en Tesoreria</h4>
-                                  </div>
-                                  <div class="card-body">
-
-                                    <table class="table table-striped table-hover">
-                                      <thead>
+                                  <table class="table table-striped table-hover">
+                                    <thead>
+                                    <tr>
+                                      <th>Nombre</th>
+                                      <th>Apellido</th>
+                                      <th>Rol</th>
+                                      <th>Actividad</th>
+                                      <th>Fecha</th>
+                                      <th>Hora</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
                                       <tr>
-                                        <th>Fecha</th>
-                                        <th>Concepto</th>
-                                        <th>Monto</th>
-                                        <th>Tipo</th>
-                                        <th>Realizado por</th>
-                                        <th>Cargo</th>
-                                      </tr>
-                                      </thead>
-                                      <tbody>
-                                        <tr>
-                              <?php
+                            <?php
 
-                              $query="SELECT fecha, concepto, monto, tipoMovimiento, primerNombre, rolUsuario FROM movimiento m
-                                      INNER JOIN usuario u ON m.idUsuario = u.idUsuario";
-                              $resultado=mysqli_query($conexion, $query);
-                              while($row = mysqli_fetch_assoc($resultado)) { ?>
-                                        <td><?php echo $row['fecha']; ?></td>
-                                        <td><?php echo $row['concepto']; ?></td>
-                                        <td><?php echo $row['monto']; ?></td>
-                                        <td><?php echo $row['tipoMovimiento']; ?></td>
-                                        <td><?php echo $row['primerNombre']; ?></td>
-                                        <td><?php echo $row['rolUsuario']; ?></td>
-                                      </tr>
-                                      <?php } ?>
-                                      </tbody>
-                                    </table>
-                                      <?php
-                                        ?>
-                                  </div>
-                              </div>
+                            $query="SELECT idLog, nombre, apellido, rol, tipoLog, actividad, fecha, hora FROM logs l WHERE tipoLog='tesoreria' ORDER BY idLog DESC";
+                            $resultado=mysqli_query($conexion, $query);
+                            while($row = mysqli_fetch_assoc($resultado)) { ?>
+                                      <td><?php echo $row['nombre']; ?></td>
+                                      <td><?php echo $row['apellido']; ?></td>
+                                      <td><?php echo $row['rol']; ?></td>
+                                      <td><?php echo $row['actividad']; ?></td>
+                                      <td><?php echo $row['fecha']; ?></td>
+                                      <td><?php echo $row['hora']; ?></td>
+                                    </tr>
+                                    <?php } ?>
+                                    </tbody>
+                                  </table>
+                                    <?php
+                                      ?>
+                                </div>
+                            </div>
 
-                              <div class="card">
-                                  <div class="card-header">
-                                      <h4 class="card-title">Registros en Inventario</h4>
-                                  </div>
-                                  <div class="card-body">
 
-                                    <table class="table table-striped table-hover">
-                                      <thead>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Inventario</h4>
+                                </div>
+                                <div class="card-body">
+
+                                  <table class="table table-striped table-hover">
+                                    <thead>
+                                    <tr>
+                                      <th>Nombre</th>
+                                      <th>Apellido</th>
+                                      <th>Rol</th>
+                                      <th>Actividad</th>
+                                      <th>Fecha</th>
+                                      <th>Hora</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
                                       <tr>
-                                        <th>Descripcion</th>
-                                        <th>Cantidad</th>
-                                        <th>Ministerio</th>
-                                        <th>Realizado por</th>
-                                        <th>Cargo</th>
-                                      </tr>
-                                      </thead>
-                                      <tbody>
-                                        <tr>
-                              <?php
+                            <?php
 
-                              $query="SELECT descripcion, cantidad, m.nombre, u.primerNombre, u.rolUsuario FROM inventario i
-                                      INNER JOIN usuario u ON i.idUsuario = u.idUsuario
-                                      INNER JOIN ministerio m ON i.idMinisterio = m.idMinisterio";
-                              $resultado=mysqli_query($conexion, $query);
-                              while($row = mysqli_fetch_assoc($resultado)) { ?>
-                                        <td><?php echo $row['descripcion']; ?></td>
-                                        <td><?php echo $row['cantidad']; ?></td>
-                                        <td><?php echo $row['nombre']; ?></td>
-                                        <td><?php echo $row['primerNombre']; ?></td>
-                                        <td><?php echo $row['rolUsuario']; ?></td>
-                                      </tr>
-                                      <?php } ?>
-                                      </tbody>
-                                    </table>
-                                      <?php
-                                        ?>
-                                  </div>
-                              </div>
-
-
-
+                            $query="SELECT idLog, nombre, apellido, rol, tipoLog, actividad, fecha, hora FROM logs l WHERE tipoLog='inventario' ORDER BY idLog DESC";
+                            $resultado=mysqli_query($conexion, $query);
+                            while($row = mysqli_fetch_assoc($resultado)) { ?>
+                                      <td><?php echo $row['nombre']; ?></td>
+                                      <td><?php echo $row['apellido']; ?></td>
+                                      <td><?php echo $row['rol']; ?></td>
+                                      <td><?php echo $row['actividad']; ?></td>
+                                      <td><?php echo $row['fecha']; ?></td>
+                                      <td><?php echo $row['hora']; ?></td>
+                                    </tr>
+                                    <?php } ?>
+                                    </tbody>
+                                  </table>
+                                    <?php
+                                      ?>
+                                </div>
+                            </div>
 
                           </div>
                       </div>

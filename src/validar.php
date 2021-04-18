@@ -35,7 +35,7 @@ if ($filas>0 && ($_SESSION['rolUsuario']=='admin' || $_SESSION['rolUsuario']=='l
   $lastnamesession = $_SESSION['primerApellido'];
   $rolsession = $_SESSION['rolUsuario'];
 
-  $query="INSERT INTO logs VALUES(idLog, '$namesession', '$lastnamesession', '$rolsession', 'Inicio de Sesión', CURDATE(), CURTIME())";
+  $query="INSERT INTO logs VALUES(idLog, '$namesession', '$lastnamesession', '$rolsession', 'sesiones', 'Inicio de Sesión', CURDATE(), CURTIME())";
   $resultado = mysqli_query($conexion, $query);
   if(!$resultado) {
     die("Query Failed.");
