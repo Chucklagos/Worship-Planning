@@ -42,7 +42,7 @@ body .fc { /* extra precedence to overcome jqui */
 .fc-unthemed .fc-divider,
 .fc-unthemed .fc-popover .fc-header,
 .fc-unthemed .fc-list-heading td {
-	background: #eee;
+	background: #bb20d3cf;
 }
 
 .fc-unthemed .fc-popover .fc-header .fc-close {
@@ -50,11 +50,11 @@ body .fc { /* extra precedence to overcome jqui */
 }
 
 .fc-unthemed td.fc-today {
-	background: #fcf8e3;
+	background: #f9e3fc;
 }
 
 .fc-highlight { /* when user is selecting cells */
-	background: #bce8f1;
+	background: #4740c7;
 	opacity: .3;
 }
 
@@ -529,13 +529,13 @@ temporary rendered events).
 	font-size: .85em;
 	line-height: 1.3;
 	border-radius: 3px;
-	border: 1px solid #3a87ad; /* default BORDER color */
+	border: 1px solid #bb20d3cf; /* default BORDER color */
 	font-weight: normal; /* undo jqui's ui-widget-header bold */
 }
 
 .fc-event,
 .fc-event-dot {
-	background-color: #3a87ad; /* default BACKGROUND color */
+	background-color: #bb20d3cf; /* default BACKGROUND color */
 }
 
 /* overpower some of bootstrap's and jqui's styles on <a> tags */
