@@ -159,12 +159,11 @@ if ($rolsession=='miembro') {
             <div class="content">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-13">
+                        <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
                                     <h4 class="card-title">Eventos</h4>
                                     <hr>
-                                    <br>
                                 </div>
                                 <div class="card-body">
                                     <div id="calendar"></div>
