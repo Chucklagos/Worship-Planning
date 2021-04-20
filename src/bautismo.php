@@ -28,7 +28,7 @@ if ($rolsession=='miembro') {
 
                 <div class="container-fluid">
                     <a class="navbar-brand" href="">  </a>
-                    
+
                     <div class="collapse navbar-collapse justify-content-end" id="navigation">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
@@ -50,15 +50,16 @@ if ($rolsession=='miembro') {
                                     <h4 class="card-title">Certificado de Bautismo</h4>
                                     <hr>
 
+                                  <form class="" action="docBautismo.php" method="post">
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-md-10 pr-1">
                                                 <div class="form-group">
                                                     <label>Nombre de la Iglesia</label>
-                                                    <input type="text" class="form-control" id="" name="nombreCompleto" required>
+                                                    <input type="text" class="form-control" id="" name="nombreIglesia" required>
                                                 </div>
                                             </div>
-                                        </div>  
+                                        </div>
                                         <div class="row">
                                             <div class="col-md-10 pr-1">
                                                 <div class="form-group">
@@ -66,36 +67,39 @@ if ($rolsession=='miembro') {
                                                     <input type="text" class="form-control" id="nombreCompleto" name="nombreCompleto" required>
                                                 </div>
                                             </div>
-                                        </div>  
+                                        </div>
                                         <div class="row">
                                             <div class="col-md-10 pr-1">
                                                 <div class="form-group">
                                                     <label>Nombre del Pastor </label>
-                                                    <input type="text" class="form-control" id="nombreCompleto" name="nombreCompleto" required>
+                                                    <input type="text" class="form-control" id="nombreCompleto" name="nombrePastor" required>
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="row">
                                             <div class="col-md-5 pr-1">
                                                 <div class="form-group">
                                                 <label>Fecha </label>
-                                              <input type="date" class="form-control" id="" name="" required>
+                                              <input type="date" class="form-control" id="" name="fecha" required>
                                                 </div>
                                             </div>
-                                        </div>  
+                                        </div>
 
                                         <br>
                                         <div class="row">
                                             <div class="col-md-5 pr-1">
                                                 <div class="form-group">
-                                                    <a class="btn btn-outline-primary" href="docBautismo.php" target="_blank">Generar documento</a>
+                                                  <input type="submit" class="btn btn-outline-primary" name="" value="Generar documento" target="_blank">
+                                                    <!--a class="btn btn-outline-primary" href="docBautismo.php" target="_blank">Generar documento</a-->
                                                   <a class="btn btn-outline-primary" href="documentos.php">Regresar</a>
                                                 </div>
                                             </div>
-                                        </div>  
+                                        </div>
                                     </div>
-                                </div>      
+                                  </form>
+
+                                </div>
                             </div>
                         </div>
                     </div>

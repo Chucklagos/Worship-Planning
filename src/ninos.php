@@ -28,7 +28,7 @@ if ($rolsession=='miembro') {
 
                 <div class="container-fluid">
                     <a class="navbar-brand" href="">  </a>
-                    
+
                     <div class="collapse navbar-collapse justify-content-end" id="navigation">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
@@ -45,6 +45,8 @@ if ($rolsession=='miembro') {
                 <div class="container-fluid">
                     <div class="row">
                         <div class=" col-md-12">
+
+                          <form class="" action="docNinos.php" method="post">
                             <div class="card">
                                 <div class="card-header">
                                     <h4 class="card-title">Certificado Presentacion de Niños</h4>
@@ -55,30 +57,30 @@ if ($rolsession=='miembro') {
                                             <div class="col-md-10 pr-1">
                                                 <div class="form-group">
                                                     <label>Nombre de la Iglesia</label>
-                                                    <input type="text" class="form-control" id="" name="" required>
+                                                    <input type="text" class="form-control" id="" name="nombreIglesia" required>
                                                 </div>
                                             </div>
-                                        </div>  
+                                        </div>
                                         <div class="row">
                                             <div class="col-md-10 pr-1">
                                                 <div class="form-group">
                                                     <label>Nombre Completo del Niño(a)</label>
-                                                    <input type="text" class="form-control" id="" name=""  required>
+                                                    <input type="text" class="form-control" id="" name="nombreCompleto"  required>
                                                 </div>
                                             </div>
-                                        </div>  
-                                        
+                                        </div>
+
                                         <div class="row">
                                             <div class="col-md-5 pr-1">
                                                 <div class="form-group">
                                                     <label>Nombre del Padre</label>
-                                                    <input type="text" class="form-control" id="" name="" placeholder="Primer Nombre y Apellido" required>
+                                                    <input type="text" class="form-control" id="" name="nombrePadre" placeholder="" required>
                                                 </div>
                                             </div>
                                             <div class="col-md-5 pl-1">
                                                 <div class="form-group">
                                                     <label>Nombre de la Madre</label>
-                                                    <input type="text" class="form-control" id="" name="" placeholder="Primer Nombre y Apellido" required>
+                                                    <input type="text" class="form-control" id="" name="nombreMadre" placeholder="" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -86,32 +88,35 @@ if ($rolsession=='miembro') {
                                             <div class="col-md-10 pr-1">
                                                 <div class="form-group">
                                                     <label>Nombre del Pastor</label>
-                                                    <input type="text" class="form-control" id="" name="nombreCompleto" required>
+                                                    <input type="text" class="form-control" id="" name="nombrePastor" required>
                                                 </div>
                                             </div>
-                                        </div>  
+                                        </div>
 
                                         <div class="row">
                                             <div class="col-md-5 pr-1">
                                                 <div class="form-group">
                                                 <label>Fecha </label>
-                                              <input type="date" class="form-control" id="" name="" required>
+                                              <input type="date" class="form-control" id="" name="fecha" required>
                                                 </div>
                                             </div>
-                                        </div>  
+                                        </div>
 
                                         <br>
                                         <div class="row">
                                             <div class="col-md-5 pr-1">
                                                 <div class="form-group">
-                                                    <a class="btn btn-outline-primary" href="docNinos.php" target="_blank">Generar documento</a>
+                                                  <input type="submit" class="btn btn-outline-primary" name="" value="Generar documento">
+                                                    <!--a class="btn btn-outline-primary" href="docNinos.php" target="_blank">Generar documento</a-->
                                                   <a class="btn btn-outline-primary" href="documentos.php">Regresar</a>
                                                 </div>
                                             </div>
-                                        </div>  
+                                        </div>
                                     </div>
-                                </div>      
+                                </div>
                             </div>
+                          </form>
+
                         </div>
                     </div>
                 </div>

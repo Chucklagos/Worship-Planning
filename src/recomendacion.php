@@ -28,7 +28,7 @@ if ($rolsession=='miembro') {
 
                 <div class="container-fluid">
                     <a class="navbar-brand" href="">  </a>
-                    
+
                     <div class="collapse navbar-collapse justify-content-end" id="navigation">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
@@ -50,15 +50,17 @@ if ($rolsession=='miembro') {
                                     <h4 class="card-title">Documento de Recomendación</h4>
                                     <hr>
 
+
+                                    <form class="" action="docRecomendacion.php" method="post">
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-md-10 pr-1">
                                                 <div class="form-group">
                                                     <label>Nombre de la Iglesia</label>
-                                                    <input type="text" class="form-control" id="nombreCompleto" name="nombreCompleto" required>
+                                                    <input type="text" class="form-control" id="nombreCompleto" name="nombreIglesia" required>
                                                 </div>
                                             </div>
-                                        </div>  
+                                        </div>
                                         <div class="row">
                                             <div class="col-md-10 pr-1">
                                                 <div class="form-group">
@@ -66,19 +68,19 @@ if ($rolsession=='miembro') {
                                                     <input type="text" class="form-control" id="nombreCompleto" name="nombreCompleto" required>
                                                 </div>
                                             </div>
-                                        </div>  
+                                        </div>
 
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label>Lugar</label>
-                                                    <input type="text" class="form-control" id="" name="" required>
+                                                    <input type="text" class="form-control" id="" name="lugar" required>
                                                 </div>
                                             </div>
                                             <div class="col-md-4 pr-1">
                                                 <div class="form-group">
                                                 <label>Fecha </label>
-                                              <input type="date" class="form-control" id="" name="" required>
+                                              <input type="date" class="form-control" id="" name="fecha" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -86,30 +88,34 @@ if ($rolsession=='miembro') {
                                             <div class="col-md-10 pr-1">
                                                 <div class="form-group">
                                                     <label>Cargo que desempeña</label>
-                                                    <input type="text" class="form-control" id="nombreCompleto" name="nombreCompleto" required>
+                                                    <input type="text" class="form-control" id="nombreCompleto" name="cargo" required>
                                                 </div>
                                             </div>
-                                        </div>  
+                                        </div>
                                         <div class="row">
                                             <div class="col-md-10 pr-1">
                                                 <div class="form-group">
                                                     <label>Nombre del Pastor</label>
-                                                    <input type="text" class="form-control" id="" name="nombreCompleto" required>
+                                                    <input type="text" class="form-control" id="" name="nombrePastor" required>
                                                 </div>
                                             </div>
-                                        </div>  
-                                        
+                                        </div>
+
                                         <br>
                                         <div class="row">
                                             <div class="col-md-5 pr-1">
                                                 <div class="form-group">
-                                                    <a class="btn btn-outline-primary" href="docRecomendacion.php" target="_blank">Generar documento</a>
+                                                  <input type="submit" class="btn btn-outline-primary" name="" value="Generar documento">
+                                                    <!--a class="btn btn-outline-primary" href="docRecomendacion.php" target="_blank">Generar documento</a-->
                                                   <a class="btn btn-outline-primary" href="documentos.php">Regresar</a>
                                                 </div>
                                             </div>
-                                        </div>  
+                                        </div>
                                     </div>
-                                </div>      
+                                  </form>
+
+
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -123,4 +129,3 @@ if ($rolsession=='miembro') {
 <?php include('include/foot.php') ?>
 
 </html>
-
