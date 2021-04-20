@@ -4,7 +4,7 @@
   $varsession=$_SESSION['email'];
   $rolsession=$_SESSION['rolUsuario'];
   if($varsession==null || $varsession== ''){
-    header('location:login.php');
+    header('location:accesoDenegado.php');
     die();
   }
   if ($rolsession=='miembro') {

@@ -3,7 +3,7 @@ session_start();
 include 'db/conexion.php';
 $varsession=$_SESSION['email'];
 if($varsession==null || $varsession== ''){
-   header('location:login.php');
+   header('location:accesoDenegado.php');
    die();
 }
 ?>
