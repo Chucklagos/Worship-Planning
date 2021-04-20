@@ -3,7 +3,7 @@ session_start();
 include 'db/conexion.php';
 $varsession=$_SESSION['email'];
 if($varsession==null || $varsession== ''){
-   echo 'Usted no tiene autorizacion para ver los datos de este usuario';
+   header('location:login.php');
    die();
 }
 ?>
