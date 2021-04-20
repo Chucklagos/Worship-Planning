@@ -23,6 +23,9 @@ if ($datosUsuario){
      $_SESSION['estadoCivil']= $datosUsuario['estadoCivil'];
      $_SESSION['rolUsuario']= $datosUsuario['rolUsuario'];
      $_SESSION['estado']= $datosUsuario['estado'];
+     $_SESSION['fechaConversion']= $datosUsuario['fechaConversion'];
+     $_SESSION['fechaBautismo']= $datosUsuario['fechaBautismo'];
+     $_SESSION['lugarBautismo']= $datosUsuario['lugarBautismo'];
 }
 
 $filas=mysqli_num_rows($resultado);
