@@ -162,8 +162,8 @@ if ($rolsession=='miembro') {
                                                 
                                             </a>
                                            <form method="POST" action="" enctype="multipart/form-data">
-                                            <input type="file" name="imagen">
-                                            <input type="submit" name="subir" value="subir">
+                                            <input type="file" name="imagen" class="form-control-file form-control-sm"><br>
+                                            <input type="submit" name="subir" value="Subir Imagen" class="btn btn-outline-primary btn-sm"><br><br>
                                            </form>
                                            <?php
                                            if(isset($_POST['subir'])){
@@ -181,7 +181,7 @@ if ($rolsession=='miembro') {
                                            }
                                            ?>
                                             <br>
-                                            <h5 class="title"><?php echo $_SESSION['primerNombre'];?></h5>
+                                            <h4 class="title"><?php echo $_SESSION['primerNombre'];?></h4>
                                             <hr>
                                             <br>
                                             <a href="#">
