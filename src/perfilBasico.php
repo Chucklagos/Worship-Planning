@@ -22,7 +22,7 @@ if(mysqli_num_rows($resultado)==1){
 
 $varsession=$_SESSION['email'];
 if($varsession==null || $varsession== ''){
-   echo 'Usted no tiene autorizacion para ver los datos de este usuario';
+   header('location:accesoDenegado.php');
    die();
 }
 ?>
