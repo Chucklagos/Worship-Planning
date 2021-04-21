@@ -174,18 +174,32 @@ if($varsession==null || $varsession== ''){
                                     <div class="author">
                                         <a href="#">
                                           <!--Extraer Foto de Usuario de la carpeta de Fotos-->
-                                          <?php $rid = $_SESSION['identidad'];
-                                                $ruta = '../userpics/'.$rid.'.jpg';
-                                           ?>
-                                            <img class="avatar border-gray" src="<?php echo "$ruta"; ?>" alt="">
-                                        </a>
-                                        <center><h6 class="title">Subir foto</h6></center>
-                                        <label for="file-upload" class="custom-file-upload">
-                                            <i class="fa fa-cloud-upload"></i> Seleccionar imagen
-                                        </label>
-                                        <br>
-                                        <input id="file-upload" name='upload_cont_img' type="file" style="display:none;">
+                                         <?php $rid = $_SESSION['identidad'];
+                                                    $ruta = "imagenperfil/".$rid.'.jpg';
+                                                   // $fichero = $ruta.basename($_FILES['imagen']['name']);
+                                               ?>
+                                                <img class="avatar border-gray" src="<?php echo "$ruta"; ?>" alt="">
+                                                
+                                            </a>
+                                           <form method="POST" action="" enctype="multipart/form-data">
+                                            <input type="file" name="imagen" class="form-control-file form-control-sm"><br>
+                                            <input type="submit" name="subir" value="Subir Imagen" class="btn btn-outline-primary btn-sm"><br><br>
+                                           </form>
+                                           <?php
+                                           if(isset($_POST['subir'])){
+                                               $ruta = "imagenperfil/";
+                                               $fichero = $ruta.basename($_FILES['imagen']['name']);
+                                               $rut = $_SESSION['identidad'].".jpg";
+                                               if(move_uploaded_file($_FILES['imagen']['tmp_name'], $ruta.$_SESSION['identidad'].".jpg")){
+                                                   
+                                                 require("db/conexion.php");
+                                                 $insertar = $conexion->query("UPDATE usuario SET imagen = '$rut' WHERE identidad ='".$_SESSION['identidad']."' ");
 
+
+                                               }
+
+                                           }
+                                           ?>
                                         <br>
                                             <h5 class="title"><?php echo $primerNombre;?></h5>
                                             <hr>
