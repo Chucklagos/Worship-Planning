@@ -3,7 +3,7 @@ session_start();
 $varsession=$_SESSION['email'];
 $rolsession=$_SESSION['rolUsuario'];
 if($varsession==null || $varsession== ''){
-  header('location:accesoRestringido.php');
+  header('location:accesoDenegado.php');
   die();
 }
 if ($rolsession=='miembro') {
@@ -18,16 +18,21 @@ if ($rolsession=='miembro') {
  <?php include('include/head.php'); ?>
   <title>Eventos</title>
 
-<link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
-<script src='fullcalendar/lib/jquery.min.js'></script>
-<script src='fullcalendar/lib/moment.min.js'></script>
-<script src='fullcalendar/fullcalendar.js'></script>
-
+    <link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
+    
+    <script src='fullcalendar/lib/jquery.min.js'></script>
+    <script src='fullcalendar/lib/moment.min.js'></script>
+    
+    <script src='fullcalendar/fullcalendar.js'></script>
+    <script src='fullcalendar/lib/es.js'></script>
+               
+   
   <script>
-
+   
   $(document).ready(function() {
+      
    var calendar = $('#calendar').fullCalendar({
-
+    
     header:{
      left:'prev,next today',
      center:'title',
@@ -57,6 +62,7 @@ if ($rolsession=='miembro') {
        success:function()
        {
         calendar.fullCalendar('refetchEvents');
+       
         alert("Evento agregado con exito");
        }
       })
@@ -122,6 +128,12 @@ if ($rolsession=='miembro') {
   </script>
 
  </head>
+
+
+
+
+
+
  <body>
  <div class="wrapper">
         <?php include'include/panel.php'; ?>
@@ -130,34 +142,10 @@ if ($rolsession=='miembro') {
             <nav class="navbar navbar-expand-lg " color-on-scroll="500">
 				<div class="container-fluid">
                     <a class="navbar-brand" href="">  </a>
-                    <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-bar burger-lines"></span>
-                        <span class="navbar-toggler-bar burger-lines"></span>
-                        <span class="navbar-toggler-bar burger-lines"></span>
-                    </button>
+                    
                     <div class="collapse navbar-collapse justify-content-end" id="navigation">
-                        <ul class="nav navbar-nav mr-auto">
-
-                        </ul>
                         <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#pablo">
-                                    <span class="no-icon"></span>
-                                </a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="no-icon"></span>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="perfil.php"></a>
-                                    <a class="dropdown-item" href="#"></a>
-                                    <a class="dropdown-item" href="#"></a>
-                                    <a class="dropdown-item" href="#"></a>
-                                    <div class="divider"></div>
-                                    <a class="dropdown-item" href="#"></a>
-                                </div>
-                            </li>
+                            
                             <li class="nav-item">
                                 <a class="nav-link" href="cerrar_session.php">
                                     <span class="no-icon">Cerrar Sesión</span>
@@ -168,8 +156,23 @@ if ($rolsession=='miembro') {
                 </div>
             </nav>
             <!-- End Navbar -->
-
-  <div id="calendar"></div>
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Eventos</h4>
+                                    <hr>
+                                </div>
+                                <div class="card-body">
+                                    <div id="calendar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
   </div>

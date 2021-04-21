@@ -245,12 +245,7 @@ if(isset($_POST['Submit'])){
               <h3><a href="">Documentos</a></h3>
             </div>
           </div>
-          <div class="col-lg-4 col-md-4 mt-4">
-            <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
-              <i class='bx bxs-bible' style="color: #EB01A0;"></i>
-              <h3><a href="">Discipulado</a></h3>
-            </div>
-          </div>
+          
           
         </div>
 

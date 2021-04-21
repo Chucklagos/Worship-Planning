@@ -18,11 +18,12 @@
                     <br>
                         <center><img src="../assets/img/restringido.png" height="250px" width="250px"/></center>                                              
                         <br>                                                                              
-                            <center><h2>Se ha denegado el acceso al usuario <?php echo $_SESSION['primerNombre'] ?> <?php echo $_SESSION['primerApellido'] ?> (cuenta: <?php echo $_SESSION['rolUsuario'] ?>) </h2><center>
+                            <center><h2>Se ha denegado el acceso</h2><center>
                         <br>
-                            <center><h3>Razón: La página solicitada pertenece a la categoría de administrador o líder</h3><center>
+                            <center><h3>Razón: NO ha iniciado sesión </h3><center>
                         <br>
-                        <a href="javascript: history.go(-1)" class="btn btn-outline-danger">Regresar</a>
+                        <a class="btn btn-outline-dark " href="login.php">Iniciar Sesión</a>
+
                     </div>
                 </div>
             </div>

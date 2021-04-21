@@ -23,6 +23,9 @@ if ($datosUsuario){
      $_SESSION['estadoCivil']= $datosUsuario['estadoCivil'];
      $_SESSION['rolUsuario']= $datosUsuario['rolUsuario'];
      $_SESSION['estado']= $datosUsuario['estado'];
+     $_SESSION['fechaConversion']= $datosUsuario['fechaConversion'];
+     $_SESSION['fechaBautismo']= $datosUsuario['fechaBautismo'];
+     $_SESSION['lugarBautismo']= $datosUsuario['lugarBautismo'];
 }
 
 $filas=mysqli_num_rows($resultado);
@@ -30,6 +33,17 @@ $filas=mysqli_num_rows($resultado);
   header('location: accesoRestringido.php');
 }*/
 if ($filas>0 && ($_SESSION['rolUsuario']=='admin' || $_SESSION['rolUsuario']=='lider') && $_SESSION['estado']=='activo') {
+
+  $namesession = $_SESSION['primerNombre'];
+  $lastnamesession = $_SESSION['primerApellido'];
+  $rolsession = $_SESSION['rolUsuario'];
+
+  $query="INSERT INTO logs VALUES(idLog, '$namesession', '$lastnamesession', '$rolsession', 'sesiones', 'Inicio de Sesión', CURDATE(), CURTIME())";
+  $resultado = mysqli_query($conexion, $query);
+  if(!$resultado) {
+    die("Query Failed.");
+  }
+
     header("location:perfil.php");
 } else if ($filas>0 && $_SESSION['rolUsuario']=='miembro') {
     header("location:perfilBasico.php");

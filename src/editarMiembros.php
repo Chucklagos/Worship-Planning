@@ -17,6 +17,9 @@ if(!isset($_GET['idUsario'])){
 		$estadoCivil=$row['estadoCivil'];
 		$rolUsuario=$row['rolUsuario'];
 		$estado=$row['estado'];
+		$fechaConversion=$row['fechaConversion'];
+		$fechaBautismo=$row['fechaBautismo'];
+		$lugarBautismo=$row['lugarBautismo'];
 	}
  }
 
@@ -80,6 +83,25 @@ if(isset($_POST['Actualizar']) && $_POST['telefono']!=$row['telefono']){
 if(isset($_POST['Actualizar']) && $_POST['estadoCivil']!=$row['estadoCivil']){
 	$estadoCivil=$_POST['estadoCivil'];
 	$query= "UPDATE usuario SET estadoCivil='$estadoCivil' WHERE idUsuario='$idUsuario' " ;
+	$resultado = mysqli_query($conexion, $query);
+	header("Location: membresia.php");
+}   
+
+if(isset($_POST['Actualizar']) && $_POST['fechaConversion']!=$row['fechaConversion']){
+	$fechaConversion=$_POST['fechaConversion'];
+	$query= "UPDATE usuario SET fechaConversion='$fechaConversion' WHERE idUsuario='$idUsuario' " ;
+	$resultado = mysqli_query($conexion, $query);
+	header("Location: membresia.php");
+}   
+if(isset($_POST['Actualizar']) && $_POST['fechaBautismo']!=$row['fechaBautismo']){
+	$fechaBautismo=$_POST['fechaBautismo'];
+	$query= "UPDATE usuario SET fechaBautismo='$fechaBautismo' WHERE idUsuario='$idUsuario' " ;
+	$resultado = mysqli_query($conexion, $query);
+	header("Location: membresia.php");
+}   
+if(isset($_POST['Actualizar']) && $_POST['lugarBautismo']!=$row['lugarBautismo']){
+	$lugarBautismo=$_POST['lugarBautismo'];
+	$query= "UPDATE usuario SET lugarBautismo='$lugarBautismo' WHERE idUsuario='$idUsuario' " ;
 	$resultado = mysqli_query($conexion, $query);
 	header("Location: membresia.php");
 }   
@@ -218,6 +240,24 @@ if(isset($_POST['Actualizar']) && $_POST['estadoCivil']!=$row['estadoCivil']){
 													<option value="activo"   <?php if($estado=='activo') echo 'selected'; ?>>Activo</option>
 													<option value="inactivo"   <?php if($estado=='inactivo') echo 'selected'; ?>>Inactivo</option>
 												</select>
+											</div>
+										</div>
+										<div class="row">
+										<div class=" form-group col-sm-4 pr-1">
+                                                <div class="form-group">
+                                                    <label >Fecha de Conversión</label>
+                                                    <input value="<?php echo $fechaConversion;?>" id="fechaConversion" name="fechaConversion" type="date" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="from-group col-sm-4 pr-1">
+                                                <div class="form-group">
+                                                    <label>Fecha de Bautismo</label>
+                                                    <input value="<?php echo $fechaBautismo;?>" id="fechaBautimo" name="fechaBautismo" type="date" class="form-control">
+                                                </div>
+                                            </div>
+											<div  class="form-group col-sm-4 pr-1">
+												<label>Lugar Bautismo</label>
+												<input  value="<?php echo $lugarBautismo;?>" type="text" class="form-control" id="lugarBautismo" name="lugarBautismo" required>
 											</div>
 										</div>
 										<div class="row">

@@ -12,6 +12,16 @@
     die("Query Failed.");
   }
 
+  $namesession = $_SESSION['primerNombre'];
+  $lastnamesession = $_SESSION['primerApellido'];
+  $rolsession = $_SESSION['rolUsuario'];
+
+  $query="INSERT INTO logs VALUES(idLog, '$namesession', '$lastnamesession', '$rolsession', 'inventario', 'Registró $cantidad $descripcion en Inventario de Alabanza', CURDATE(), CURTIME())";
+  $resultado = mysqli_query($conexion, $query);
+  if(!$resultado) {
+    die("Query Failed.");
+  }
+
   header('location: invAlabanza.php');
 
  ?>

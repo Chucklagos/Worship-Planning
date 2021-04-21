@@ -1,9 +1,28 @@
 <?php
 session_start();
 include 'db/conexion.php';
+
+$iden=$_SESSION['identidad'];
+$consulta= "SELECT * FROM usuario WHERE idUsuario=$iden ";
+$resultado= mysqli_query($conexion,$consulta);
+if(mysqli_num_rows($resultado)==1){
+   $row=mysqli_fetch_array($resultado);
+   $contrasena=$row['contrasena'];
+   $primerNombre=$row['primerNombre'];
+   $segundoNombre=$row['segundoNombre'];
+   $primerApellido=$row['primerApellido'];
+   $segundoApellido=$row['segundoApellido'];
+   $telefono=$row['telefono'];
+   $rolUsuario=$row['rolUsuario'];
+   $fechaConversion=$row['fechaConversion'];
+   $fechaBautismo=$row['fechaBautismo'];
+   $estadoCivil=$row['estadoCivil'];
+   $lugarBautismo=$row['lugarBautismo'];
+}
+
 $varsession=$_SESSION['email'];
 if($varsession==null || $varsession== ''){
-   echo 'Usted no tiene autorizacion para ver los datos de este usuario';
+   header('location:accesoDenegado.php');
    die();
 }
 ?>
@@ -91,25 +110,25 @@ if($varsession==null || $varsession== ''){
                                             <div class="col-md-3 pr-1">
                                                 <div class="form-group">
                                                     <label>Primer Nombre</label>
-                                                    <input type="text" class="form-control" placeholder="" value="<?php echo $_SESSION['primerNombre'] ?>" disabled="">
+                                                    <input type="text" class="form-control" placeholder="" value="<?php echo $primerNombre ?>" disabled="">
                                                 </div>
                                             </div>
                                             <div class="col-md-3 pr-1">
                                                 <div class="form-group">
                                                     <label>Segundo Nombre</label>
-                                                    <input type="text" class="form-control" placeholder="" value="<?php echo $_SESSION['segundoNombre'] ?>" disabled="">
+                                                    <input type="text" class="form-control" placeholder="" value="<?php echo $segundoNombre ?>" disabled="">
                                                 </div>
                                             </div>
                                             <div class="col-md-3 pl-1">
                                                 <div class="form-group">
                                                     <label>Primer Apellido</label>
-                                                    <input type="text" class="form-control" placeholder="" value="<?php echo $_SESSION['primerApellido'] ?>" disabled="">
+                                                    <input type="text" class="form-control" placeholder="" value="<?php echo $primerApellido ?>" disabled="">
                                                 </div>
                                             </div>
                                             <div class="col-md-3 pl-1">
                                                 <div class="form-group">
                                                 <label>Segundo Apellido</label>
-                                                    <input type="text" class="form-control" placeholder="" value="<?php echo $_SESSION['segundoApellido'] ?>" disabled="">
+                                                    <input type="text" class="form-control" placeholder="" value="<?php echo $segundoApellido ?>" disabled="">
                                                 </div>
                                             </div>
                                         </div>
@@ -119,7 +138,7 @@ if($varsession==null || $varsession== ''){
                                             <div class="col-md-4 pr-1">
                                                 <div class="form-group">
                                                     <label>Telefono</label>
-                                                    <input type="text" class="form-control" placeholder="" value="<?php echo $_SESSION['telefono'] ?>" disabled="">
+                                                    <input type="text" class="form-control" placeholder="" value="<?php echo $telefono ?>" disabled="">
                                                 </div>
                                             </div>
                                             <div class="col-md-4 px-1">
@@ -131,7 +150,7 @@ if($varsession==null || $varsession== ''){
                                             <div class="col-md-4 pl-1">
                                                 <div class="form-group">
                                                     <label>Estado Civil</label>
-                                                    <input type="text" class="form-control" placeholder="" value="<?php echo $_SESSION['estadoCivil'] ?>" disabled="">
+                                                    <input type="text" class="form-control" placeholder="" value="<?php echo $estadoCivil ?>" disabled="">
                                                 </div>
                                             </div>
                                         </div>
@@ -165,7 +184,7 @@ if($varsession==null || $varsession== ''){
                                         <input id="file-upload" name='upload_cont_img' type="file" style="display:none;">
 
                                         <br>
-                                            <h5 class="title"><?php echo $_SESSION['primerNombre'];?></h5>
+                                            <h5 class="title"><?php echo $primerNombre;?></h5>
                                             <hr>
                                             <br>
                                             <a href="#">
@@ -195,31 +214,31 @@ if($varsession==null || $varsession== ''){
                                             <div class="col-md-4 pr-1">
                                                 <div class="form-group">
                                                     <label>Cargo</label>
-                                                    <input type="text" class="form-control" placeholder="" value="<?php echo $_SESSION['rolUsuario'] ?>" disabled="">
+                                                    <input type="text" class="form-control" placeholder="" value="<?php echo $rolUsuario ?>" disabled="">
                                                 </div>
                                             </div>
                                             <div class="col-md-4 px-1">
                                                 <div class="form-group">
                                                     <label >Fecha de Conversión</label>
-                                                    <input type="date" class="form-control" value= "" >
+                                                    <input type="date" class="form-control" value= "<?php echo $fechaConversion?>" >
                                                 </div>
                                             </div>
                                             <div class="col-md-4 pl-1">
                                                 <div class="form-group">
                                                     <label>Fecha de Bautismo</label>
-                                                    <input type="date" class="form-control" placeholder="" value="">
+                                                    <input type="date" class="form-control" placeholder="" value="<?php echo $fechaBautismo ?>">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-12">
+                                            <div class="col-md-4 pr-1">
                                                 <div class="form-group">
-                                                    <label>Lugar de Bautismo</label>
-                                                    <textarea rows="4" cols="80" class="form-control" placeholder="" value="Mike"></textarea>
+                                                    <label>Lugar Bautismo</label>
+                                                    <input type="text" class="form-control" placeholder="" value="<?php echo $lugarBautismo ?>" disabled="">
                                                 </div>
                                             </div>
                                         </div>
-                                            <button type="submit" class="btn btn-info btn-fill pull-right">Actualizar</button>
+                                           <!-- <button type="submit" class="btn btn-info btn-fill pull-right">Actualizar</button>-->
                                         <br>
                                         <div class="clearfix"></div>
                                     </form>
