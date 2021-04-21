@@ -48,6 +48,9 @@ if($varsession==null || $varsession== ''){
                                 <a class="nav-link" href="cerrar_session.php">
                                     <span class="no-icon">Cerrar Sesión</span>
                                 </a>
+                                <a class="nav-link" href="manual_de_usuario.php">
+                                    <span class="no-icon">Ayuda</span>
+                                </a>
                             </li>
 
                         </ul>
@@ -352,3 +355,7 @@ if($varsession==null || $varsession== ''){
 <?php include('include/foot.php') ?>
 
 </html>
+
+
+
+
