@@ -14,6 +14,19 @@ $fecha = $_POST['fecha'];
 $cargo = $_POST['cargo'];
 $nombrePastor = $_POST['nombrePastor'];
 
+//Para logs
+$namesession = $_SESSION['primerNombre'];
+$lastnamesession = $_SESSION['primerApellido'];
+$rolsession = $_SESSION['rolUsuario'];
+
+$query="INSERT INTO logs VALUES(idLog, '$namesession', '$lastnamesession', '$rolsession', 'documentos', 'Generó  un carta recomendación para $nombreCompleto', CURDATE(), CURTIME())";
+$resultado = mysqli_query($conexion, $query);
+if(!$resultado) {
+  die("Query Failed.");
+}
+//---------------
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

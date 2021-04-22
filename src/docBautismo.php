@@ -12,6 +12,17 @@ $nombreCompleto = $_POST['nombreCompleto'];
 $nombrePastor = $_POST['nombrePastor'];
 $fecha = $_POST['fecha'];
 
+//Para logs
+$namesession = $_SESSION['primerNombre'];
+$lastnamesession = $_SESSION['primerApellido'];
+$rolsession = $_SESSION['rolUsuario'];
+
+$query="INSERT INTO logs VALUES(idLog, '$namesession', '$lastnamesession', '$rolsession', 'documentos', 'Generó  un certificado de bautismo para $nombreCompleto', CURDATE(), CURTIME())";
+$resultado = mysqli_query($conexion, $query);
+if(!$resultado) {
+  die("Query Failed.");
+}
+//---------------
 ?>
 <!DOCTYPE html>
 <html lang="en">

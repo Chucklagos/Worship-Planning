@@ -67,9 +67,6 @@ if($varsession==null || $varsession== ''){
                                 <a class="nav-link" href="cerrar_session.php">
                                     <span class="no-icon">Cerrar Sesión</span>
                                 </a>
-                                <a class="nav-link" href="manual_de_usuario.php">
-                                    <span class="no-icon">Ayuda</span>
-                                </a>
                             </li>
 
                         </ul>
@@ -179,7 +176,7 @@ if($varsession==null || $varsession== ''){
                                                    // $fichero = $ruta.basename($_FILES['imagen']['name']);
                                                ?>
                                                 <img class="avatar border-gray" src="<?php echo "$ruta"; ?>" alt="">
-                                                
+
                                             </a>
                                            <form method="POST" action="" enctype="multipart/form-data">
                                             <input type="file" name="imagen" class="form-control-file form-control-sm"><br>
@@ -191,7 +188,7 @@ if($varsession==null || $varsession== ''){
                                                $fichero = $ruta.basename($_FILES['imagen']['name']);
                                                $rut = $_SESSION['identidad'].".jpg";
                                                if(move_uploaded_file($_FILES['imagen']['tmp_name'], $ruta.$_SESSION['identidad'].".jpg")){
-                                                   
+
                                                  require("db/conexion.php");
                                                  $insertar = $conexion->query("UPDATE usuario SET imagen = '$rut' WHERE identidad ='".$_SESSION['identidad']."' ");
 
@@ -284,7 +281,7 @@ if($varsession==null || $varsession== ''){
                                                   <?php
                                                     //$query="SELECT MIN(start_event), title, start_event FROM events;";
                                                     $query="SELECT title, start_event FROM events WHERE start_event > now() ORDER BY start_event ASC ;";
-                                        
+
                                                     $result_tasks = mysqli_query($conexion, $query);
                                                     while($row = mysqli_fetch_assoc($result_tasks)) { ?>
                                                     <div class="col-lg-2 mb-2">
@@ -389,7 +386,3 @@ if($varsession==null || $varsession== ''){
 <?php include('include/foot.php') ?>
 
 </html>
-
-
-
-

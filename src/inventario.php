@@ -37,19 +37,6 @@
 
                         </ul>
                         <ul class="navbar-nav ml-auto">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="no-icon"></span>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="#"></a>
-                                    <a class="dropdown-item" href="#"></a>
-                                    <a class="dropdown-item" href="#"></a>
-                                    <a class="dropdown-item" href="#"></a>
-                                    <div class="divider"></div>
-                                    <a class="dropdown-item" href="#"></a>
-                                </div>
-                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="cerrar_session.php">
                                     <span class="no-icon">Cerrar Sesión</span>

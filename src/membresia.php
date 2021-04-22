@@ -45,15 +45,12 @@
                                 <a class="nav-link" href="cerrar_session.php">
                                     <span class="no-icon">Cerrar Sesión</span>
                                 </a>
-								<a class="nav-link" href="manual_de_usuario.php">
-                                    <span class="no-icon">Ayuda</span>
-                                </a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-            
+
 <div class="content">
                 <div class="container-fluid">
                     <div class="row">
@@ -119,7 +116,7 @@
 								</div>
 							</div>
 						</div>
-					</div>				
+					</div>
 </div>
 <div class="content">
                 <div class="container-fluid">
@@ -188,7 +185,7 @@
 						</div>
 					</div>
 				</div>
-</div>								
+</div>
 <div class="content">
                 <div class="container-fluid">
                     <div class="row">
