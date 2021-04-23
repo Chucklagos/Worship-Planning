@@ -276,7 +276,7 @@ if($varsession==null || $varsession== ''){
                                 <form>
                                         <section id="gallery">
                                             <div class="container">
-                                                <div class="row">
+                                                <center><div class="row">
 
                                                   <?php
                                                     //$query="SELECT MIN(start_event), title, start_event FROM events;";
@@ -284,9 +284,10 @@ if($varsession==null || $varsession== ''){
 
                                                     $result_tasks = mysqli_query($conexion, $query);
                                                     while($row = mysqli_fetch_assoc($result_tasks)) { ?>
-                                                    <div class="col-lg-2 mb-2">
-                                                        <div class="card">
-                                                            <div class="card-body">
+                                                    <div class="col-3 mb-3">
+                                                        <div class="card text-white bg-secondary mb-3" >
+                                                            <div class="card-body ">
+                                                            
                                                               <?php
 
                                                               $fecha = $row['start_event'];
@@ -341,6 +342,7 @@ if($varsession==null || $varsession== ''){
                                                                 echo "$f_fecha <br> Inicia: $hora";
                                                                 //echo $row['start_event'];
                                                               ?>
+                                                              
                                                             </div>
                                                         </div>
                                                     </div>
@@ -349,7 +351,7 @@ if($varsession==null || $varsession== ''){
 
 
 
-                                                </div>
+                                                </div><center>
                                             </div>
                                         </section>
                                     </form>
