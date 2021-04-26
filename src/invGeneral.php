@@ -77,9 +77,6 @@
 											</tr>
                                             <?php } ?>
 
-												<td></td>
-												<td></td>
-												<td></td>
 
 
 											</tbody>
