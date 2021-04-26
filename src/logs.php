@@ -71,7 +71,6 @@
                                       <th>Rol</th>
                                       <th>Actividad</th>
                                       <th>Fecha</th>
-                                      <th>Hora</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -86,7 +85,6 @@
                                       <td><?php echo $row['rol']; ?></td>
                                       <td><?php echo $row['actividad']; ?></td>
                                       <td><?php echo $row['fecha']; ?></td>
-                                      <td><?php echo $row['hora']; ?></td>
                                     </tr>
                                     <?php } ?>
                                     </tbody>
@@ -112,7 +110,6 @@
                                       <th>Rol</th>
                                       <th>Actividad</th>
                                       <th>Fecha</th>
-                                      <th>Hora</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -127,7 +124,6 @@
                                       <td><?php echo $row['rol']; ?></td>
                                       <td><?php echo $row['actividad']; ?></td>
                                       <td><?php echo $row['fecha']; ?></td>
-                                      <td><?php echo $row['hora']; ?></td>
                                     </tr>
                                     <?php } ?>
                                     </tbody>
@@ -152,7 +148,6 @@
                                       <th>Rol</th>
                                       <th>Actividad</th>
                                       <th>Fecha</th>
-                                      <th>Hora</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -167,7 +162,6 @@
                                       <td><?php echo $row['rol']; ?></td>
                                       <td><?php echo $row['actividad']; ?></td>
                                       <td><?php echo $row['fecha']; ?></td>
-                                      <td><?php echo $row['hora']; ?></td>
                                     </tr>
                                     <?php } ?>
                                     </tbody>
@@ -191,7 +185,6 @@
                                       <th>Rol</th>
                                       <th>Actividad</th>
                                       <th>Fecha</th>
-                                      <th>Hora</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -206,7 +199,6 @@
                                       <td><?php echo $row['rol']; ?></td>
                                       <td><?php echo $row['actividad']; ?></td>
                                       <td><?php echo $row['fecha']; ?></td>
-                                      <td><?php echo $row['hora']; ?></td>
                                     </tr>
                                     <?php } ?>
                                     </tbody>
