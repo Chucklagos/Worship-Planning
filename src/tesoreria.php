@@ -4,7 +4,7 @@
   $varsession=$_SESSION['email'];
   $rolsession=$_SESSION['rolUsuario'];
   if($varsession==null || $varsession== ''){
-    header('location:accesoDenegado.php');
+    header('location:accesoRestringido.php');
     die();
   }
   if ($rolsession=='miembro') {
@@ -42,7 +42,19 @@
                                     <span class="no-icon"></span>
                                 </a>
                             </li>
-                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="no-icon"></span>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="perfil.php"></a>
+                                    <a class="dropdown-item" href="#"></a>
+                                    <a class="dropdown-item" href="#"></a>
+                                    <a class="dropdown-item" href="#"></a>
+                                    <div class="divider"></div>
+                                    <a class="dropdown-item" href="#"></a>
+                                </div>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="cerrar_session.php">
                                     <span class="no-icon">Cerrar Sesión</span>
@@ -91,14 +103,15 @@
 												<th>Concepto</th>
 												<th>Monto</th>
 												<th>Tipo</th>
+                        <th>Ultima Modificacion Realizada por</th>
 												<th>Acción</th>
 											</tr>
 											</thead>
 											<tbody>
-
-												<tr>
+                      	<tr>
+                        
                       <?php
-                        $query = "SELECT idMovimiento, fecha, concepto, monto, tipoMovimiento FROM movimiento ORDER BY fecha DESC";
+                        $query = "SELECT idMovimiento, fecha, concepto, monto, tipoMovimiento, idUsuario FROM movimiento ORDER BY fecha DESC";
                         $result_tasks = mysqli_query($conexion, $query);
                         while($row = mysqli_fetch_assoc($result_tasks)) {
 
@@ -154,10 +167,11 @@
 											<td><?php echo $row['concepto']; ?></td>
 											<td><?php echo $row['monto']; ?></td>
 											<td><?php echo $row['tipoMovimiento']; ?></td>
+                      <td><?php echo $row['idUsuario']; ?></td>
 											<td>
 
                         <a style="margin-right:2px" href="borrarTesoreria.php?idMovimiento=<?php echo $row['idMovimiento']?>"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                        <a style="margin-left:2px" href="#editarModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                        <a href="editarMovimientos.php?idMovimiento=<?php echo $row['idMovimiento']?>"  class="edit" ><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
 
 
 											</td>
