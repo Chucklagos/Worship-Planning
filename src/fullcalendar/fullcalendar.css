@@ -42,7 +42,7 @@ body .fc { /* extra precedence to overcome jqui */
 .fc-unthemed .fc-divider,
 .fc-unthemed .fc-popover .fc-header,
 .fc-unthemed .fc-list-heading td {
-	background: #bb20d3cf;
+	background: #EF78FF;
 }
 
 .fc-unthemed .fc-popover .fc-header .fc-close {
@@ -214,14 +214,14 @@ NOTE: use percentage font sizes or else old IE chokes
 */
 
 .fc-state-default {
-	background-color: #bc36d1cf;
-	background-image: -moz-linear-gradient(top, #cc77dacf, #cd53e0cf);
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#cc77dacf), to(#cd53e0cf));
-	background-image: -webkit-linear-gradient(top, #cc77dacf, #cd53e0cf);
-	background-image: -o-linear-gradient(top, #cc77dacf, #cd53e0cf);
-	background-image: linear-gradient(to bottom, #cc77dacf, #cd53e0cf);
+	background-color: #ECA5F7;
+	background-image: -moz-linear-gradient(top, #ECA5F7, #ECA5F7);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ECA5F7), to(#ECA5F7));
+	background-image: -webkit-linear-gradient(top, #ECA5F7, #ECA5F7);
+	background-image: -o-linear-gradient(top, #ECA5F7, #ECA5F7);
+	background-image: linear-gradient(to bottom, #ECA5F7, #ECA5F7);
 	background-repeat: repeat-x;
-	border-color: #bc36d1cf #bc36d1cf #bfbfbf;
+	border-color: #ECA5F7 #ECA5F7 #bfbfbf;
 	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 	color: #333;
 	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
@@ -233,7 +233,7 @@ NOTE: use percentage font sizes or else old IE chokes
 .fc-state-active,
 .fc-state-disabled {
 	color: #333333;
-	background-color: #bc36d1cf;
+	background-color: #E689F5;
 }
 
 .fc-state-hover {
@@ -248,7 +248,7 @@ NOTE: use percentage font sizes or else old IE chokes
 
 .fc-state-down,
 .fc-state-active {
-	background-color: #bc36d1cf;
+	background-color: #E689F5;
 	background-image: none;
 	box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
@@ -529,13 +529,13 @@ temporary rendered events).
 	font-size: .85em;
 	line-height: 1.3;
 	border-radius: 3px;
-	border: 1px solid #bb20d3cf; /* default BORDER color */
+	border: 1px solid #E45BF7; /* default BORDER color */
 	font-weight: normal; /* undo jqui's ui-widget-header bold */
 }
 
 .fc-event,
 .fc-event-dot {
-	background-color: #bb20d3cf; /* default BACKGROUND color */
+	background-color: #edb0f5; /* default BACKGROUND color */
 }
 
 /* overpower some of bootstrap's and jqui's styles on <a> tags */
