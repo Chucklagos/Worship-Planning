@@ -18,11 +18,11 @@
   $lastnamesession = $_SESSION['primerApellido'];
   $rolsession = $_SESSION['rolUsuario'];
 
-  $query="INSERT INTO logs VALUES(idLog, '$namesession', '$lastnamesession', '$rolsession', 'tesoreria', 'Registró $concepto con valor $monto del tipo $tipoMovimiento', CURDATE(), CURTIME())";
+  /*$query="INSERT INTO logs VALUES(idLog, '$namesession', '$lastnamesession', '$rolsession', 'tesoreria', 'Registró $concepto con valor $monto del tipo $tipoMovimiento', CURDATE(), CURTIME())";
   $resultado = mysqli_query($conexion, $query);
   if(!$resultado) {
     die("Query Failed.");
-  }
+  }*/
 
   header('location: tesoreria.php');
 

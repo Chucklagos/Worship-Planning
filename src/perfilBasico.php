@@ -14,10 +14,10 @@ if(mysqli_num_rows($resultado)==1){
    $segundoApellido=$row['segundoApellido'];
    $telefono=$row['telefono'];
    $rolUsuario=$row['rolUsuario'];
-   $fechaConversion=$row['fechaConversion'];
-   $fechaBautismo=$row['fechaBautismo'];
+   //$fechaConversion=$row['fechaConversion'];
+   //$fechaBautismo=$row['fechaBautismo'];
    $estadoCivil=$row['estadoCivil'];
-   $lugarBautismo=$row['lugarBautismo'];
+   //$lugarBautismo=$row['lugarBautismo'];
 }
 
 $varsession=$_SESSION['email'];
@@ -214,7 +214,7 @@ if($varsession==null || $varsession== ''){
 
 
 
-                        <div class="col-auto  col-md-12" >
+                        <!--div class="col-auto  col-md-12" >
                             <br>
                             <div class="card">
                                 <div class="card-header">
@@ -252,14 +252,14 @@ if($varsession==null || $varsession== ''){
                                                 </div>
                                             </div>
                                         </div>
-                                           <!-- <button type="submit" class="btn btn-info btn-fill pull-right">Actualizar</button>-->
+                                            <button type="submit" class="btn btn-info btn-fill pull-right">Actualizar</button>
                                         <br>
                                         <div class="clearfix"></div>
                                     </form>
 
                                 </div>
                             </div>
-                        </div>
+                        </div-->
 
 
                         <div class="col-auto  col-md-12" >

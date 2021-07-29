@@ -13,7 +13,7 @@
     die("Query Failed.");
   }
 
-    $namesession = $_SESSION['primerNombre'];
+    /*$namesession = $_SESSION['primerNombre'];
     $lastnamesession = $_SESSION['primerApellido'];
     $rolsession = $_SESSION['rolUsuario'];
 
@@ -21,7 +21,7 @@
     $resultado = mysqli_query($conexion, $query);
     if(!$resultado) {
       die("Query Failed.");
-    }
+    }*/
 
 
   header('location: invInfantil.php');

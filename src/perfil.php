@@ -15,10 +15,10 @@ if(mysqli_num_rows($resultado)==1){
    $segundoApellido=$row['segundoApellido'];
    $telefono=$row['telefono'];
    $rolUsuario=$row['rolUsuario'];
-   $fechaConversion=$row['fechaConversion'];
-   $fechaBautismo=$row['fechaBautismo'];
+   /*$fechaConversion=$row['fechaConversion'];*/
+   /*$fechaBautismo=$row['fechaBautismo'];*/
    $estadoCivil=$row['estadoCivil'];
-   $lugarBautismo=$row['lugarBautismo'];
+   /*$lugarBautismo=$row['lugarBautismo'];*/
 }
 
 
@@ -218,7 +218,7 @@ if ($rolsession=='miembro') {
                             </div>
                         </div>
 
-                        <div class="col-auto  col-md-12" >
+                        <!--div class="col-auto  col-md-12" >
                             <br>
                             <div class="card">
                                 <div class="card-header">
@@ -263,7 +263,7 @@ if ($rolsession=='miembro') {
 
                                 </div>
                             </div>
-                        </div>
+                        </div-->
                   
 
 
