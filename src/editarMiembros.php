@@ -230,6 +230,7 @@ if(isset($_POST['Actualizar']) && $_POST['lugarBautismo']!=$row['lugarBautismo']
 												<select  class="form-control" id="rolUsuario" name="rolUsuario">
 													<option value="admin"   <?php if($rolUsuario=='admin') echo 'selected'; ?>>Admin</option>
 													<option value="lider"   <?php if($rolUsuario=='lider') echo 'selected'; ?>>Lider</option>
+													<option value="tesorero" <?php if($rolUsuario=='tesorero') echo 'selected'; ?>>Tesorero</option>
 													<option value="miembro" <?php if($rolUsuario=='miembro') echo 'selected'; ?>>Miembro</option>
 												</select>
 											</div>

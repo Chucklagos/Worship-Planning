@@ -21,7 +21,12 @@
 </head>
 <body>
     <div class="wrapper">
-        <?php include 'include/panel.php'; ?>
+        <?php 
+        if($rolsession== 'admin' || $rolsession=='lider')
+          include'include/panel.php';
+        else
+          include'include/panelT.php';
+        ?>
         <div class="main-panel">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg " color-on-scroll="500">
