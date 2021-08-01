@@ -79,15 +79,32 @@ if(isset($_POST['Submit'])){
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
+
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
   <!--CAPTCHA-->
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!--Button responsive-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+
+
 </head>
 
-<body>
+
+<body data-aos-easing="ease-in-out" data-aos-duration="1000" 
+data-aos-delay="0" class="">
+
+  <button type="button" class="mobile-nav-toggle d-lg-none">
+    <i class="icofont-navigation-menu"></i></button>
+ 
+
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center header-transparent">
     <div class="container d-flex align-items-center">
+    
 
       <div class="logo mr-auto">
       
@@ -103,9 +120,13 @@ if(isset($_POST['Submit'])){
           <li><a href="src/registrarse.php" target="_blank" >Registrarse</a></li>
           <li><a href="src/login.php" target="_blank">Iniciar Sesión</a></li>
         </ul>
+      </button>
+    </div>
+    
       </nav><!-- .nav-menu -->
 
     </div>
+    
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
@@ -373,6 +394,7 @@ if(isset($_POST['Submit'])){
   <script src="assets/js/main.js"></script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
+  
 </body>
 
 </html>
