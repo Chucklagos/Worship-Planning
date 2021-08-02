@@ -97,6 +97,8 @@ nombre varchar(50),
 direccion varchar(50),
 PRIMARY KEY(idIglesia)
 );
+INSERT INTO `iglesia` (`idIglesia `, `nombre`,`direccion`) VALUES
+(1, 'pare de sufrir','carrizal'),
 
 
 CREATE TABLE `usuario` (
