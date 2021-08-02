@@ -14,13 +14,14 @@
   $estadoCivil = $_POST['estadoCivil'];
   $estado = "activo";
   $rolUsuario = "miembro";
+  $fk_idIglesia = 1 ;
   /*$fechaConversion= null;
   $fechaBautismo=null;
   $lugarBautismo=null;*/
   echo "$email, $contrasena, $pnombre, $snombre, $papellido, $sapellido, $telefono, $fechaNacimiento, $estadoCivil, $rolUsuario";
 
   //$query = "INSERT INTO usuario VALUES('$identidad', '$email', '$contrasena', '$estado', '$pnombre', '$snombre', '$papellido', '$sapellido', '$telefono', '$fechaNacimiento', '$estadoCivil', '$rolUsuario', '$fechaConversion', '$fechaBautismo','$lugarBautismo')";
-  $query = "INSERT INTO usuario VALUES('$identidad', '$email', '$contrasena', '$estado', '$pnombre', '$snombre', '$papellido', '$sapellido', '$telefono', '$fechaNacimiento', '$estadoCivil', '$rolUsuario')";
+  $query = "INSERT INTO usuario VALUES('$identidad', '$email', '$contrasena', '$estado', '$pnombre', '$snombre', '$papellido', '$sapellido', '$telefono', '$fechaNacimiento', '$estadoCivil', '$rolUsuario','$fk_idIglesia')";
   $resultado = mysqli_query($conexion, $query);
   if(!$resultado) {
     die("Query Failed.");

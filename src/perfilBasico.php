@@ -3,7 +3,9 @@ session_start();
 include 'db/conexion.php';
 
 $iden=$_SESSION['identidad'];
-$consulta= "SELECT * FROM usuario WHERE idUsuario=$iden ";
+$consulta= "SELECT * FROM usuario 
+inner join iglesia on usuario.fk_idIglesia = iglesia.idIglesia
+WHERE idUsuario=$iden ";
 $resultado= mysqli_query($conexion,$consulta);
 if(mysqli_num_rows($resultado)==1){
    $row=mysqli_fetch_array($resultado);
@@ -14,9 +16,11 @@ if(mysqli_num_rows($resultado)==1){
    $segundoApellido=$row['segundoApellido'];
    $telefono=$row['telefono'];
    $rolUsuario=$row['rolUsuario'];
+
    //$fechaConversion=$row['fechaConversion'];
    //$fechaBautismo=$row['fechaBautismo'];
    $estadoCivil=$row['estadoCivil'];
+   $fk_idIglesia = $row['nombre'];
    //$lugarBautismo=$row['lugarBautismo'];
 }
 
@@ -151,6 +155,12 @@ if($varsession==null || $varsession== ''){
                                                 <div class="form-group">
                                                     <label>Estado Civil</label>
                                                     <input type="text" class="form-control" placeholder="" value="<?php echo $estadoCivil ?>" disabled="">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 pl-1">
+                                                <div class="form-group">
+                                                    <label>Iglesia</label>
+                                                    <input type="text" class="form-control" placeholder="" value="<?php echo $fk_idIglesia ?>" disabled="">
                                                 </div>
                                             </div>
                                         </div>
