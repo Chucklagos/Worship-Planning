@@ -47,6 +47,9 @@ if ($filas>0 && ($_SESSION['rolUsuario']=='admin' || $_SESSION['rolUsuario']=='l
     header("location:perfil.php");
 } else if ($filas>0 && $_SESSION['rolUsuario']=='miembro') {
     header("location:perfilBasico.php");
+  }
+    else if ($filas>0 && $_SESSION['rolUsuario']=='tesorero'){
+    header("location:perfilTesorero.php");
 } else {
     ?>
     <?php

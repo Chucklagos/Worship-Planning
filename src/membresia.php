@@ -198,6 +198,74 @@
 										<div class="table-title">
 											<div class="row">
 												<div class="col-sm-6">
+													<h3>Tesoreros <b></b></h3>
+												</div>
+
+												<div class="col-sm-6">
+													<a href="#agregarModal"  data-toggle="modal">
+													</a>
+												</div>
+
+											</div>
+										</div>
+										<hr>
+										<br>
+										<table class="table table-striped table-hover">
+											<thead>
+											<tr>
+                                                <th>Identidad</th>
+												<th>Nombre</th>
+												<th>Apellido</th>
+												<th>Teléfono</th>
+												<th>Correo Electrónico </th>
+												<th>Rol de Usuario </th>
+												<th>Estado de la Cuenta</th>
+												<th>Acción</th>
+											</tr>
+											</thead>
+											<tbody>
+											  <tr>
+					    <?php
+                        $query = "SELECT idUsuario, primerNombre, primerApellido, telefono, email, rolUsuario, estado FROM usuario WHERE rolUsuario= 'tesorero' ORDER BY idUsuario DESC";
+                        $result_tasks = mysqli_query($conexion, $query);
+                        while($row = mysqli_fetch_assoc($result_tasks)) { ?>
+
+												<td><?php echo $row['idUsuario']; ?></td>
+												<td><?php echo $row['primerNombre']; ?></td>
+												<td><?php echo $row['primerApellido']; ?></td>
+												<td><?php echo $row['telefono']; ?></td>
+												<td><?php echo $row['email']; ?></td>
+												<td><?php echo $row['rolUsuario']; ?></td>
+												<td><?php echo $row['estado']; ?></td>
+												<td>
+												<a href="borrarMiembro.php?idUsuario=<?php echo $row['idUsuario']?>"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+												<a href="editarMiembros.php?idUsuario=<?php echo $row['idUsuario']?>"  class="edit" ><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+												</td>
+
+											</tr>
+											<?php } ?>
+											</tbody>
+										</table>
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+</div>
+<div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+								<br>
+                                <div class="container-xl">
+
+									<div class="table-wrapper">
+										<div class="table-title">
+											<div class="row">
+												<div class="col-sm-6">
 													<h3>Miembros <b></b></h3>
 												</div>
 
