@@ -123,7 +123,7 @@ if($varsession==null || $varsession== ''){
                                                     <input type="text" class="form-control" placeholder="" value="<?php echo $segundoNombre ?>" disabled="">
                                                 </div>
                                             </div>
-                                            <div class="col-md-3 pl-1">
+                                            <div class="col-md-3 pr-1">
                                                 <div class="form-group">
                                                     <label>Primer Apellido</label>
                                                     <input type="text" class="form-control" placeholder="" value="<?php echo $primerApellido ?>" disabled="">
@@ -145,7 +145,7 @@ if($varsession==null || $varsession== ''){
                                                     <input type="text" class="form-control" placeholder="" value="<?php echo $telefono ?>" disabled="">
                                                 </div>
                                             </div>
-                                            <div class="col-md-4 px-1">
+                                            <div class="col-md-4 pr-1">
                                                 <div class="form-group">
                                                     <label>Fecha de Nacimiento</label>
                                                     <input type="date" class="form-control" placeholder="" value="<?php echo $_SESSION['fechaNacimiento'] ?>" disabled="">
@@ -157,7 +157,9 @@ if($varsession==null || $varsession== ''){
                                                     <input type="text" class="form-control" placeholder="" value="<?php echo $estadoCivil ?>" disabled="">
                                                 </div>
                                             </div>
-                                            <div class="col-md-4 pl-1">
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 pr-1">
                                                 <div class="form-group">
                                                     <label>Iglesia</label>
                                                     <input type="text" class="form-control" placeholder="" value="<?php echo $fk_idIglesia ?>" disabled="">
@@ -271,120 +273,148 @@ if($varsession==null || $varsession== ''){
                             </div>
                         </div-->
 
+                                                   
+                            <div class="col-auto  col-md-12" >
+                                
+                                    <div class="card-header">
+                                        <h5 class="card-title">Eventos</h5><hr>
+                                    </div>
 
-                        <div class="col-auto  col-md-12" >
-                            <br>
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 class="card-title">Eventos</h5>
-                                    <hr>
-                                    <br>
-                                    <h6 class="card-title">Eventos próximos</h6>
-                                </div>
+                                    <div class="card-body col-md-12">
+                                    <form>
+                                            <section id="gallery">
+                                                <div class="container">
+                                                    <center><div class="row">
 
-                                <div class="card-body">
-                                <form>
-                                        <section id="gallery">
-                                            <div class="container">
-                                                <center><div class="row">
+                                                    <?php
+                                                        //$query="SELECT MIN(start_event), title, start_event FROM events;";
+                                                        $query="SELECT title, start_event FROM events WHERE start_event > now() ORDER BY start_event ASC ;";
 
-                                                  <?php
-                                                    //$query="SELECT MIN(start_event), title, start_event FROM events;";
-                                                    $query="SELECT title, start_event FROM events WHERE start_event > now() ORDER BY start_event ASC ;";
+                                                        $result_tasks = mysqli_query($conexion, $query);
+                                                        while($row = mysqli_fetch_assoc($result_tasks)) { ?>
+                                                        <div class="col-3 mb-3">
+                                                            <div class="card-big-shadow" >
+                                                                <div class="card card-just-text" data-background="color" data-color="blue" data-radius="none">
+                                                                
+                                                                <?php
 
-                                                    $result_tasks = mysqli_query($conexion, $query);
-                                                    while($row = mysqli_fetch_assoc($result_tasks)) { ?>
-                                                    <div class="col-3 mb-3">
-                                                        <div class="card text-white bg-secondary mb-3" >
-                                                            <div class="card-body ">
-                                                            
-                                                              <?php
+                                                                $fecha = $row['start_event'];
+                                                                $dia = substr($fecha,8, 2);
+                                                                $mes = substr($fecha, 5, 2);
+                                                                $anio = substr($fecha, 0, 4);
+                                                                $hora = substr($fecha, 10, 6);
 
-                                                              $fecha = $row['start_event'];
-                                                              $dia = substr($fecha,8, 2);
-                                                              $mes = substr($fecha, 5, 2);
-                                                              $anio = substr($fecha, 0, 4);
-                                                              $hora = substr($fecha, 10, 6);
-
-                                                              switch ($mes) {
-                                                                case '01':
-                                                                    $f_fecha = "$dia/Enero/$anio";
-                                                                  break;
-                                                                case '02':
-                                                                    $f_fecha = "$dia/Febrero/$anio";
-                                                                  break;
-                                                                case '03':
-                                                                    $f_fecha = "$dia/Marzo/$anio";
-                                                                  break;
-                                                                case '04':
-                                                                    $f_fecha = "$dia/Abril/$anio";
-                                                                  break;
-                                                                case '05':
-                                                                    $f_fecha = "$dia/Mayo/$anio";
-                                                                  break;
-                                                                case '06':
-                                                                    $f_fecha = "$dia/Junio/$anio";
-                                                                  break;
-                                                                case '07':
-                                                                    $f_fecha = "$dia/Julio/$anio";
-                                                                  break;
-                                                                case '08':
-                                                                    $f_fecha = "$dia/Agosto/$anio";
-                                                                  break;
-                                                                case '09':
-                                                                    $f_fecha = "$dia/Septiembre/$anio";
-                                                                  break;
-                                                                case '10':
-                                                                    $f_fecha = "$dia/Octubre/$anio";
-                                                                  break;
-                                                                case '11':
-                                                                    $f_fecha = "$dia/Noviembre/$anio";
-                                                                  break;
-                                                                case '12':
-                                                                    $f_fecha = "$dia/Diciembre/$anio";
-                                                                  break;
-                                                                default:
-                                                                    $f_fecha = "error";
-                                                                  break;
-                                                              }
-
-                                                                echo $row['title']."<br>";
-                                                                echo "$f_fecha <br> Inicia: $hora";
-                                                                //echo $row['start_event'];
-                                                              ?>
-                                                              
+                                                                switch ($mes) {
+                                                                    case '01':
+                                                                        $f_fecha = "$dia/Enero/$anio";
+                                                                    break;
+                                                                    case '02':
+                                                                        $f_fecha = "$dia/Febrero/$anio";
+                                                                    break;
+                                                                    case '03':
+                                                                        $f_fecha = "$dia/Marzo/$anio";
+                                                                    break;
+                                                                    case '04':
+                                                                        $f_fecha = "$dia/Abril/$anio";
+                                                                    break;
+                                                                    case '05':
+                                                                        $f_fecha = "$dia/Mayo/$anio";
+                                                                    break;
+                                                                    case '06':
+                                                                        $f_fecha = "$dia/Junio/$anio";
+                                                                    break;
+                                                                    case '07':
+                                                                        $f_fecha = "$dia/Julio/$anio";
+                                                                    break;
+                                                                    case '08':
+                                                                        $f_fecha = "$dia/Agosto/$anio";
+                                                                    break;
+                                                                    case '09':
+                                                                        $f_fecha = "$dia/Septiembre/$anio";
+                                                                    break;
+                                                                    case '10':
+                                                                        $f_fecha = "$dia/Octubre/$anio";
+                                                                    break;
+                                                                    case '11':
+                                                                        $f_fecha = "$dia/Noviembre/$anio";
+                                                                    break;
+                                                                    case '12':
+                                                                        $f_fecha = "$dia/Diciembre/$anio";
+                                                                    break;
+                                                                    default:
+                                                                        $f_fecha = "error";
+                                                                    break;
+                                                                }
+                                                                
+                                                                   
+                                                                    echo $row['title']."<br><h6></h6><hr>";
+                                                                    echo "Fecha: $f_fecha <br><br>
+                                                                    <h6> Hora de Inicio:</h6> $hora <br><br>";
+                                                                    //echo $row['start_event'];
+                                                                ?>
+                                                                
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                  <?php } ?>
+                                                    <?php } ?>
+                                                    </div><center>
+                                                </div>
+                                            </section>
+                                        </form>
 
-
-
-
-                                                </div><center>
-                                            </div>
-                                        </section>
-                                    </form>
-
-                                </div>
+                                    </div>
+                                
                             </div>
-                        </div>
+
+                            
+
+<style type="text/css">
+.card-big-shadow {
+    max-width: 320px;
+    position: relative;
+}
+.card.card-just-text .content {
+    padding: 50px 65px;
+    text-align: center;
+}
+.card-big-shadow:before {
+    background-image: url("http://static.tumblr.com/i21wc39/coTmrkw40/shadow.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    bottom: -12%;
+    content: "";
+    display: block;
+    left: -12%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+}
 
 
+/*======== COLOR ===========*/
+.card[data-color="blue"] {
+    background: #b8d8d8;
+}
+.card[data-color="blue"] .description {
+    color: #506568;
+}
 
+.card[data-color="green"] {
+    background: #d5e5a3;
+}
+.card[data-color="green"] .description {
+    color: #60773d;
+}
+.card[data-color="green"] .category {
+    color: #92ac56;
+}
+</style>
+<script type="text/javascript">
 
-
-
-
-
-
-
-
-
-
-
-
-
+</script>
+         
                     </div>
                 </div>
             </div>
