@@ -17,9 +17,9 @@ if(!isset($_GET['idUsario'])){
 		$estadoCivil=$row['estadoCivil'];
 		$rolUsuario=$row['rolUsuario'];
 		$estado=$row['estado'];
-		$fechaConversion=$row['fechaConversion'];
-		$fechaBautismo=$row['fechaBautismo'];
-		$lugarBautismo=$row['lugarBautismo'];
+		//$fechaConversion=$row['fechaConversion'];
+		//$fechaBautismo=$row['fechaBautismo'];
+		//$lugarBautismo=$row['lugarBautismo'];
 	}
  }
 
